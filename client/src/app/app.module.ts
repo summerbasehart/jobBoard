@@ -18,6 +18,8 @@ import { PostComponent } from './post/post.component';
 import { PostDetailsComponent } from './post/post-details/post-details.component';
 import { PostAddComponent } from './post/post-add/post-add.component';
 import { PostEditComponent } from './post/post-edit/post-edit.component';
+import { CKEditorModule } from 'ckeditor4-angular';
+import { MatContenteditableModule } from 'mat-contenteditable';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatInputModule,
@@ -68,7 +70,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatCardModule,
     MatFormFieldModule,
     MatMenuModule,
-    MatToolbarModule
+    MatToolbarModule,
+    CKEditorModule,
+    MatContenteditableModule
   ],
   providers: [
     {
