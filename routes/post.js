@@ -1,8 +1,6 @@
 var passport = require('passport');
-var config = require('../config/settings');
 require('../config/passport')(passport);
 var express = require('express');
-var jwt = require('jsonwebtoken');
 var router = express.Router();
 var Post = require("../models/category");
 
