@@ -4,7 +4,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 var passport = require('passport');
-
 var auth = require('./routes/auth');
 var category = require('./routes/category');
 var post = require('./routes/post');
