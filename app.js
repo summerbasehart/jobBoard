@@ -9,7 +9,7 @@ var category = require('./routes/category');
 var post = require('./routes/post');
 var cors = require('cors')
 
-mongoose.connect('mongodb://localhost/blog-cms', { 
+mongoose.connect('mongodb://localhost/testApp', { 
     promiseLibrary: require('bluebird'), 
     useNewUrlParser: true, 
     useUnifiedTopology: true,
