@@ -34,6 +34,7 @@ export class AppComponent implements OnInit  {
         console.log(err);
       });
   }
+  
   logout() {
     this.authService.logout()
       .subscribe((res: any) => {
