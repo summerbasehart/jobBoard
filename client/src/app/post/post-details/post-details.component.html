@@ -10,9 +10,7 @@
       <mat-card-header>
         <mat-card-title><h2>{{post.postTitle}}</h2></mat-card-title>
         <p>Created by: {{post.postAuthor}}, {{post.created | date}}, updated: {{post.updated | date}}</p>
-        <mat-card-subtitle>{{post.postDesc}}</mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image src="{{post.postImgUrl}}" alt="{{post.postTitle}}">
       <mat-card-content>
         <dl>
           <dt>Post Content:</dt>

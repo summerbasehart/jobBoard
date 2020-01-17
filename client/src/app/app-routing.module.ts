@@ -26,13 +26,13 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    data: { title: 'Blog Home' }
+    data: { title: ' Home' }
   },
   {
     path: 'admin',
     canActivate: [AuthGuard],
     component: AdminComponent,
-    data: { title: 'Blog Admin' }
+    data: { title: ' Admin' }
   },
   {
     path: 'bycategory/:id',
