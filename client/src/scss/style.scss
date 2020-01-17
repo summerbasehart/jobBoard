@@ -731,13 +731,13 @@ a,
 		0%   { top: 5px;
 		opacity: 0;
 	}
-}
-30% {
-	top: 10px;
-	opacity: 1;
-	top: 10px;
-	opacity: 1;
-}
+    }
+    30% {
+        top: 10px;
+        opacity: 1;
+        top: 10px;
+        opacity: 1;
+    }
 100% {
 	top: 25px;
 	opacity: 0;
