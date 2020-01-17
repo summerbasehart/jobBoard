@@ -11,7 +11,7 @@ var post = require('./routes/post');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-mongoose.connect('mongodb://localhost/blog-cms', {
+mongoose.connect('mongodb://localhost/testApp', {
     promiseLibrary: require('bluebird'),
     useNewUrlParser: true,
     useUnifiedTopology: true,
