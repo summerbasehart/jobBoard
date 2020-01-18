@@ -4,15 +4,15 @@
   </div>
 </div>
 <div class="row" id="header">
-  <div class="col-md-12"><img class="img-responsive" src="/images/OSTLogoLarge.png"
-      ngStyle="margin:auto;padding-top:2em;width:30%" />
-    <h2 class="text-center" ngStyle="['color':'red';'font-family':'Times New Roman'; 'font-size': '26px']">Delivering
-      Service<span>&nbsp;<b>FIRST!</b></span></h2>
+  <div class="col-md-12"><img class="img-responsive" src="../../images/OSTLogoLarge.png"
+      ngStyle="{'margin':'auto','padding-top':'2em','width':'30%'}" />
+    <h2 class="text-center" ngStyle="{'color':'red','font-family':'Times New Roman', 'font-size':'26px'}">Delivering
+      Service<span>&nbsp,<b>FIRST!</b></span></h2>
   </div>
 </div>
 <div class="container"
-  ngStyle="['background-color': '#313131';'box-shadow': '0 5px 5px 2px grey';'padding-right': '40px';'min-height':'100%']">
-  <div class="row" ngStyle="margin: 20px">
+  ngStyle="{'background-color':'#313131','box-shadow':'0 5px 5px 2px grey','padding-right':'40px','min-height':'100%'}">
+  <div class="row" ngStyle="{'margin':'20px'}">
     <div class="container">
       <div class="col-md-11">
         <h3 class="text-center">JOIN OST AND BECOME A PART OF A WINNING TEAM!</h3>
@@ -27,28 +27,28 @@
       </div>
     </div>
   </div>
-  <div class="tabs" ngStyle="['margin-top': '30px']">
+  <div class="tabs" ngStyle="{'margin-top':'30px'}">
     <div class="tab">
       <input id="tab-1" type="radio" name="tab-group-1" checked="" />
-      <label for="tab-1" ngStyle="['margin-left':'30%']">Employee </label>
+      <label for="tab-1" ngStyle="{'margin-left':'30%'}">Employee </label>
       <div class="content">
         <div class="row">
           <div class="container">
-            <div class="col-md-11" ngStyle="['margin-top':'30px';'margin-bottom':'5px']">
+            <div class="col-md-11" ngStyle="{'margin-top':'30px','margin-bottom':'5px'}">
               <h3>Open Positions:</h3>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="container">
-            <div class="col-md-2" id="jobNames" ngStyle="['margin-bottom': '20px']">
+            <div class="col-md-2" id="jobNames" ngStyle="{'margin-bottom':'20px'}">
               <div class="w3-bar w3-black">
                 <button class="w3-bar-item w3-button tablink"
                   onclick="openLink(event, [post._id])">{{post.postTitle}}</button>
               </div>
             </div>
-            <div class="col-md-9" id="jobContainer" ngStyle="['margin-bottom': '20px']">
-              <div class="job w3-container w3-animate-opacity" id="['/details/', post._id]">
+            <div class="col-md-9" id="jobContainer" ngStyle="{'margin-bottom':'20px'}">
+              <div class="job w3-container w3-animate-opacity" id="{'/details/', post._id}">
                 <h3>Date Posted: {{post.updated}}</h3>
                 <p>{{post.postDesc}}</p>
               </div>
@@ -91,15 +91,15 @@
                     ng-model=""></textarea>
                 </div>
                 <div class="form-group"><a class="btn btn-custom-1-inverse" ng-click=""
-                    ngStyle="['display':b'l'ock;'background-color':'red';'border':'red';'color':'white']"
-                    ng-disabled="employForm.$invalid">Send it &nbsp;<i class="fa fa-refresh fa-spin"
+                    ngStyle="{'display':'block','background-color':'red','border':'red','color':'white'}"
+                    ng-disabled="employForm.$invalid">Send it &nbsp,<i class="fa fa-refresh fa-spin"
                       ng-show="emailing"></i></a></div>
                 <div class="form-group">
                   <div class="alert alert-success" ng-show="emailed"
-                    ngStyle="['float':'left'; 'margin-top': '10px'; 'display':'block';]">Thank you for your interest! We will be
+                    ngStyle="{'float':'left', 'margin-top':'10px', 'display':'block',}">Thank you for your interest! We will be
                     reaching out to you as soon as we can.</div>
                   <div class="alert alert-danger" ng-show="emailError"
-                    ngStyle="['float':'left'; 'margin-top': '10px'; 'display':'block';]">We are sorry, something happened when it came
+                    ngStyle="{'float':'left', 'margin-top':'10px', 'display':'block',}">We are sorry, something happened when it came
                     to submitting this form</div>
                   <!-- Displays status when submitting form-->
                   <!-- .col-->
@@ -112,11 +112,11 @@
     </div>
     <div class="tab">
       <input id="tab-2" type="radio" name="tab-group-1" />
-      <label for="tab-2" ngStyle="['margin-left':'40%']">Contractor </label>
+      <label for="tab-2" ngStyle="{'margin-left':'40%'}">Contractor </label>
       <div class="content">
         <div class="row">
-          <div class="container" ngStyle="['margin-top': '30px']">
-            <div class="col-md-12" ngStyle="['margin-bottom': '30px']">
+          <div class="container" ngStyle="{'margin-top':'30px'}">
+            <div class="col-md-12" ngStyle="{'margin-bottom':'30px'}">
               <h3>Why join OST:</h3>
               <ul>
                 <li>STRENGTH!
@@ -171,7 +171,7 @@
         </div>
         <div class="row" ng-controller="ostJoinCtrl">
           <div class="container">
-            <div class="col-md-11" ngStyle="margin-top: 25px">
+            <div class="col-md-11" ngStyle="{'margin-top':'25px'}">
               <h4>Join OST Today!</h4>
               <form id="contact-form" novalidate="novalidate" name="joinForm">
                 <div class="ajax-hidden">
@@ -179,7 +179,7 @@
                     <input class="form-control" id="c_name" name="c_name" placeholder="Name" ng-model="newContact.name"
                       required="required" />
                     <div class="alert alert-danger"
-                      ng-show="joinForm.c_name.$error.required &amp;&amp; joinForm.c_name.$dirty">Name is a required
+                      ng-show="joinForm.c_name.$error.required &amp,&amp, joinForm.c_name.$dirty">Name is a required
                       field.</div>
                   </div>
                 </div>
@@ -191,14 +191,14 @@
                   <input class="form-control" id="c_email" type="email" name="c_email" placeholder="E-mail"
                     ng-model="newContact.email" required="required" />
                   <div class="alert alert-danger"
-                    ng-show="joinForm.c_email.$error.required &amp;&amp; joinForm.c_email.$dirty">Email is a required
+                    ng-show="joinForm.c_email.$error.required &amp,&amp, joinForm.c_email.$dirty">Email is a required
                     field.</div>
                 </div>
                 <div class="form-group">
                   <input class="form-control" id="c_phone" type="phone" name="c_phone" placeholder="Phone"
                     ng-model="newContact.phone" required="required" />
                   <div class="alert alert-danger"
-                    ng-show="joinForm.c_phone.$error.required &amp;&amp; joinForm.c_phone.$dirty">Phone is a required
+                    ng-show="joinForm.c_phone.$error.required &amp,&amp, joinForm.c_phone.$dirty">Phone is a required
                     field.</div>
                 </div>
                 <div class="form-group">
@@ -206,15 +206,15 @@
                     ng-model="newContact.message"></textarea>
                 </div>
                 <div class="form-group"><a class="btn btn-custom-1-inverse" ng-click="joinOST()"
-                    ngStyle="{'display':'block';'background-color':'red';'border':'red';'color':'white'}"
-                    ng-disabled="joinForm.$invalid">Send it &nbsp;<i class="fa fa-refresh fa-spin"
+                    ngStyle="{'display':'block','background-color':'red','border':'red','color':'white'}"
+                    ng-disabled="joinForm.$invalid">Send it &nbsp,<i class="fa fa-refresh fa-spin"
                       ng-show="emailing"></i></a></div>
                 <div class="form-group">
                   <div class="alert alert-success" ng-show="emailed"
-                    ngStyle="float:left; margin-top: 10px; display:block">Thank you for your interest! We will be reaching
+                    ngStyle="{'float':'left', 'margin-top':'10px', 'display':'block'}">Thank you for your interest! We will be reaching
                     out to you as soon as we can.</div>
                   <div class="alert alert-danger" ng-show="emailError"
-                    ngStyle="float:left; margin-top: 10px; display:block">We are sorry, something happened when it came to
+                    ngStyle="{'float':'left', 'margin-top':'10px', 'display':'block'}">We are sorry, something happened when it came to
                     emailing us</div>
                   <!-- Displays status when submitting form-->
                   <!-- .col-->
@@ -226,7 +226,7 @@
       </div>
     </div>
   </div>
-  <div class="row text-center" ngStyle="margin: 20px">
+  <div class="row text-center" ngStyle="{'margin':'20px'}">
     <div class="container">
       <div class="col-md-11"><small class="text-center">© 2020 OST Advantage</small></div>
     </div>
