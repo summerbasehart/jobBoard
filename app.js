@@ -8,6 +8,7 @@ var auth = require('./routes/auth');
 var category = require('./routes/category');
 var post = require('./routes/post');
 var cors = require('cors')
+var mailer = require('./nodemailer');
 
 mongoose.connect('mongodb://localhost/testApp', { 
     promiseLibrary: require('bluebird'), 

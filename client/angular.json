@@ -25,12 +25,17 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/images"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/css/style.css",
+              "src/assets/css/ost.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/js/ost.js",
+              "src/js/jobs.js"
+            ]
           },
           "configurations": {
             "production": {

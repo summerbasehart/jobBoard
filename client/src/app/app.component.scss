@@ -1,3 +1,20 @@
 .container {
     padding: 20px;
 }
+
+.mat-toolbar{
+    font-size: small;
+    color: red;
+    text-decoration: underline;
+    height: 50px
+}
+
+#menuButton {
+    // background-color: rgba(0,0,0,0);
+    color:red
+}
+
+.mat-menu-item {
+    background-color: red;
+    color:white
+}
