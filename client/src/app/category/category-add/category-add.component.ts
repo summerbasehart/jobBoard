@@ -21,8 +21,6 @@ export class CategoryAddComponent implements OnInit {
 
   categoryForm: FormGroup;
   catName = '';
-  catDesc = '';
-  catImgUrl = '';
   catContent = '';
   isLoadingResults = false;
   matcher = new MyErrorStateMatcher();
@@ -32,8 +30,6 @@ export class CategoryAddComponent implements OnInit {
   ngOnInit() {
     this.categoryForm = this.formBuilder.group({
       catName : [null, Validators.required],
-      catDesc : [null, Validators.required],
-      catImgUrl : [null, Validators.required],
       catContent : [null, Validators.required]
     });
   }

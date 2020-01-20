@@ -16,20 +16,6 @@
           </mat-error>
         </mat-form-field>
         <mat-form-field class="example-full-width">
-          <textarea matInput placeholder="Category Desc" formControlName="catDesc"
-                 [errorStateMatcher]="matcher"></textarea>
-          <mat-error>
-            <span *ngIf="!categoryForm.get('catDesc').valid && categoryForm.get('catDesc').touched">Please enter Category Description</span>
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Category Image URL" formControlName="catImgUrl"
-                 [errorStateMatcher]="matcher">
-          <mat-error>
-            <span *ngIf="!categoryForm.get('catImgUrl').valid && categoryForm.get('catImgUrl').touched">Please enter Category Image URL</span>
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field class="example-full-width">
             <ckeditor matCkeditor placehoder="Category Content" formControlName="catContent"></ckeditor>
             <mat-error>
               <span *ngIf="!categoryForm.get('catContent').valid && categoryForm.get('catContent').touched">Please enter Category Description</span>

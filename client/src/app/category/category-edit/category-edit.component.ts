@@ -22,8 +22,6 @@ export class CategoryEditComponent implements OnInit {
   categoryForm: FormGroup;
   id = '';
   catName = '';
-  catDesc = '';
-  catImgUrl = '';
   catContent = '';
   updated: Date = null;
   isLoadingResults = false;
@@ -35,8 +33,6 @@ export class CategoryEditComponent implements OnInit {
     this.getCategory(this.route.snapshot.params.id);
     this.categoryForm = this.formBuilder.group({
       catName : [null, Validators.required],
-      catDesc : [null, Validators.required],
-      catImgUrl : [null, Validators.required],
       catContent : [null, Validators.required]
     });
   }
@@ -46,7 +42,6 @@ export class CategoryEditComponent implements OnInit {
       this.id = data.id;
       this.categoryForm.setValue({
         prod_name: data.prod_name,
-        prod_desc: data.prod_desc,
         prod_price: data.prod_price
       });
     });

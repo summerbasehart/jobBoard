@@ -10,7 +10,7 @@ import { Category } from '../category';
 })
 export class CategoryDetailsComponent implements OnInit {
 
-  category: Category = { id: null, catName: '', catDesc: '', catImgUrl: '', catContent: '', updated: null };
+  category: Category = { id: null, catName: '', catContent: '', updated: null };
   isLoadingResults = true;
 
   constructor(private route: ActivatedRoute, private api: CategoryService, private router: Router) { }
