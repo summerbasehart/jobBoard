@@ -9,7 +9,7 @@ import { Category } from './category';
 })
 export class CategoryComponent implements OnInit {
 
-  displayedColumns: string[] = ['catName', 'catDesc'];
+  displayedColumns: string[] = ['catName', 'catContent'];
   data: Category[] = [];
   isLoadingResults = true;
 
