@@ -15,10 +15,8 @@ export class PostDetailsComponent implements OnInit {
     id: '',
     postTitle: '',
     postAuthor: '',
-    postDesc: '',
     postContent: '',
     postReference: '',
-    postImgUrl: '',
     created: null,
     updated: null
   };

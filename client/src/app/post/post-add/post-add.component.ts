@@ -25,10 +25,8 @@ export class PostAddComponent implements OnInit {
   category = '';
   postTitle = '';
   postAuthor = '';
-  postDesc = '';
   postContent = '';
   postReference = '';
-  postImgUrl = '';
   isLoadingResults = false;
   matcher = new MyErrorStateMatcher();
   categories: Category[] = [];
@@ -45,10 +43,8 @@ export class PostAddComponent implements OnInit {
       category : [null, Validators.required],
       postTitle : [null, Validators.required],
       postAuthor : [null, Validators.required],
-      postDesc : [null, Validators.required],
       postContent : [null, Validators.required],
       postReference : [null, Validators.required],
-      postImgUrl : [null, Validators.required]
     });
   }
 

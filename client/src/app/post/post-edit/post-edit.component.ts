@@ -26,10 +26,8 @@ export class PostEditComponent implements OnInit {
   id = '';
   postTitle = '';
   postAuthor = '';
-  postDesc = '';
   postContent = '';
   postReference = '';
-  postImgUrl = '';
   updated: Date = null;
   isLoadingResults = false;
   matcher = new MyErrorStateMatcher();
@@ -48,10 +46,8 @@ export class PostEditComponent implements OnInit {
     this.postForm = this.formBuilder.group({
       postTitle : [null, Validators.required],
       postAuthor : [null, Validators.required],
-      postDesc : [null, Validators.required],
       postContent : [null, Validators.required],
       postReference : [null, Validators.required],
-      postImgUrl : [null, Validators.required]
     });
   }
 
@@ -61,10 +57,8 @@ export class PostEditComponent implements OnInit {
       this.postForm.setValue({
         postTitle: data.postTitle,
         postAuthor: data.postAuthor,
-        postDesc: data.postDesc,
         postContent: data.postContent,
         postReference: data.postReference,
-        postImgUrl: data.postImgUrl
       });
     });
   }
