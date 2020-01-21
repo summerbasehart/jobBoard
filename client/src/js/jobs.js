@@ -1,5 +1,3 @@
-db.posts.find({})
-
 function openLink(evt, animName) {
   var i, x, tablinks;
   x = document.getElementsByClassName("job");
