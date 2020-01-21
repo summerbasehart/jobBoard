@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../post/post';
+import { PostService } from '../post.service';
 import { HomeService } from '../home.service';
 
 @Component({
@@ -8,7 +9,16 @@ import { HomeService } from '../home.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  post: Post = {
+    category: '',
+    id: '',
+    postTitle: '',
+    postAuthor: '',
+    postContent: '',
+    postReference: '',
+    created: null,
+    updated: null
+  };
   posts: Post[] = [];
   isLoadingResults = true;
 

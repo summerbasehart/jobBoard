@@ -8,7 +8,7 @@
       <h3>Current OST Advantage Employees Only</h3>
       <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit(loginForm.value)">
         <mat-form-field class="example-full-width">
-          <input class="form-control" matInput type="email" placeholder="Admin Username" formControlName="username" [errorStateMatcher]="matcher" ng-pattern="/^[A-Za-z0-9._%+-]+@ostadvantage.com$/">
+          <input class="form-control" matInput type="email" placeholder="Admin Username" formControlName="username" [errorStateMatcher]="matcher">
           <mat-error>
             <span *ngIf="!loginForm.get('username').valid && loginForm.get('username').touched">Please enter your username, must be a valid OST advantage employee username</span>
           </mat-error>

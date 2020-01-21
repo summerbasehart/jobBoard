@@ -3,7 +3,7 @@
   var app = angular.module('form-example-modify-validators', []);
   
   app.directive('overwriteEmail', function() {
-    var EMAIL_REGEXP = /^[a-z0-9!#$%&'*+/=?^_`{|}~.-]+@ostadvantage\.com$/i;
+    var EMAIL_REGEXP = /^[a-z]+@ostadvantage\.com$/i;
   
     return {
       require: '?ngModel',
