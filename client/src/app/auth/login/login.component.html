@@ -8,7 +8,7 @@
       <h3>Current OST Advantage Employees Only</h3>
       <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit(loginForm.value)">
         <mat-form-field class="example-full-width">
-          <input class="form-control" matInput type="email" placeholder="Admin Username" formControlName="username" [errorStateMatcher]="matcher">
+          <input class="form-control" matInput type="email" placeholder="Admin Email" formControlName="username" [errorStateMatcher]="matcher">
           <mat-error>
             <span *ngIf="!loginForm.get('username').valid && loginForm.get('username').touched">Please enter your username, must be a valid OST advantage employee username</span>
           </mat-error>
@@ -19,10 +19,9 @@
             <span *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">Please enter your password</span>
           </mat-error>
         </mat-form-field>
-        <div class="button">
-          <button type="submit" [disabled]="!loginForm.valid" mat-flat-button color="primary">Login</button>
-          <span class="register">New here? <button type="button" mat-flat-button color="primary" (click)="register()">Register</button></span>
-        </div>
+        <span class="button-row">
+          <button type="submit" mat-flat-button color="primary">Login</button></span><span class="button-row">
+          <span class="register">New here? <button type="button" mat-flat-button color="primary" (click)="register()">Register</button></span></span>
       </form>
     </mat-card>
   </div>
