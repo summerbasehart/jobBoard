@@ -19,7 +19,7 @@
       <div class="tab">
         <input id="tab-1" type="radio" name="tab-group-1" checked="" />
         <label for="tab-1">Employee </label>
-        <div class="content" *ngFor="let post of posts">
+        <div class="content">
           <div class="row">
             <div class="container">
               <div class="col-md-12 open">
@@ -30,16 +30,16 @@
           <div class="example-loading-shade" *ngIf="isLoadingResults">
             <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
           </div>
-          <div class="row" [routerLink]="['/details/', post._id]" >
-            <div class="col-md-2" id="jobNames">
+          <div class="row" >
+            <div class="col-md-2" id="jobNames" >
               <div class="w3-bar w3-black">
-                <button class="w3-bar-item w3-button tablink" ng-click="openLink(event, 'post._id' )">{{post.postTitle}}</button>
+                <button class="w3-bar-item w3-button tablink" *ngFor="let post of posts" (click)="selectPost(post)">{{post.postTitle}}</button>
               </div>
             </div>
             <div class="col-md-10" id="jobContainer">
-              <div class="job w3-container w3-animate-opacity" id="{{post._id}}">
-                <h3 class="jobSections">Date Posted: {{post.updated | date: 'dd MMM yyyy'}}</h3>
-                <p [innerHTML]="post.postContent"></p>
+              <div class="job w3-container w3-animate-opacity" id="{{selectedPost.postTitle}}">
+                <h3 class="jobSections">Date Posted: {{selectedPost.updated | date: 'dd MMM yyyy'}}</h3>
+                {{selectedPost.postContent}}
               </div>
             </div>
           </div>
@@ -89,12 +89,10 @@
                       happened
                       when it came
                       to submitting this form</div>
-                    <!-- Displays status when submitting form-->
-                    <!-- .col-->
                   </div>
                 </form>
               </div>
-            </div>
+            </div> 
           </div>
         </div>
       </div>
@@ -219,3 +217,9 @@
       </div>
     </div>
 
+<script>
+var id = post._id;
+collection.findOne({name: value}, function(err, item) {
+    res.send(item);
+});
+</script>
