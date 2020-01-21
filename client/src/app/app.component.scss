@@ -2,15 +2,23 @@
     padding: 20px;
 }
 
-.mat-toolbar{
+.mat-toolbar {
+    margin-left: 75%;
+}
+
+.mat-button{
     font-size: small;
     color: red;
     text-decoration: underline;
-    height: 50px
+    height: 50px;
+    background-color: rgba(0,0,0,0);
+}
+
+.mat-button:hover {
+    cursor: pointer;
 }
 
 #menuButton {
-    // background-color: rgba(0,0,0,0);
     color:red
 }
 

@@ -23,3 +23,13 @@
 .register {
     float:right
 }
+
+.link{
+    text-decoration: none !important;
+    color:red !important; 
+}
+.link:hover{
+    text-decoration: underline !important;
+    color: gold !important;
+    cursor: pointer !important;
+}

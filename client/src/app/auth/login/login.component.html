@@ -1,28 +1,33 @@
 <div class="container mainContainer">
-<div class="example-container mat-elevation-z8">
-    <div class="example-loading-shade"
-         *ngIf="isLoadingResults">
+  <div class="example-container mat-elevation-z8">
+    <div class="example-loading-shade" *ngIf="isLoadingResults">
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
     <mat-card class="example-card">
       <h3>Current OST Advantage Employees Only</h3>
       <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit(loginForm.value)">
         <mat-form-field class="example-full-width">
-          <input class="form-control" matInput type="email" placeholder="Admin Email" formControlName="username" [errorStateMatcher]="matcher">
+          <input class="form-control" matInput type="email" placeholder="Admin Email" formControlName="username"
+            [errorStateMatcher]="matcher">
           <mat-error>
-            <span *ngIf="!loginForm.get('username').valid && loginForm.get('username').touched">Please enter your username, must be a valid OST advantage employee username</span>
+            <span *ngIf="!loginForm.get('username').valid && loginForm.get('username').touched">Please enter your
+              username, must be a valid OST advantage employee username</span>
           </mat-error>
         </mat-form-field>
         <mat-form-field class="example-full-width">
-          <input class="form-control" matInput type="password" placeholder="Password" formControlName="password"[errorStateMatcher]="matcher">
+          <input class="form-control" matInput type="password" placeholder="Password" formControlName="password"
+            [errorStateMatcher]="matcher">
           <mat-error>
-            <span *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">Please enter your password</span>
+            <span *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">Please enter your
+              password</span>
           </mat-error>
         </mat-form-field>
         <span class="button-row">
-          <button type="submit" mat-flat-button color="primary">Login</button></span><span class="button-row">
-          <span class="register">New here? <button type="button" mat-flat-button color="primary" (click)="register()">Register</button></span></span>
+          <button type="submit" mat-flat-button color="primary">Login</button></span><span class="button-row"></span>
+
       </form>
+      <p>New here? <a class="link" (click)="register()">Register</a> </p>
+      <p>Here by mistake? Go back <a class="link" [routerLink]="['/']">Home</a></p>
     </mat-card>
   </div>
 </div>
