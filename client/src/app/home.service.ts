@@ -45,6 +45,14 @@ export class HomeService {
     );
   }
 
+  getPostsHome(tabName: string): Observable<Post[]> {
+    return this.http.get<Post[]>(apiUrl + 'post?tabName='+tabName)
+      .pipe(
+        tap(_ => this.log('fetched Posts')),
+        catchError(this.handleError('getPostsHome', []))
+      );
+  } 
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 
