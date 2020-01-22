@@ -54,14 +54,14 @@ h2 {
 }
 
 h3 {
-	font-size: 22px;
+	font-size: 1.25em;
 	text-transform: uppercase;
-	margin: 25px 10px 20px;
-	text-shadow: 0 5px black;
+	margin: 2% 1% 2%;
+	text-shadow: 0 2px red;
 }
 
 h4 {
-	font-size: 16px;
+	font-size: 1em;
     margin: 20px 10px 20px;
 }
 
@@ -142,9 +142,9 @@ p {
 .form-control {
 	background: #FFF;
 	border: 2px solid #D8E1E4;
-	height: 54px;
+	height: 1%;
 	font-size: 14px;
-	padding: 15px;
+	padding: 2%;
 }
 
 .input-lg, .form-horizontal .form-group-lg .form-control {
@@ -253,7 +253,7 @@ p {
 .btn-custom-1-inverse, .btn-custom-2-inverse {
 	background: red;
 	border: 2px darkred;
-	padding: 15px 25px;
+	padding: 1% 2%;
 	color: black;
 	display: block;
 }

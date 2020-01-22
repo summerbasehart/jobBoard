@@ -1,225 +1,211 @@
-  
-    <div class="row rowOne">
-      <div class="container">
+<div class="row rowOne">
+  <div class="container">
+    <div class="col-md-12">
+      <h3 class="text-center ">JOIN OST AND BECOME A PART OF A WINNING TEAM!</h3>
+      <p class="text-center">We are seeking Independent Owner/Operators with HIGH CUBE box trucks to join our
+        team.
+        This
+        unique business opportunity is ideal for someone that has experience in the home delivery and/or moving
+        business.
+        As an Independent Owner/Operator you will run a two man crew providing high quality home deliveries. We
+        proudly represent
+        our customers by showing extraordinary care, respect, and courtesy to their customers!
+      </p>
+    </div>
+  </div>
+</div>
+<div class="tabs">
+  <div class="tab">
+    <input id="tab-1" type="radio" name="tab-group-1" checked="" />
+    <label for="tab-1">Employee </label>
+    <div class="content">
+      <div class="col-md-12 open">
+        <h3>Open Positions:</h3>
+      </div>
+      <div class="example-loading-shade" *ngIf="isLoadingResults">
+        <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+      </div>
+      <div class="row">
+        <div class="col-md-2" id="jobNames">
+          <div class="w3-bar w3-black">
+            <button class="w3-bar-item w3-button tablink" *ngFor="let post of posts"
+              (click)="selectPost(post)">{{post.postTitle}}</button>
+          </div>
+        </div>
+        <div class="col-md-10" id="jobContainer">
+          <div class="job w3-container w3-animate-opacity" id="{{selectedPost.postTitle}}">
+            <h3 class="jobSections">Date Posted: {{selectedPost.updated | date: 'dd MMM yyyy'}}</h3>
+            {{selectedPost.postContent}}
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-md-12">
-          <h3 class="text-center ">JOIN OST AND BECOME A PART OF A WINNING TEAM!</h3>
-          <p class="text-center">We are seeking Independent Owner/Operators with HIGH CUBE box trucks to join our
-            team.
-            This
-            unique business opportunity is ideal for someone that has experience in the home delivery and/or moving
-            business.
-            As an Independent Owner/Operator you will run a two man crew providing high quality home deliveries. We
-            proudly represent
-            our customers by showing extraordinary care, respect, and courtesy to their customers!
-          </p>
+          <h4>Employment Application</h4>
+          <form id="employment-form" novalidate="novalidate" name="employForm">
+            <div class="ajax-hidden">
+              <div class="form-group">
+                <input class="form-control" name="" placeholder="Name" ng-model="" required="required" />
+              </div>
+            </div>
+            <div class="form-group">
+              <select class="form-control">
+                <option value="{{post.postTitle}}" selected="selected">{{post.postTitle}}</option>
+                <option value="-- Position --" selected="selected">-- Position --</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="email" name="c_email" placeholder="E-mail" ng-model=""
+                required="required" />
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="phone" name="" placeholder="Phone" ng-model="" required="required" />
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="" rows="1" placeholder="Address Line 1 (include Unit/Apt)"
+                ng-model=""></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="" rows="1" placeholder="Address Line 2" ng-model=""></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="" rows="6" placeholder="Paste your resume here"
+                ng-model=""></textarea>
+            </div>
+            <div class="form-group submit-button text-center"><a class="btn btn-custom-1-inverse" ng-click=""
+                ng-disabled="">Send it &nbsp;<i class="fa fa-refresh fa-spin" ng-show="emailing"></i></a></div>
+            <div class="form-group">
+              <div class="alert alert-success" ng-show="emailed">Thank you for your interest!
+                We
+                will be
+                reaching out to you as soon as we can.</div>
+              <div class="alert alert-danger" ng-show="emailError">We are sorry, something
+                happened
+                when it came
+                to submitting this form</div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-    <div class="tabs">
-      <div class="tab">
-        <input id="tab-1" type="radio" name="tab-group-1" checked="" />
-        <label for="tab-1">Employee </label>
-        <div class="content">
-          <div class="row">
-            <div class="container">
-              <div class="col-md-12 open">
-                <h3>Open Positions:</h3>
-              </div>
-            </div>
-          </div>
-          <div class="example-loading-shade" *ngIf="isLoadingResults">
-            <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
-          </div>
-          <div class="row" >
-            <div class="col-md-2" id="jobNames" >
-              <div class="w3-bar w3-black">
-                <button class="w3-bar-item w3-button tablink" *ngFor="let post of posts" (click)="selectPost(post)">{{post.postTitle}}</button>
-              </div>
-            </div>
-            <div class="col-md-10" id="jobContainer">
-              <div class="job w3-container w3-animate-opacity" id="{{selectedPost.postTitle}}">
-                <h3 class="jobSections">Date Posted: {{selectedPost.updated | date: 'dd MMM yyyy'}}</h3>
-                {{selectedPost.postContent}}
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="container">
-              <div class="col-md-12">
-                <h4>Employment Application</h4>
-                <form id="employment-form" novalidate="novalidate" name="employForm">
-                  <div class="ajax-hidden">
-                    <div class="form-group">
-                      <input class="form-control" name="" placeholder="Name" ng-model="" required="required" />
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <select class="form-control">
-                      <option value="{{post.postTitle}}" selected="selected">{{post.postTitle}}</option>
-                      <option value="-- Position --" selected="selected">-- Position --</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" type="email" name="c_email" placeholder="E-mail" ng-model=""
-                      required="required" />
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" type="phone" name="" placeholder="Phone" ng-model=""
-                      required="required" />
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" name="" rows="1" placeholder="Address Line 1 (include Unit/Apt)"
-                      ng-model=""></textarea>
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" name="" rows="1" placeholder="Address Line 2" ng-model=""></textarea>
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" name="" rows="6" placeholder="Paste your resume here"
-                      ng-model=""></textarea>
-                  </div>
-                  <div class="form-group submit-button text-center"><a class="btn btn-custom-1-inverse" ng-click=""
-                      ng-disabled="">Send it &nbsp;<i class="fa fa-refresh fa-spin" ng-show="emailing"></i></a></div>
-                  <div class="form-group">
-                    <div class="alert alert-success" ng-show="emailed">Thank you for your interest!
-                      We
-                      will be
-                      reaching out to you as soon as we can.</div>
-                    <div class="alert alert-danger" ng-show="emailError">We are sorry, something
-                      happened
-                      when it came
-                      to submitting this form</div>
-                  </div>
-                </form>
-              </div>
-            </div> 
-          </div>
+  </div>
+  <div class="tab">
+    <input id="tab-2" type="radio" name="tab-group-1" />
+    <label for="tab-2">Contractor </label>
+    <div class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Why join OST:</h3>
+          <ul>
+            <li>STRENGTH!
+              <ul>
+                <li>We service some of the largest retailers in the United States!</li>
+              </ul>
+            </li>
+            <li>COMPENSATION!
+              <ul>
+                <li>We offer some of the most competitive settlement packages in the industry!</li>
+                <li>We gladly pay out monthly bonuses!</li>
+                <li>We offer volume pricing for some goods and services lowering your monthly costs!</li>
+              </ul>
+            </li>
+            <li>LOCAL ROUTES – NO OVERNIGHTS!</li>
+            <li>NO CDL REQUIRED!</li>
+            <li>SIGNING BONUS!</li>
+            <li>BUSINESS EXPANSION OPPORTUNITIES!</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Independent Contract Carrier Requirements:</h3>
+          <ul>
+            <li>Own or lease a late model 24ft or 26ft box truck in good condition</li>
+            <li>Must be able to deliver and install all types of furniture and appliances</li>
+            <li>Must have or be able to obtain your own Operating Authority (CA # / USDOT #)</li>
+            <li>Must have or establish an LLC or Corporation with the Secretary of State</li>
+            <li>Must have the ability to provide proof of insurance</li>
+            <li>Must be able to provide a background check</li>
+            <li>Ability to lift, move and assemble merchandise</li>
+            <li>Provide own tools necessary to perform deliveries and installations</li>
+            <li>Must be able to communicate well with customers (must speak and understand English)</li>
+          </ul>
         </div>
       </div>
-      <div class="tab">
-        <input id="tab-2" type="radio" name="tab-group-1" />
-        <label for="tab-2">Contractor </label>
-        <div class="content">
-          <div class="row">
-            <div class="container">
-              <div class="col-md-12">
-                <h3>Why join OST:</h3>
-                <ul>
-                  <li>STRENGTH!
-                    <ul>
-                      <li>We service some of the largest retailers in the United States!</li>
-                    </ul>
-                  </li>
-                  <li>COMPENSATION!
-                    <ul>
-                      <li>We offer some of the most competitive settlement packages in the industry!</li>
-                      <li>We gladly pay out monthly bonuses!</li>
-                      <li>We offer volume pricing for some goods and services lowering your monthly costs!</li>
-                    </ul>
-                  </li>
-                  <li>LOCAL ROUTES – NO OVERNIGHTS!</li>
-                  <li>NO CDL REQUIRED!</li>
-                  <li>SIGNING BONUS!</li>
-                  <li>BUSINESS EXPANSION OPPORTUNITIES!</li>
-                </ul>
+      <div class="row">
+        <div class="col-md-12">
+          <p>For information regarding this opportunity, please submit your contact information below or call
+            Ernesto Gomez direct at (951) 366-0276.</p>
+        </div>
+        <div class="col-md-12">
+          <p>For information regarding NORTHERN CALIFORNIA opportunity, please submit your contact information
+            below
+            or call John Roberts direct at (562) 479-1971.</p>
+        </div>
+      </div>
+      <div class="row" ng-controller="ostJoinCtrl">
+        <div class="col-md-12">
+          <h4>Join OST Today!</h4>
+          <form id="contact-form" novalidate="novalidate" name="joinForm">
+            <div class="ajax-hidden">
+              <div class="form-group">
+                <input class="form-control" id="c_name" name="c_name" placeholder="Name" ng-model="newContact.name"
+                  required="required" />
+                <div class="alert alert-danger" ng-show="joinForm.c_name.$error.required && joinForm.c_name.$dirty">
+                  Name is a required field.
+                </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="container">
-              <div class="col-md-12">
-                <h3>Independent Contract Carrier Requirements:</h3>
-                <ul>
-                  <li>Own or lease a late model 24ft or 26ft box truck in good condition</li>
-                  <li>Must be able to deliver and install all types of furniture and appliances</li>
-                  <li>Must have or be able to obtain your own Operating Authority (CA # / USDOT #)</li>
-                  <li>Must have or establish an LLC or Corporation with the Secretary of State</li>
-                  <li>Must have the ability to provide proof of insurance</li>
-                  <li>Must be able to provide a background check</li>
-                  <li>Ability to lift, move and assemble merchandise</li>
-                  <li>Provide own tools necessary to perform deliveries and installations</li>
-                  <li>Must be able to communicate well with customers (must speak and understand English)</li>
-                </ul>
-              </div>
+            <div class="form-group">
+              <input class="form-control" id="c_company" ng-model="newContact.company" name="c_company"
+                placeholder="Company" />
             </div>
-          </div>
-          <div class="row">
-            <div class="container">
-              <div class="col-md-12">
-                <p>For information regarding this opportunity, please submit your contact information below or call
-                  Ernesto Gomez direct at (951) 366-0276.</p>
-              </div>
-              <div class="col-md-12">
-                <p>For information regarding NORTHERN CALIFORNIA opportunity, please submit your contact information
-                  below
-                  or call John Roberts direct at (562) 479-1971.</p>
-              </div>
+            <div class="form-group">
+              <input class="form-control" id="c_email" type="email" name="c_email" placeholder="E-mail"
+                ng-model="newContact.email" required="required" />
+              <div class="alert alert-danger" ng-show="joinForm.c_email.$error.required && joinForm.c_email.$dirty">
+                Email is a
+                required
+                field.</div>
             </div>
-          </div>
-          <div class="row" ng-controller="ostJoinCtrl">
-            <div class="container">
-              <div class="col-md-12">
-                <h4>Join OST Today!</h4>
-                <form id="contact-form" novalidate="novalidate" name="joinForm">
-                  <div class="ajax-hidden">
-                    <div class="form-group">
-                      <input class="form-control" id="c_name" name="c_name" placeholder="Name"
-                        ng-model="newContact.name" required="required" />
-                      <div class="alert alert-danger"
-                        ng-show="joinForm.c_name.$error.required && joinForm.c_name.$dirty">Name is a required field.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="c_company" ng-model="newContact.company" name="c_company"
-                      placeholder="Company" />
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="c_email" type="email" name="c_email" placeholder="E-mail"
-                      ng-model="newContact.email" required="required" />
-                    <div class="alert alert-danger"
-                      ng-show="joinForm.c_email.$error.required && joinForm.c_email.$dirty">Email is a
-                      required
-                      field.</div>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="c_phone" type="phone" name="c_phone" placeholder="Phone"
-                      ng-model="newContact.phone" required="required" />
-                    <div class="alert alert-danger"
-                      ng-show="joinForm.c_phone.$error.required && joinForm.c_phone.$dirty">Phone is a
-                      required
-                      field.</div>
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" id="c_message" name="c_message" rows="6" placeholder="Your message"
-                      ng-model="newContact.message"></textarea>
-                  </div>
-                  <div class="form-group submit-button"><a class="btn btn-custom-1-inverse" ng-click="joinOST()"
-                      ng-disabled="joinForm.$invalid">Send it &nbsp;<i class="fa fa-refresh fa-spin"
-                        ng-show="emailing"></i></a></div>
-                  <div class="form-group">
-                    <div class="alert alert-success" ng-show="emailed">Thank you for your interest!
-                      We
-                      will be reaching
-                      out to you as soon as we can.</div>
-                    <div class="alert alert-danger" ng-show="emailError">We are sorry, something
-                      happened
-                      when it came to
-                      emailing us</div>
-                    <!-- Displays status when submitting form-->
-                    <!-- .col-->
-                  </div>
-                </form>
-              </div>
+            <div class="form-group">
+              <input class="form-control" id="c_phone" type="phone" name="c_phone" placeholder="Phone"
+                ng-model="newContact.phone" required="required" />
+              <div class="alert alert-danger" ng-show="joinForm.c_phone.$error.required && joinForm.c_phone.$dirty">
+                Phone is a
+                required
+                field.</div>
             </div>
-          </div>
+            <div class="form-group">
+              <textarea class="form-control" id="c_message" name="c_message" rows="6" placeholder="Your message"
+                ng-model="newContact.message"></textarea>
+            </div>
+            <div class="form-group submit-button"><a class="btn btn-custom-1-inverse" ng-click="joinOST()"
+                ng-disabled="joinForm.$invalid">Send it &nbsp;<i class="fa fa-refresh fa-spin"
+                  ng-show="emailing"></i></a></div>
+            <div class="form-group">
+              <div class="alert alert-success" ng-show="emailed">Thank you for your interest!
+                We
+                will be reaching
+                out to you as soon as we can.</div>
+              <div class="alert alert-danger" ng-show="emailError">We are sorry, something
+                happened
+                when it came to
+                emailing us</div>
+              <!-- Displays status when submitting form-->
+              <!-- .col-->
+            </div>
+          </form>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
 <script>
-var id = post._id;
-collection.findOne({name: value}, function(err, item) {
+  var id = post._id;
+  collection.findOne({ name: value }, function (err, item) {
     res.send(item);
-});
+  });
 </script>

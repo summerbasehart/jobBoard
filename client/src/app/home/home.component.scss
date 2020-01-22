@@ -17,9 +17,20 @@
     left: 1px; 
     top: -29px;
     -webkit-transition: background-color .17s linear;
-    font-size: 20px;
     cursor: pointer;
     font-weight: bold;
+    @media screen and (min-width: 601px) {
+        div.example {
+          font-size: 22px;
+        }
+      }
+      
+      /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+      @media screen and (max-width: 600px) {
+        div.example {
+          font-size: 10px;
+        }
+      }
 }
 
 .tab [type=radio] {
@@ -56,7 +67,7 @@
 }
 
 #jobContainer {
-    height: 400px;
+    min-height: 300px;
     overflow: scroll;
     background-color: #181818;
     padding: 15px;
@@ -83,9 +94,11 @@
 }
 
 select.form-control {
-    height:54px !important;
+    min-height:2% !important;
+    max-height:4% !important;
 }
 
 textarea.form-control {
-    height: auto;
+    min-height: 5rem;
+    max-height: 7rem;
 }

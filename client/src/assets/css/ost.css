@@ -58,7 +58,7 @@ body {
 
 ul {
     color: white;
-    padding-inline-start: 50px !important;
+    padding-inline-start: 2% !important;
 }
 li {
     padding-bottom: 5px;
@@ -135,13 +135,6 @@ li {
     padding: 10px;
     border: 2px solid #181818;
     cursor: pointer;
-}
-
-#jobContainer {
-    height: 400px;
-    overflow: scroll;
-    background-color: #181818;
-    padding: 15px;
 }
 
 .jobName {
