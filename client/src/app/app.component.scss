@@ -3,8 +3,8 @@
 }
 
 .mat-toolbar {
-    width: 50%;
-    float: right
+    width: min-content;
+    margin: 0 auto;
 }
 
 .mat-button{
@@ -13,6 +13,7 @@
     text-decoration: underline;
     height: 50px;
     background-color: rgba(0,0,0,0);
+    margin: 0 auto
 }
 
 .mat-button:hover {
