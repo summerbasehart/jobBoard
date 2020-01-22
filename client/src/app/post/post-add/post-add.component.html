@@ -9,48 +9,27 @@
     <mat-card class="card">
       <form [formGroup]="postForm" (ngSubmit)="onFormSubmit()">
         <mat-form-field class="example-full-width">
-          <mat-select formControlName="category" [errorStateMatcher]="matcher">
-            <mat-option *ngFor="let cat of categories" [value]="cat._id">
+          <select formControlName="category">
+            <option *ngFor="let cat of categories" [value]="cat._id" required>
               {{cat.catName}}
-            </mat-option>
-          </mat-select>
-          <mat-error>
-            <span *ngIf="!postForm.get('category').valid && postForm.get('category').touched">Please select Category</span>
-          </mat-error>
+            <option>
+          </select>
         </mat-form-field>
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Post Title" formControlName="postTitle"
-                  [errorStateMatcher]="matcher">
-          <mat-error>
-            <span *ngIf="!postForm.get('postTitle').valid && postForm.get('postTitle').touched">Please enter Post Title</span>
-          </mat-error>
+          <input matInput placeholder="Post Title" formControlName="postTitle" [errorStateMatcher]="matcher" required>       
         </mat-form-field>
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Post Author" formControlName="postAuthor"
-                  [errorStateMatcher]="matcher">
-          <mat-error>
-            <span *ngIf="!postForm.get('postAuthor').valid && postForm.get('postAuthor').touched">Please enter Post Author</span>
-          </mat-error>
+          <input matInput placeholder="Post Author" formControlName="postAuthor"[errorStateMatcher]="matcher" required>
         </mat-form-field>
         <mat-form-field class="example-full-width">
-            <ckeditor placeholder="Post Qualifications" formControlName="postQualifications"></ckeditor>
-            <mat-error>
-              <span *ngIf="!postForm.get('postQualifications').valid && postForm.get('postQualifications').touched">Please enter Post Content</span>
-            </mat-error>
+            <ckeditor matCkeditor placeholder="Post Qualifications" formControlName="postQualifications" required></ckeditor>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <ckeditor matCkeditor placehoder="Duties and Benefits" formControlName="postDescription"></ckeditor>
-            <mat-error>
-              <span *ngIf="!postForm.get('postDescription').valid && postForm.get('postDescription').touched">Please enter Post Content</span>
-            </mat-error>
+            <ckeditor matCkeditor placeholder="Duties and Benefits" formControlName="postDescription" required></ckeditor>
           </mat-form-field>
         <div class="button-row">
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Post Reference" formControlName="postReference"
-                  [errorStateMatcher]="matcher">
-          <mat-error>
-            <span *ngIf="!postForm.get('postReference').valid && postForm.get('postReference').touched">Please enter Post Ref</span>
-          </mat-error>
+          <input matInput placeholder="Post Reference" formControlName="postReference" [errorStateMatcher]="matcher" rerquired>
         </mat-form-field>
           <button type="submit" [disabled]="!postForm.valid" mat-flat-button color="primary"><mat-icon>save</mat-icon></button>
         </div>

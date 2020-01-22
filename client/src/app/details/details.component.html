@@ -1,15 +1,25 @@
-  <div class="example-container mat-elevation-z8">
+  <div>
     <div class="example-loading-shade"
          *ngIf="isLoadingResults">
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
     <div class="row" [routerLink]="['/details/', post.id]">
-      <div class="col-md-3">
+      <div class="col-md-2">
         <h3>{{post.postTitle}}</h3>
-        <h4>By: {{post.postAuthor}}, {{post.updated | date: 'dd MMM yyyy'}}</h4>
+        <h4>Contact: {{post.postReference}}</h4>
+        <h4>{{post.updated | date: 'dd MMM yyyy'}}</h4>
       </div>
-      <div class="col-md-9" [innerHTML]="post.postQualifications" >  </div>
-      <div class="col-md-9" [innerHTML]="post.postDescription" >  </div>
+      <div class="col-md-5">
+        <h4>Qualifications</h4>
+        <p [innerHTML]="post.postQualifications" ></p>
+      </div>
+      <div class="col-md-5">
+        <h4>Description</h4>
+        <p [innerHTML]="post.postDescription" ></p>
+      </div>
       <mat-card-actions></mat-card-actions>
+      <hr>
     </div>
   </div>
+
+  

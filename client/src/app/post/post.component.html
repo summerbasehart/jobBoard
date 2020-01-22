@@ -1,24 +1,25 @@
-<div class="dashboard" > 
+<div class="dashboard">
   <div class="example-loading-shade"
         *ngIf="isLoadingResults">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
   </div>
   <div class="button-row">
-    <a mat-flat-button [routerLink]="['add']">Add Post</a>
+    <a mat-flat-button color="primary" [routerLink]="['add']"><mat-icon>add</mat-icon></a>
   </div>
-  <div>
-    <table mat-table [dataSource]="data" class="example-table" matSort matSortActive="postName" matSortDisableClear matSortDirection="asc">
+  <div >
+    <table mat-table [dataSource]="data" class="example-table"
+            matSort matSortActive="postTitle" matSortDisableClear matSortDirection="asc">
 
       <!-- Post Name Column -->
-      <ng-container matColumnDef="postName">
-        <th mat-header-cell *matHeaderCellDef>Post Name</th>
-        <td mat-cell *matCellDef="let row">{{row.postName}}</td>
+      <ng-container matColumnDef="postTitle">
+        <th mat-header-cell *matHeaderCellDef>Job Title</th>
+        <td mat-cell *matCellDef="let row">{{row.postTitle}}</td>
       </ng-container>
 
       <!-- Post Description Column -->
-      <ng-container matColumnDef="postContent">
-        <th mat-header-cell *matHeaderCellDef>Post Description</th>
-        <td mat-cell *matCellDef="let row">{{row.postContent}}</td>
+      <ng-container matColumnDef="postDesc">
+        <th mat-header-cell *matHeaderCellDef>Posted</th>
+        <td mat-cell *matCellDef="let row">{{row.updated}}</td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
