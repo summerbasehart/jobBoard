@@ -37,7 +37,7 @@
             <h3 class="jobSections">{{selectedPost.postTitle}} --  Date Posted: {{selectedPost.updated | date: 'dd MMM yyyy'}}</h3>
             <p innerHTML={{selectedPost.postQualifications}}></p>
             <p innerHTML={{selectedPost.postDescription}}></p>
-            <p>Contact {{selectedPost.postReference}} for additional information.</p>
+            <p innerHTML={{selectedPost.postReference}}></p>
           </div>
         </div>
       </div>
@@ -51,8 +51,9 @@
               </div>
             </div>
             <div class="form-group">
-              <select class="form-control" placeholder="position" *ngFor="let post of posts">
-                <option value="{{post.postTitle}}">{{post.postTitle}}</option>
+              <select class="form-control" placeholder="position" >
+                <option value="{{post.postTitle}}" *ngFor="let post of posts">{{post.postTitle}}</option>
+                <option value="no position selected">--select a position--</option>
               </select>
             </div>
             <div class="form-group">
