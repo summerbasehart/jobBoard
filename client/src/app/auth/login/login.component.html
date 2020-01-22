@@ -1,12 +1,13 @@
-  <div class="example-container mat-elevation-z8">
+  <div>
     <div class="example-loading-shade" *ngIf="isLoadingResults">
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
-    <mat-card class="example-card">
+    <div>
       <h3>Current OST Advantage Employees Only</h3>
       <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit(loginForm.value)">
         <mat-form-field class="example-full-width">
-          <input class="form-control" matInput type="email" placeholder="Admin Email" formControlName="username"
+          <label for="email">Admin Email</label>
+          <input class="form-control" matInput type="email" formControlName="username"
             [errorStateMatcher]="matcher">
           <mat-error>
             <span *ngIf="!loginForm.get('username').valid && loginForm.get('username').touched">Please enter your
@@ -14,7 +15,8 @@
           </mat-error>
         </mat-form-field>
         <mat-form-field class="example-full-width">
-          <input class="form-control" matInput type="password" placeholder="Password" formControlName="password"
+          <label for="password">Password</label>
+          <input class="form-control" matInput type="password" formControlName="password"
             [errorStateMatcher]="matcher">
           <mat-error>
             <span *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">Please enter your
@@ -22,10 +24,11 @@
           </mat-error>
         </mat-form-field>
         <span class="button-row">
-          <button type="submit"  [disabled]="!loginForm.valid" mat-flat-button color="primary">Login</button></span><span class="button-row"></span>
-
+          <button type="submit" value="Submit" [disabled]="!loginForm.valid" class="btn btn-block" >Login</button></span><span class="button-row">
+            <br>
+            <p>New here? <a class="link" (click)="register()">Register</a> </p>
+            <p>Here by mistake? Go back <a class="link" [routerLink]="['/']">Home</a></p>
+            </span>
       </form>
-      <p>New here? <a class="link" (click)="register()">Register</a> </p>
-      <p>Here by mistake? Go back <a class="link" [routerLink]="['/']">Home</a></p>
-    </mat-card>
+    </div>
   </div>

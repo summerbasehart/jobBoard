@@ -1,4 +1,4 @@
-<div class="example-container mat-elevation-z8">
+<div class="dashboard" >
     <div class="example-loading-shade"
           *ngIf="isLoadingResults">
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
@@ -6,7 +6,7 @@
     <div class="button-row">
       <a mat-flat-button color="primary" (click)="categoryDetails()"><mat-icon>list</mat-icon></a>
     </div>
-    <mat-card class="example-card">
+    <mat-card class="example-card dashboard">
       <form [formGroup]="categoryForm" (ngSubmit)="onFormSubmit()">
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Category Name" formControlName="catName"

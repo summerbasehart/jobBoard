@@ -1,13 +1,14 @@
+
 .container {
     padding: 0.5%;
 }
 
-.mat-toolbar {
+.toolbarOne{
     width: min-content;
     margin: 0 auto;
 }
 
-.mat-button{
+.toolbarButtonOne{
     font-size: small;
     color: red;
     text-decoration: underline;
@@ -16,7 +17,33 @@
     margin: 0 auto
 }
 
+.toolbarTwo{
+    width: min-content;
+    margin: 0 auto;
+}
+
+.toolbarButtonTwo{
+    font-size: small;
+    color: red;
+    text-decoration: underline;
+    height: 50px;
+    background-color: rgba(0,0,0);
+    margin: 0 auto
+}
+
 .mat-button:hover {
+    cursor: pointer;
+}
+
+.navbar-text {
+    margin:0 30px;
+}
+
+.navbar-text:hover {
+    cursor: pointer;
+}
+
+.nav-item:hover {
     cursor: pointer;
 }
 
@@ -25,6 +52,20 @@
 }
 
 .mat-menu-item {
-    background-color: red;
-    color:white
+    color:red;
+    margin: auto
+}
+
+.mat-menu {
+    height: 100% !important;
+    width: 25% !important;
+    margin: 0 auto !important;
+}
+
+.dashboard {
+    background-image: linear-gradient(0deg, rgba(255, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://images.unsplash.com/photo-1541969487406-1f1adf3884ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1955&q=80);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 500px;
 }

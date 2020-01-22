@@ -1,4 +1,4 @@
-<div class="example-container mat-elevation-z8">
+<div class="dashboard" >
     <div class="example-loading-shade"
           *ngIf="isLoadingResults">
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
@@ -6,7 +6,7 @@
     <div class="button-row">
       <a mat-flat-button color="primary" [routerLink]="['/post']"><mat-icon>list</mat-icon></a>
     </div>
-    <mat-card class="example-card">
+    <mat-card class="card">
       <form [formGroup]="postForm" (ngSubmit)="onFormSubmit()">
         <mat-form-field class="example-full-width">
           <mat-select formControlName="category" [errorStateMatcher]="matcher">
@@ -33,7 +33,7 @@
           </mat-error>
         </mat-form-field>
         <mat-form-field class="example-full-width">
-            <ckeditor matCkeditor placehoder="Post Qualifications" formControlName="postQualifications"></ckeditor>
+            <ckeditor placeholder="Post Qualifications" formControlName="postQualifications"></ckeditor>
             <mat-error>
               <span *ngIf="!postForm.get('postQualifications').valid && postForm.get('postQualifications').touched">Please enter Post Content</span>
             </mat-error>

@@ -5,28 +5,38 @@
         Service<span>&nbsp;<b>FIRST!</b></span></h2>
     </div>
   </div>
+
   <div class="container mainContainer">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" *ngIf="loginStatus === true">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" [routerLink]="['/admin']">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/category']">Category</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/post']">Post</a>
+          </li>
+        </ul>
+        <span class="navbar-text" (click)="logout()">Logout</span>
+      </div>
+    </nav>
     <router-outlet></router-outlet>
-    <div class="row text-center">
+    <div class="row text-center" *ngIf="loginStatus === false">
       <div class="container">
         <div class="col-md-12 copyright"><small class="text-center">© 2020 OST Advantage</small></div>
       </div>
     </div>
   </div>
-  <mat-toolbar text-center>
-    <div *ngIf="loginStatus === false">
-      <!-- <button mat-menu-item [routerLink]="['/']">Home</button>
-        <button mat-menu-item *ngFor="let cat of categories" [routerLink]="['/bycategory/', cat._id]">{{cat.catName}}</button> -->
-      <button mat-button [routerLink]="['/login']">Admin</button>
+  <nav class="toolbarOne" text-center *ngIf="loginStatus === false">
+    <div>
+      <button mat-button class="toolbarButtonOne" [routerLink]="['/login']">Admin</button>
     </div>
-    <div *ngIf="loginStatus === true">
-      <button id="menuButton" mat-button [matMenuTriggerFor]="menu">Admin</button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item [routerLink]="['/admin']">Home</button>
-        <button mat-menu-item [routerLink]="['/category']">Category</button>
-        <button mat-menu-item [routerLink]="['/post']">Post</button>
-        <button mat-menu-item (click)="logout()">Logout</button>
-      </mat-menu>
-    </div>
-  </mat-toolbar>
+  </nav>
 </div>

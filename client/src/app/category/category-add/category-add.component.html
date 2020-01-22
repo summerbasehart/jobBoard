@@ -1,4 +1,4 @@
-<div class="example-container mat-elevation-z8">
+<div >
     <div class="example-loading-shade"
          *ngIf="isLoadingResults">
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
@@ -6,7 +6,7 @@
     <div class="button-row">
       <a mat-flat-button color="primary" [routerLink]="['/category']"><mat-icon>list</mat-icon></a>
     </div>
-    <mat-card class="example-card">
+    <mat-card class="example-card dashboard">
       <form [formGroup]="categoryForm" (ngSubmit)="onFormSubmit()">
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Category Name" formControlName="catName"
@@ -16,7 +16,7 @@
           </mat-error>
         </mat-form-field>
         <mat-form-field class="example-full-width">
-            <ckeditor matCkeditor placehoder="Category Content" formControlName="catContent"></ckeditor>
+            <ckeditor matInput placehoder="Category Content" formControlName="catContent"></ckeditor>
             <mat-error>
               <span *ngIf="!categoryForm.get('catContent').valid && categoryForm.get('catContent').touched">Please enter Category Description</span>
             </mat-error>
