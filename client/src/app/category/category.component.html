@@ -1,14 +1,13 @@
-<div > 
+<div class="dashboard" > 
     <div class="example-loading-shade"
           *ngIf="isLoadingResults">
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
     <div class="button-row">
-      <a mat-flat-button color="primary" [routerLink]="['add']"><mat-icon>add</mat-icon></a>
+      <a mat-flat-button [routerLink]="['add']">Add Category</a>
     </div>
-    <div class="dashboard" >
-      <table mat-table [dataSource]="data" class="example-table"
-              matSort matSortActive="catName" matSortDisableClear matSortDirection="asc">
+    <div>
+      <table mat-table [dataSource]="data" class="example-table" matSort matSortActive="catName" matSortDisableClear matSortDirection="asc">
   
         <!-- Category Name Column -->
         <ng-container matColumnDef="catName">

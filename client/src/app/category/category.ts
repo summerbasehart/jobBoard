@@ -4,3 +4,6 @@ export class Category {
     catContent: string;
     updated: Date;
   }
+
+
+
