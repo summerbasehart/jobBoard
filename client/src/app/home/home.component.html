@@ -35,7 +35,7 @@
         <div class="col-md-10" id="jobContainer">
           <div class="job w3-container w3-animate-opacity" id="{{selectedPost.postTitle}}">
             <h3 class="jobSections">Date Posted: {{selectedPost.updated | date: 'dd MMM yyyy'}}</h3>
-            {{selectedPost.postContent}}
+            <p innerHTML={{selectedPost.postContent}}></p>
           </div>
         </div>
       </div>
@@ -73,13 +73,13 @@
                 ng-model=""></textarea>
             </div>
             <div class="form-group submit-button text-center"><a class="btn btn-custom-1-inverse" ng-click=""
-                ng-disabled="">Send it &nbsp;<i class="fa fa-refresh fa-spin" ng-show="emailing"></i></a></div>
+                ng-disabled="">Send it &nbsp;<i class="fa fa-refresh fa-spin" [hidden]="!emailing"></i></a></div>
             <div class="form-group">
-              <div class="alert alert-success" ng-show="emailed">Thank you for your interest!
+              <div class="alert alert-success" [hidden]="!emailed">Thank you for your interest!
                 We
                 will be
                 reaching out to you as soon as we can.</div>
-              <div class="alert alert-danger" ng-show="emailError">We are sorry, something
+              <div class="alert alert-danger" [hidden]="!emailError">We are sorry, something
                 happened
                 when it came
                 to submitting this form</div>
@@ -185,11 +185,11 @@
                 ng-disabled="joinForm.$invalid">Send it &nbsp;<i class="fa fa-refresh fa-spin"
                   ng-show="emailing"></i></a></div>
             <div class="form-group">
-              <div class="alert alert-success" ng-show="emailed">Thank you for your interest!
+              <div class="alert alert-success" [hidden]="!emailed">Thank you for your interest!
                 We
                 will be reaching
                 out to you as soon as we can.</div>
-              <div class="alert alert-danger" ng-show="emailError">We are sorry, something
+              <div class="alert alert-danger" [hidden]="!emailError">We are sorry, something
                 happened
                 when it came to
                 emailing us</div>
