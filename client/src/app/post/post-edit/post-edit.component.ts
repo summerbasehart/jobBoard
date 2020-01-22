@@ -26,7 +26,8 @@ export class PostEditComponent implements OnInit {
   id = '';
   postTitle = '';
   postAuthor = '';
-  postContent = '';
+  postDescription = '';
+  postQualifications = '';
   postReference = '';
   updated: Date = null;
   isLoadingResults = false;
@@ -46,7 +47,7 @@ export class PostEditComponent implements OnInit {
     this.postForm = this.formBuilder.group({
       postTitle : [null, Validators.required],
       postAuthor : [null, Validators.required],
-      postContent : [null, Validators.required],
+      postQualifications : [null, Validators.required],
       postReference : [null, Validators.required],
     });
   }
@@ -57,7 +58,7 @@ export class PostEditComponent implements OnInit {
       this.postForm.setValue({
         postTitle: data.postTitle,
         postAuthor: data.postAuthor,
-        postContent: data.postContent,
+        postQualifications: data.postQualifications,
         postReference: data.postReference,
       });
     });

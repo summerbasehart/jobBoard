@@ -14,7 +14,8 @@ export class HomeComponent implements OnInit {
     id: '',
     postTitle: '',
     postAuthor: '',
-    postContent: '',
+    postDescription: '',
+    postQualifications: '',
     postReference: '',
     created: null,
     updated: null
@@ -25,24 +26,12 @@ export class HomeComponent implements OnInit {
 
   constructor(private api: HomeService) { }
 
-  openLink(evt, animName) {
-    var i, x, tablinks;
-    x = document.getElementsByClassName("job");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < x.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-    }
-    document.getElementById(animName).style.display = "block";
-    evt.currentTarget.className += " w3-red";
-  }
-
   selectPost(post) {
     this.selectedPost = post;
     console.log(this.selectedPost);
+    
   }
+
 
   ngOnInit() {
     this.api.getPosts()

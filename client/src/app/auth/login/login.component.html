@@ -22,7 +22,7 @@
           </mat-error>
         </mat-form-field>
         <span class="button-row">
-          <button type="submit" mat-flat-button color="primary">Login</button></span><span class="button-row"></span>
+          <button type="submit"  [disabled]="!loginForm.valid" mat-flat-button color="primary">Login</button></span><span class="button-row"></span>
 
       </form>
       <p>New here? <a class="link" (click)="register()">Register</a> </p>

@@ -13,8 +13,10 @@
       </mat-card-header>
       <mat-card-content>
         <dl>
-          <dt>Post Content:</dt>
-          <dd [innerHTML]="post.postContent"></dd>
+          <dt>Qualifications:</dt>
+          <dd [innerHTML]="post.postQualifications"></dd>
+          <dt>Duties and Benefits:</dt>
+          <dd [innerHTML]="post.postDescription"></dd>
           <dt>Reference:</dt>
           <dd>{{post.postReference}}</dd>
         </dl>

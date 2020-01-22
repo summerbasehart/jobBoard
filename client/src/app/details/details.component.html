@@ -8,7 +8,8 @@
         <h3>{{post.postTitle}}</h3>
         <h4>By: {{post.postAuthor}}, {{post.updated | date: 'dd MMM yyyy'}}</h4>
       </div>
-      <div class="col-md-9" [innerHTML]="post.postContent" >  </div>
+      <div class="col-md-9" [innerHTML]="post.postQualifications" >  </div>
+      <div class="col-md-9" [innerHTML]="post.postDescription" >  </div>
       <mat-card-actions></mat-card-actions>
     </div>
   </div>

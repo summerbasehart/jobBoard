@@ -66,6 +66,10 @@
     cursor: pointer;
 }
 
+.w3-bar-item:checked {
+    background-color: red;
+}
+
 #jobContainer {
     min-height: 300px;
     overflow: scroll;

@@ -15,7 +15,8 @@ export class PostDetailsComponent implements OnInit {
     id: '',
     postTitle: '',
     postAuthor: '',
-    postContent: '',
+    postDescription: '',
+    postQualifications: '',
     postReference: '',
     created: null,
     updated: null

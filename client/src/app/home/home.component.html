@@ -34,8 +34,10 @@
         </div>
         <div class="col-md-10" id="jobContainer">
           <div class="job w3-container w3-animate-opacity" id="{{selectedPost.postTitle}}">
-            <h3 class="jobSections">Date Posted: {{selectedPost.updated | date: 'dd MMM yyyy'}}</h3>
-            <p innerHTML={{selectedPost.postContent}}></p>
+            <h3 class="jobSections">{{selectedPost.postTitle}} --  Date Posted: {{selectedPost.updated | date: 'dd MMM yyyy'}}</h3>
+            <p innerHTML={{selectedPost.postQualifications}}></p>
+            <p innerHTML={{selectedPost.postDescription}}></p>
+            <p>Contact {{selectedPost.postReference}} for additional information.</p>
           </div>
         </div>
       </div>
@@ -49,9 +51,8 @@
               </div>
             </div>
             <div class="form-group">
-              <select class="form-control">
-                <option value="{{post.postTitle}}" selected="selected">{{post.postTitle}}</option>
-                <option value="-- Position --" selected="selected">-- Position --</option>
+              <select class="form-control" placeholder="position" *ngFor="let post of posts">
+                <option value="{{post.postTitle}}">{{post.postTitle}}</option>
               </select>
             </div>
             <div class="form-group">
@@ -208,3 +209,30 @@
     res.send(item);
   });
 </script>
+
+<script type="text/javascript" src="/client/src/js/angular.js"></script>
+<script type="text/javascript" src="/client/src/js/ost.js"></script>
+<script type="text/javascript" src="/client/src/js/jobs.js"></script>
+<!-- <script type="text/javascript" src="/client/src/js/custom.js"></script> -->
+
+<script src="node_modules/core-js/client/shim.min.js"></script>
+<script src="node_modules/web-animations-js/web-animations.min.js"></script>
+<script>
+  /**
+   * you can configure some zone flags which can disable zone interception for some
+   * asynchronous activities to improve startup performance - use these options only
+   * if you know what you are doing as it could result in hard to trace down bugs..
+   */
+  // __Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame
+  // __Zone_disable_on_property = true; // disable patch onProperty such as onclick
+  // __zone_symbol__BLACK_LISTED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames
+
+  /*
+  * in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js
+  * with the following flag, it will bypass `zone.js` patch for IE/Edge
+  */
+  // __Zone_enable_cross_context_check = true;
+</script>
+<!-- zone.js required by Angular -->
+<script src="node_modules/zone.js/dist/zone.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
