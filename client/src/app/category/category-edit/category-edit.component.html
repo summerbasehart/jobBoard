@@ -4,21 +4,22 @@
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
     <div class="button-row">
-      <a mat-flat-button color="primary" (click)="categoryDetails()"><mat-icon>list</mat-icon></a>
+      <a mat-flat-button color="primary" (click)="categoryDetails()">Back</a>
     </div>
     <div class="row dashboard">
       <form [formGroup]="categoryForm" (ngSubmit)="onFormSubmit()">
-        <div class="form-group">
+        <div>
           <label for="catName">Category Name</label>
-          <input matInput placeholder="Category Name" formControlName="catName" [errorStateMatcher]="matcher">
+          <input matInput formControlName="catName" [errorStateMatcher]="matcher">
           <mat-error>
             <span *ngIf="!categoryForm.get('catName').valid && categoryForm.get('catName').touched">Please enter Category
               Name</span>
           </mat-error>
         </div>
-        <div class="form-group">
-          <label for="catContent">Category Name</label>
-          <ckeditor matInput placehoder="Category Content" formControlName="catContent" required></ckeditor>
+        <hr>
+        <div>
+          <label for="catContent">Department</label>
+          <ckeditor matInput placeholder="About this Department" formControlName="catContent" required></ckeditor>
           <mat-error>
             <span *ngIf="!categoryForm.get('catContent').valid && categoryForm.get('catContent').touched">Please enter
               Category Description</span>

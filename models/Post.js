@@ -8,7 +8,6 @@ var PostSchema = new mongoose.Schema({
   postDescription: String,
   postQualifications: String,
   postReference: String,
-  created: { type: Date },
   updated: { type: Date, default: Date.now },
 });
 

@@ -6,6 +6,5 @@ export class Post {
     postDescription: string;
     postQualifications: string;
     postReference: string;
-    created: Date;
     updated: Date;
   }

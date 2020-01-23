@@ -5,30 +5,21 @@
   <div class="button-row">
     <a mat-flat-button color="primary" [routerLink]="['/post']">List</a>
   </div>
-  <div class="card">
-    <mat-card-header>
-      <mat-card-title>
+  <div class="row">
+  <div class="col-md-4">
         <h2>{{post.postTitle}}</h2>
-      </mat-card-title>
       <p>Created by: {{post.postAuthor}}, {{post.created | date}}, updated: {{post.updated | date}}</p>
-    </mat-card-header>
-    <mat-card-content>
-      <dl>
-        <dt>Qualifications:</dt>
-        <dd>{{post.postQualifications}}</dd>
-        <dt>Duties and Benefits:</dt>
-        <dd>{{post.postDescription}}</dd>
-        <dt>Reference:</dt>
-        <dd>{{post.postReference}}</dd>
-      </dl>
-    </mat-card-content>
-    <mat-card-actions>
-      <a mat-flat-button color="primary" [routerLink]="['/post/edit', post.id]">
+      <ul>
+        <li>Qualifications: {{post.postQualifications}}</li>
+        <li>Duties and Benefits: {{post.postDescription}}</li>
+        <li>Reference: {{post.postReference}}</li>
+      </ul>
+      <a mat-flat-button [routerLink]="['/post/edit', post.id]">
         <mat-icon>edit</mat-icon>
       </a>
-      <a mat-flat-button color="warn" (click)="deletePost(post.id)">
+      <a mat-flat-button (click)="deletePost(post.id)">
         <mat-icon>delete</mat-icon>
       </a>
-    </mat-card-actions>
+    </div>
   </div>
 </div>
