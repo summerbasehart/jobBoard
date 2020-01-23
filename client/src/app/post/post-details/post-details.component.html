@@ -2,22 +2,31 @@
   <div class="example-loading-shade" *ngIf="isLoadingResults">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
   </div>
-  <div class="button-row">
-    <a mat-flat-button color="primary" [routerLink]="['/post']">List</a>
-  </div>
   <div class="row">
-  <div class="col-md-4">
-        <h2>{{post.postTitle}}</h2>
-      <p>Created by: {{post.postAuthor}}, {{post.created | date}}, updated: {{post.updated | date}}</p>
-      <ul>
-        <li>Qualifications: {{post.postQualifications}}</li>
-        <li>Duties and Benefits: {{post.postDescription}}</li>
-        <li>Reference: {{post.postReference}}</li>
-      </ul>
-      <a mat-flat-button [routerLink]="['/post/edit', post.id]">
+    <div class="col-md-1">
+      <a mat-flat-button [routerLink]="['/post']">Return</a>
+    </div>
+  </div>
+  <div class="row posting">
+    <div class="col-md-3">
+      <p><b>{{post.postTitle}}</b></p>
+      <p>Created by: {{post.postAuthor}}</p>
+      <p>Updated: {{post.updated | date}}</p>
+      <p>Contact: {{post.postReference}}</p>
+    </div>
+    <div class="col-md-4">
+      <p>Qualifications:</p>
+      <small>{{post.postQualifications}}</small>
+    </div>
+    <div class="col-md-4">
+      <p>Duties and Benefits:</p>
+      <small>{{post.postDescription}}</small>
+    </div>
+    <div class="col-md-1">
+      <a class="btn btn-block" [routerLink]="['/post/edit', post.id]">
         <mat-icon>edit</mat-icon>
       </a>
-      <a mat-flat-button (click)="deletePost(post.id)">
+      <a class="btn btn-block" button (click)="deletePost(post.id)">
         <mat-icon>delete</mat-icon>
       </a>
     </div>

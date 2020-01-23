@@ -1,41 +1,41 @@
-<div class="dashboard" >
-  <div class="example-loading-shade"
-          *ngIf="isLoadingResults">
-      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
-    </div>
-    <div class="button-row">
-      <a mat-flat-button color="primary" (click)="postDetails()"><mat-icon>list</mat-icon></a>
-    </div>
-    <mat-card class="card">
-      <form [formGroup]="postForm" (ngSubmit)="onFormSubmit()">
-        <div class="form-group">
-          <label for="category">Department : </label>
-          <select formControlName="category">
-            <option *ngFor="let cat of categories" [value]="cat._id">
-              {{cat.catName}}
-            <option>
-          </select></div>
-        <div class="form-group">
-          <label for="postTitle">Job Title : </label>
-          <input matInput placeholder="Post Title" formControlName="postTitle" [errorStateMatcher]="matcher"></div>
-        <div class="form-group">
-          <label for="postAuthor">Created By : </label>
-          <input matInput placeholder="Post Author" formControlName="postAuthor" [errorStateMatcher]="matcher"></div>
-        <div class="form-group">
-          <label for="postDescription">Duties and Benefits : </label>
-          <ckeditor matCkeditor placeholder="Duties and Benefits" formControlName="postDescription"></ckeditor>
-        </div>
-        <div class="form-group">
-          <label for="postQualifications">Qualifications : </label>
-          <ckeditor matCkeditor placeholder="Post Qualifications" formControlName="postQualifications"></ckeditor>
-        </div>
-        <div class="form-group">
-          <label for="postReference">Contact Reference(s) : </label>
-          <input matInput placeholder="Post Reference" formControlName="postReference" [errorStateMatcher]="matcher">
-        </div>
-        <button type="submit" [disabled]="!postForm.valid" mat-flat-button color="primary">
-          Save
-        </button>
-      </form>
-    </mat-card>
+<div class="dashboard">
+  <div class="example-loading-shade" *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
   </div>
+  <div class="button-row">
+    <a mat-flat-button color="primary" (click)="postDetails()">
+      <mat-icon>list</mat-icon>
+    </a>
+  </div>
+  <mat-card class="card">
+    <form [formGroup]="postForm" (ngSubmit)="onFormSubmit()">
+
+      <label for="category">Department : </label>
+      <select formControlName="category">
+        <option *ngFor="let cat of categories" [value]="cat._id">
+          {{cat.catName}}
+        <option>
+      </select>
+      <br>
+      <label for="postTitle">Job Title : </label>
+      <input matInput placeholder="Post Title" formControlName="postTitle" [errorStateMatcher]="matcher">
+      <br>
+      <label for="postAuthor">Created By : </label>
+      <input matInput placeholder="Post Author" formControlName="postAuthor" [errorStateMatcher]="matcher">
+      <br>
+      <label for="postDescription">Duties and Benefits : </label>
+      <ckeditor matCkeditor placeholder="Duties and Benefits" formControlName="postDescription"></ckeditor>
+      <br>
+      <label for="postQualifications">Qualifications : </label>
+      <ckeditor matCkeditor placeholder="Post Qualifications" formControlName="postQualifications"></ckeditor>
+      <br>
+      <label for="postReference">Contact Reference(s) : </label>
+      <input matInput placeholder="Post Reference" formControlName="postReference" [errorStateMatcher]="matcher">
+      <br>
+      <button type="submit" [disabled]="!postForm.valid" mat-flat-button color="primary">
+        Save
+      </button>
+
+    </form>
+  </mat-card>
+</div>

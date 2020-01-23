@@ -6,21 +6,13 @@
     <a mat-flat-button [routerLink]="['add']">Add Job Posting</a>
   </div>
   <hr>
-  <div *ngFor="let post of data">
-    <div class="card" class="example-table" [routerLink]="['details/', post._id]">
-
-      <!-- Post Name Column -->
-      <div class="card-title">
-        <h4>{{post.postTitle}}</h4>
+  <h3>Current Job Postings:</h3>
+  <div class="row">
+    <div class="col-md-3 posting" *ngFor="let post of data">
+      <div [routerLink]="['details/', post._id]">
+        <p><b>{{post.postTitle}}</b></p>
+        <p> Last updated: {{post.updated | date: 'dd MMM yyyy'}}</p>
       </div>
-
-      <!-- Post Description Column -->
-      <div class="card-text">
-        Updated: {{post.updated | date: 'dd MMM yyyy'}}
-      </div>
-
-      <mat-card-actions></mat-card-actions>
-
     </div>
   </div>
-  </div>
+</div>

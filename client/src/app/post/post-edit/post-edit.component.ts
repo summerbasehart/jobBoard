@@ -46,6 +46,7 @@ export class PostEditComponent implements OnInit {
     this.getPost(this.route.snapshot.params.id);
     this.postForm = this.formBuilder.group({
       postTitle : [null, Validators.required],
+      category : [null, Validators.required],
       postAuthor : [null, Validators.required],
       postDescription : [null, Validators.required],
       postQualifications : [null, Validators.required],
@@ -58,6 +59,7 @@ export class PostEditComponent implements OnInit {
       this.id = data.id;
       this.postForm.setValue({
         postTitle: data.postTitle,
+        category: data.category,
         postAuthor: data.postAuthor,
         postDescription : data.postDescription,
         postQualifications: data.postQualifications,
@@ -90,10 +92,6 @@ export class PostEditComponent implements OnInit {
           this.isLoadingResults = false;
         }
       );
-  }
-
-  postDetails() {
-    this.router.navigate(['/post-details', this.id]);
   }
 
 }
