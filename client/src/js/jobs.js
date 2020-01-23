@@ -11,3 +11,13 @@ function openLink(evt, animName) {
   document.getElementById(animName).style.display = "block";
   evt.currentTarget.className += " w3-red";
 }
+
+function admin() {
+  var x;
+  x = document.getElementsByClassName("mainContainer");
+  if (loginStatus === true) {
+    x.style.width = "100%";
+  } else {
+    x.style.width = "85%";
+  }
+}

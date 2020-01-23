@@ -9,28 +9,28 @@
   </div>
   <mat-card class="card">
     <form [formGroup]="postForm" (ngSubmit)="onFormSubmit()">
-      <div class="form-group">
+      <div>
         <label for="category">Department : </label>
         <select formControlName="category">
           <option *ngFor="let cat of categories" [value]="cat._id">
             {{cat.catName}}
           <option>
         </select></div>
-      <div class="form-group">
+      <div>
         <label for="postTitle">Job Title : </label>
         <input matInput placeholder="Post Title" formControlName="postTitle" [errorStateMatcher]="matcher"></div>
-      <div class="form-group">
+      <div>
         <label for="postAuthor">Created By : </label>
         <input matInput placeholder="Post Author" formControlName="postAuthor" [errorStateMatcher]="matcher"></div>
-      <div class="form-group">
+      <div>
         <label for="postDescription">Duties and Benefits : </label>
         <ckeditor matCkeditor placeholder="Duties and Benefits" formControlName="postDescription"></ckeditor>
       </div>
-      <div class="form-group">
+      <div>
         <label for="postQualifications">Qualifications : </label>
         <ckeditor matCkeditor placeholder="Post Qualifications" formControlName="postQualifications"></ckeditor>
       </div>
-      <div class="form-group">
+      <div>
         <label for="postReference">Contact Reference(s) : </label>
         <input matInput placeholder="Post Reference" formControlName="postReference" [errorStateMatcher]="matcher">
       </div>
