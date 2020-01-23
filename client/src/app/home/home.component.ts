@@ -32,7 +32,6 @@ export class HomeComponent implements OnInit {
     
   }
 
-
   ngOnInit() {
     this.api.getPosts()
       .subscribe((res: any) => {

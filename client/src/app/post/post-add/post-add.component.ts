@@ -44,6 +44,7 @@ export class PostAddComponent implements OnInit {
       category : [null, Validators.required],
       postTitle : [null, Validators.required],
       postAuthor : [null, Validators.required],
+      postDescription : [null, Validators.required],
       postQualifications : [null, Validators.required],
       postReference : [null, Validators.required],
     });

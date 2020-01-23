@@ -1,29 +1,34 @@
-<div class="dashboard" >
-    <div class="example-loading-shade"
-          *ngIf="isLoadingResults">
-      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
-    </div>
-    <div class="button-row">
-      <a mat-flat-button color="primary" [routerLink]="['/post']"><mat-icon>list</mat-icon></a>
-    </div>
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title><h2>{{post.postTitle}}</h2></mat-card-title>
-        <p>Created by: {{post.postAuthor}}, {{post.created | date}}, updated: {{post.updated | date}}</p>
-      </mat-card-header>
-      <mat-card-content>
-        <dl>
-          <dt>Qualifications:</dt>
-          <dd [innerHTML]="post.postQualifications"></dd>
-          <dt>Duties and Benefits:</dt>
-          <dd [innerHTML]="post.postDescription"></dd>
-          <dt>Reference:</dt>
-          <dd>{{post.postReference}}</dd>
-        </dl>
-      </mat-card-content>
-      <mat-card-actions>
-        <a mat-flat-button color="primary" [routerLink]="['/post/edit', post.id]"><mat-icon>edit</mat-icon></a>
-        <a mat-flat-button color="warn" (click)="deletePost(post.id)"><mat-icon>delete</mat-icon></a>
-      </mat-card-actions>
-    </mat-card>
+<div class="dashboard">
+  <div class="example-loading-shade" *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
   </div>
+  <div class="button-row">
+    <a mat-flat-button color="primary" [routerLink]="['/post']">List</a>
+  </div>
+  <div class="card">
+    <mat-card-header>
+      <mat-card-title>
+        <h2>{{post.postTitle}}</h2>
+      </mat-card-title>
+      <p>Created by: {{post.postAuthor}}, {{post.created | date}}, updated: {{post.updated | date}}</p>
+    </mat-card-header>
+    <mat-card-content>
+      <dl>
+        <dt>Qualifications:</dt>
+        <dd>{{post.postQualifications}}</dd>
+        <dt>Duties and Benefits:</dt>
+        <dd>{{post.postDescription}}</dd>
+        <dt>Reference:</dt>
+        <dd>{{post.postReference}}</dd>
+      </dl>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-flat-button color="primary" [routerLink]="['/post/edit', post.id]">
+        <mat-icon>edit</mat-icon>
+      </a>
+      <a mat-flat-button color="warn" (click)="deletePost(post.id)">
+        <mat-icon>delete</mat-icon>
+      </a>
+    </mat-card-actions>
+  </div>
+</div>

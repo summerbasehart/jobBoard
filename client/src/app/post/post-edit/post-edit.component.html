@@ -6,55 +6,36 @@
     <div class="button-row">
       <a mat-flat-button color="primary" (click)="postDetails()"><mat-icon>list</mat-icon></a>
     </div>
-    <mat-card class="example-card">
+    <mat-card class="card">
       <form [formGroup]="postForm" (ngSubmit)="onFormSubmit()">
-        <mat-form-field class="example-full-width">
-          <mat-select formControlName="category" [errorStateMatcher]="matcher">
-            <mat-option *ngFor="let cat of categories" [value]="cat._id">
+        <div class="form-group">
+          <label for="category">Department : </label>
+          <select formControlName="category">
+            <option *ngFor="let cat of categories" [value]="cat._id">
               {{cat.catName}}
-            </mat-option>
-          </mat-select>
-          <mat-error>
-            <span *ngIf="!postForm.get('category').valid && postForm.get('category').touched">Please select Category</span>
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Post Title" formControlName="postTitle"
-                  [errorStateMatcher]="matcher">
-          <mat-error>
-            <span *ngIf="!postForm.get('postTitle').valid && postForm.get('postTitle').touched">Please enter Post Title</span>
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Post Author" formControlName="postAuthor"
-                  [errorStateMatcher]="matcher">
-          <mat-error>
-            <span *ngIf="!postForm.get('postAuthor').valid && postForm.get('postAuthor').touched">Please enter Post Author</span>
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field class="example-full-width">
-          <textarea matInput placeholder="Post Desc" formControlName="postDescription"
-                  [errorStateMatcher]="matcher"></textarea>
-          <mat-error>
-            <span *ngIf="!postForm.get('postDescription').valid && postForm.get('postDescription').touched">Please enter Post Description</span>
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field class="example-full-width">
-            <ckeditor matCkeditor placehoder="Post Content" formControlName="postContent"></ckeditor>
-            <mat-error>
-              <span *ngIf="!postForm.get('postContent').valid && postForm.get('postContent').touched">Please enter Post Content</span>
-            </mat-error>
-          </mat-form-field>
-        <div class="button-row">
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Post Reference" formControlName="postReference"
-                  [errorStateMatcher]="matcher">
-          <mat-error>
-            <span *ngIf="!postForm.get('postReference').valid && postForm.get('postReference').touched">Please enter Post Ref</span>
-          </mat-error>
-        </mat-form-field>
-          <button type="submit" [disabled]="!postForm.valid" mat-flat-button color="primary"><mat-icon>save</mat-icon></button>
+            <option>
+          </select></div>
+        <div class="form-group">
+          <label for="postTitle">Job Title : </label>
+          <input matInput placeholder="Post Title" formControlName="postTitle" [errorStateMatcher]="matcher"></div>
+        <div class="form-group">
+          <label for="postAuthor">Created By : </label>
+          <input matInput placeholder="Post Author" formControlName="postAuthor" [errorStateMatcher]="matcher"></div>
+        <div class="form-group">
+          <label for="postDescription">Duties and Benefits : </label>
+          <ckeditor matCkeditor placeholder="Duties and Benefits" formControlName="postDescription"></ckeditor>
         </div>
+        <div class="form-group">
+          <label for="postQualifications">Qualifications : </label>
+          <ckeditor matCkeditor placeholder="Post Qualifications" formControlName="postQualifications"></ckeditor>
+        </div>
+        <div class="form-group">
+          <label for="postReference">Contact Reference(s) : </label>
+          <input matInput placeholder="Post Reference" formControlName="postReference" [errorStateMatcher]="matcher">
+        </div>
+        <button type="submit" [disabled]="!postForm.valid" mat-flat-button color="primary">
+          Save
+        </button>
       </form>
     </mat-card>
   </div>

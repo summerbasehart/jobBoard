@@ -32,13 +32,12 @@ export class CategoryDetailsComponent implements OnInit {
     this.isLoadingResults = true;
     this.api.deleteCategory(id)
       .subscribe(res => {
-          this.isLoadingResults = false;
-          this.router.navigate(['/category']);
-        }, (err) => {
-          console.log(err);
-          this.isLoadingResults = false;
-        }
+        this.isLoadingResults = false;
+        this.router.navigate(['/category']);
+      }, (err) => {
+        console.log(err);
+        this.isLoadingResults = false;
+      }
       );
   }
-
 }

@@ -5,3 +5,15 @@
     background-position: center;
     min-height: 500px;
 }
+
+table.mat-table {
+    margin: 15px 0 0 15px;
+}
+
+td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, th.mat-header-cell:first-of-type {
+    padding: 24px;
+}
+
+.mat-flat-button {
+    margin: 15px 15px 0 15px;
+}
