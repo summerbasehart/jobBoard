@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
     postDescription: '',
     postQualifications: '',
     postReference: '',
-    created: null,
     updated: null
   };
   posts: Post[] = [];

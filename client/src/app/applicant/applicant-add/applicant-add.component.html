@@ -1,0 +1,43 @@
+<form id="employment-form" novalidate="novalidate" name="employForm">
+    <div class="ajax-hidden">
+      <div class="form-group">
+        <input class="form-control" name="" placeholder="Name" ng-model="" required="required" />
+      </div>
+    </div>
+    <div class="form-group">
+      <select class="form-control" placeholder="position" >
+        <option value="{{post.postTitle}}" *ngFor="let post of posts">{{post.postTitle}}</option>
+        <option value="no position selected">--select a position--</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="email" name="c_email" placeholder="E-mail" ng-model=""
+        required="required" />
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="phone" name="" placeholder="Phone" ng-model="" required="required" />
+    </div>
+    <div class="form-group">
+      <textarea class="form-control" name="" rows="1" placeholder="Address Line 1 (include Unit/Apt)"
+        ng-model=""></textarea>
+    </div>
+    <div class="form-group">
+      <textarea class="form-control" name="" rows="1" placeholder="Address Line 2" ng-model=""></textarea>
+    </div>
+    <div class="form-group">
+      <textarea class="form-control" name="" rows="6" placeholder="Paste your resume here"
+        ng-model=""></textarea>
+    </div>
+    <div class="form-group submit-button text-center"><a class="btn btn-custom-1-inverse" ng-click=""
+        ng-disabled="">Send it &nbsp;<i class="fa fa-refresh fa-spin" [hidden]="!emailing"></i></a></div>
+    <div class="form-group">
+      <div class="alert alert-success" [hidden]="!emailed">Thank you for your interest!
+        We
+        will be
+        reaching out to you as soon as we can.</div>
+      <div class="alert alert-danger" [hidden]="!emailError">We are sorry, something
+        happened
+        when it came
+        to submitting this form</div>
+    </div>
+  </form>

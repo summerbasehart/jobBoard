@@ -35,8 +35,11 @@
         <div class="col-md-10" id="jobContainer">
           <div class="job w3-container w3-animate-opacity" id="{{selectedPost.postTitle}}">
             <h3 class="jobSections">{{selectedPost.postTitle}} --  Date Posted: {{selectedPost.updated | date: 'dd MMM yyyy'}}</h3>
-            <p innerHTML={{selectedPost.postQualifications}}></p>
-            <p innerHTML={{selectedPost.postDescription}}></p>
+            <h4 class="jobSections">Job Description</h4>
+            <p innerHTML={{selectedPost.postDescription}}></p><br>
+            <h4 class="jobSections">Qualifications</h4>
+            <p innerHTML={{selectedPost.postQualifications}}></p><br>
+            <h4 class="jobSections">For More Information Contact:</h4>
             <p innerHTML={{selectedPost.postReference}}></p>
           </div>
         </div>
