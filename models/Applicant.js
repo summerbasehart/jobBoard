@@ -13,4 +13,4 @@ var ApplicantSchema = new mongoose.Schema ({
 });
 
 
-module.exports = mongoose.model('Applicants', ApplicantSchema);
+module.exports = mongoose.model('Applicant', ApplicantSchema);
