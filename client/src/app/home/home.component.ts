@@ -1,8 +1,20 @@
+import { BrowserModule }                from '@angular/platform-browser';
+import { ReactiveFormsModule }          from '@angular/forms';
+import { NgModule }                     from '@angular/core';
+
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../post/post';
 import { PostService } from '../post.service';
 import { HomeService } from '../home.service';
-import { ApplicantService } from '../applicant.service'
+import { QuestionService } from '../question.service';
+import { DynamicFormComponent }         from './dynamicForm/dynamic-form.component';
+import { DynamicFormQuestionComponent } from './dynamicForm/dynamic-form-question.component';
+
+@NgModule({
+  imports: [ BrowserModule, ReactiveFormsModule ],
+  declarations: [ DynamicFormComponent, DynamicFormQuestionComponent ],
+  bootstrap: [  ]
+})
 
 @Component({
   selector: 'app-home',
@@ -24,7 +36,7 @@ export class HomeComponent implements OnInit {
   isLoadingResults = true;
   selectedPost: Post = null;
 
-  constructor(private api: HomeService, private applicantService: ApplicantService) { }
+  constructor(private api: HomeService) { }
 
   selectPost(post) {
     this.selectedPost = post;

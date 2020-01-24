@@ -6,18 +6,16 @@ import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
 import { CategoryComponent } from './category/category.component';
 import { PostComponent } from './post/post.component';
-import { ApplicantComponent } from './applicant/applicant.component';
 import { CategoryDetailsComponent } from './category/category-details/category-details.component';
 import { CategoryAddComponent } from './category/category-add/category-add.component';
 import { CategoryEditComponent } from './category/category-edit/category-edit.component';
 import { PostDetailsComponent } from './post/post-details/post-details.component';
 import { PostAddComponent } from './post/post-add/post-add.component';
 import { PostEditComponent } from './post/post-edit/post-edit.component';
-import { ApplicantAddComponent } from'./applicant/applicant-add/applicant-add.component';
-import { ApplicantDetailsComponent } from'./applicant/applicant-details/applicant-details.component';
 import { BycategoryComponent } from './bycategory/bycategory.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AdminComponent } from './admin/admin.component';
+import { DynamicFormQuestionComponent } from './home/dynamicForm/dynamic-form-question.component'
 
 
 
@@ -105,23 +103,6 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     component: PostEditComponent,
     data: { title: 'Post Edit' }
-  },
-  {
-    path: 'applicant',
-    canActivate: [AuthGuard],
-    component: ApplicantComponent,
-    data: { title: 'Applicant' }
-  },
-  {
-    path: 'applicant/details/:id',
-    canActivate: [AuthGuard],
-    component: ApplicantDetailsComponent,
-    data: { title: 'Applicant Details' }
-  },
-  {
-    path: 'applicant/add',
-    component: ApplicantAddComponent,
-    data: { title: 'Applicant Add' }
   },
 ];
 
