@@ -43,10 +43,6 @@ export class HomeComponent implements OnInit {
         this.isLoadingResults = false;
       }
     );
-    this.applicantService.addApplicant()
-    .subscribe((res: any) => {
-      this.applicants = res;
-    })
   }
   
   
