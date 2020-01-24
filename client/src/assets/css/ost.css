@@ -12,6 +12,9 @@ body {
     padding-right: 40px;
     min-height: 100%;
     width:100%
+
+    /* max-width: 95%;
+    margin: 3%; */
 }
 
 .adminContainer {
@@ -19,7 +22,8 @@ body {
     box-shadow: 0 5px 5px 2px grey;
     padding-right: 40px;
     min-height: 100%;
-    width:100%
+    max-width: 95%;
+    margin: 3%;
 }
 
 #jobNames {
