@@ -14,7 +14,7 @@ import { PostDetailsComponent } from './post/post-details/post-details.component
 import { PostAddComponent } from './post/post-add/post-add.component';
 import { PostEditComponent } from './post/post-edit/post-edit.component';
 import { ApplicantAddCOmponent } from'./applicant/applicant-add/applicant-add.component';
-import { ApplicantDetailsCOmponent } from'./applicant/applicant-details/applicant-details.component';
+import { ApplicantDetailsComponent } from'./applicant/applicant-details/applicant-details.component';
 import { BycategoryComponent } from './bycategory/bycategory.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AdminComponent } from './admin/admin.component';
