@@ -1,8 +1,17 @@
 import { Component, Input, OnInit }  from '@angular/core';
-import { FormGroup }                 from '@angular/forms';
-
+import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { QuestionBase }              from './question-base';
 import { QuestionControlService }    from '../question-control.service';
+
+import { ErrorStateMatcher } from '@angular/material/core';
+
+/** Error when invalid control is dirty, touched, or submitted. */
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
 
 @Component({
   selector: 'app-dynamic-form',
@@ -22,6 +31,8 @@ export class DynamicFormComponent implements OnInit {
   }
 
   onSubmit() {
+
+    
     this.payLoad = JSON.stringify(this.form.value);
   }
 }
