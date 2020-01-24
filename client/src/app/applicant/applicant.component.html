@@ -4,7 +4,7 @@
     </div>
     <div>
       <div *ngFor="let post of posts">
-        <div [routerLink]="['/details/', post._id]">
+        <div [routerLink]="['/details/', applicant._id]">
           <div>
             <h4>{{post.postTitle}}</h4>
             <h5>{{post.updated | date: 'dd MMM yyyy'}}</h5>
