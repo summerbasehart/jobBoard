@@ -7,8 +7,8 @@ import { Post } from '../post/post';
 import { PostService } from '../post.service';
 import { HomeService } from '../home.service';
 import { QuestionService } from '../question.service';
-import { DynamicFormComponent }         from './dynamicForm/dynamic-form.component';
-import { DynamicFormQuestionComponent } from './dynamicForm/dynamic-form-question.component';
+import { DynamicFormComponent }         from '../dynamicForm/dynamic-form.component';
+import { DynamicFormQuestionComponent } from '../dynamicForm/dynamic-form-question.component';
 
 @NgModule({
   imports: [ BrowserModule, ReactiveFormsModule ],
@@ -19,7 +19,8 @@ import { DynamicFormQuestionComponent } from './dynamicForm/dynamic-form-questio
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  providers:  [QuestionService]
 })
 export class HomeComponent implements OnInit {
   post: Post = {
@@ -35,8 +36,11 @@ export class HomeComponent implements OnInit {
   posts: Post[] = [];
   isLoadingResults = true;
   selectedPost: Post = null;
+  questions: any[];
 
-  constructor(private api: HomeService) { }
+  constructor(private api: HomeService, service: QuestionService) { 
+    this.questions = service.getQuestions();
+  }
 
   selectPost(post) {
     this.selectedPost = post;

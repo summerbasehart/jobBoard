@@ -3,17 +3,19 @@ import { Router } from '@angular/router';
 import { Category } from './category/category';
 import { HomeService } from './home.service';
 import { AuthService } from './auth.service';
-
+import { QuestionService } from './question.service';
+import { QuestionControlService } from './question-control.service'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers:  [QuestionService, QuestionControlService]
 })
 export class AppComponent implements OnInit  {
   title = 'client';
 
-  constructor(private api: HomeService, private authService: AuthService, private router: Router) { }
+  constructor(private api: HomeService, private authService: AuthService, private router: Router, private questionsService: QuestionService, private questionControlService: QuestionControlService) { }
 
   categories: Category[] = [];
   loginStatus = false;

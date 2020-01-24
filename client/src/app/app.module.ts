@@ -39,6 +39,8 @@ import { BycategoryComponent } from './bycategory/bycategory.component';
 import { CKEditorModule } from 'ckeditor4-angular';
 import { MatContenteditableModule } from 'mat-contenteditable';
 import { AdminComponent } from './admin/admin.component';
+import { DynamicFormComponent } from './dynamicForm/dynamic-form.component';
+import { DynamicFormQuestionComponent } from './dynamicForm/dynamic-form-question.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,8 @@ import { AdminComponent } from './admin/admin.component';
     PostEditComponent,
     BycategoryComponent,
     AdminComponent,
+    DynamicFormComponent,
+    DynamicFormQuestionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,9 @@
 import { Injectable }       from '@angular/core';
 import { PostComponent } from './post/post.component'
 
-import { DropdownQuestion } from './home/dynamicForm/question-dropdown';
-import { QuestionBase }     from './home/dynamicForm/question-base';
-import { TextboxQuestion }  from './home/dynamicForm/question-textbox';
+import { DropdownQuestion } from './dynamicForm/question-dropdown';
+import { QuestionBase }     from './dynamicForm/question-base';
+import { TextboxQuestion }  from './dynamicForm/question-textbox';
 
 @Injectable()
 export class QuestionService {
@@ -20,6 +20,7 @@ export class QuestionService {
         options: [
           {key: '{{post._id}}',  value: '{{post.postTitle}}'},
         ],
+        required: true,
         order: 9
       }),
 
@@ -38,7 +39,7 @@ export class QuestionService {
       }),
 
       new TextboxQuestion({
-        key: 'emailAddress',
+        key: 'email',
         label: 'Email',
         type: 'email',
         required: true,

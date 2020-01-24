@@ -15,9 +15,7 @@ import { PostEditComponent } from './post/post-edit/post-edit.component';
 import { BycategoryComponent } from './bycategory/bycategory.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AdminComponent } from './admin/admin.component';
-import { DynamicFormQuestionComponent } from './home/dynamicForm/dynamic-form-question.component'
-
-
+import { DynamicFormComponent} from './dynamicForm/dynamic-form.component';
 
 const routes: Routes = [
   {
@@ -29,6 +27,11 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
     data: { title: ' Home' }
+  },
+  {
+    path: 'home/dynamicForm',
+    component: DynamicFormComponent,
+    data: { title: ' Questions' }
   },
   {
     path: 'admin',
