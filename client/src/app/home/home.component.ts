@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Post } from '../post/post';
 import { PostService } from '../post.service';
 import { HomeService } from '../home.service';
+import { ApplicantService } from '../applicant.service'
 
 @Component({
   selector: 'app-home',
@@ -23,7 +24,7 @@ export class HomeComponent implements OnInit {
   isLoadingResults = true;
   selectedPost: Post = null;
 
-  constructor(private api: HomeService) { }
+  constructor(private api: HomeService, private applicantService: ApplicantService) { }
 
   selectPost(post) {
     this.selectedPost = post;
@@ -42,6 +43,12 @@ export class HomeComponent implements OnInit {
         this.isLoadingResults = false;
       }
     );
+    this.applicantService.addApplicant()
+    .subscribe((res: any) => {
+      this.applicants = res;
+    })
   }
+  
+  
   
 }

@@ -1,5 +1,6 @@
-<form id="employment-form" novalidate="novalidate" name="employForm">
-
+<div class="row dashboard">
+    <form [formGroup]="applicantForm" (ngSubmit)="onFormSubmit()">
+        
     <div class="ajax-hidden">
         <input placeholder="Full Name" formControlName="appName" required="required" />
     </div>
