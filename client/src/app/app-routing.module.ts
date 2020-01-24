@@ -13,7 +13,7 @@ import { CategoryEditComponent } from './category/category-edit/category-edit.co
 import { PostDetailsComponent } from './post/post-details/post-details.component';
 import { PostAddComponent } from './post/post-add/post-add.component';
 import { PostEditComponent } from './post/post-edit/post-edit.component';
-import { ApplicantAddCOmponent } from'./applicant/applicant-add/applicant-add.component';
+import { ApplicantAddComponent } from'./applicant/applicant-add/applicant-add.component';
 import { ApplicantDetailsComponent } from'./applicant/applicant-details/applicant-details.component';
 import { BycategoryComponent } from './bycategory/bycategory.component';
 import { AuthGuard } from './auth/auth.guard';
