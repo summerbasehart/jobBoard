@@ -9,3 +9,17 @@
     line-height: 1.5;
     width: 100%;
 }
+
+.mat-flat-button[disabled][disabled] {
+        background-color: red;
+        display: block;
+        color:grey
+    
+}
+
+.mat-flat-button {
+    background-color: red;
+    display: block;
+    color:white
+}
+

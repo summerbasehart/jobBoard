@@ -20,7 +20,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./applicant-add.component.scss']
 })
 export class ApplicantAddComponent implements OnInit {
-  postForm: FormGroup;
+  applicantForm: FormGroup;
   appName = '';
   appEmail = '';
   appPhone: '';
@@ -28,18 +28,7 @@ export class ApplicantAddComponent implements OnInit {
   appAddress2 = '';
   appResume = '';
   isLoadingResults = false;
-  
   matcher = new MyErrorStateMatcher();
-  post: Post = {
-    category: '',
-    id: '',
-    postTitle: '',
-    postAuthor: '',
-    postDescription: '',
-    postQualifications: '',
-    postReference: '',
-    updated: null
-  };
   posts: Post[] = [];
 
   constructor(
@@ -50,7 +39,7 @@ export class ApplicantAddComponent implements OnInit {
 
   ngOnInit() {
     this.getPosts();
-    this.postForm = this.formBuilder.group({
+    this.applicantForm = this.formBuilder.group({
       post : [null, Validators.required],
       appName : [null, Validators.required],
       appEmail : [null, Validators.required],
@@ -59,19 +48,6 @@ export class ApplicantAddComponent implements OnInit {
       appAddress2 : [null, Validators.required],
       appResume : [null, Validators.required],
     });
-  }
-
-  onFormSubmit() {
-    this.isLoadingResults = true;
-    this.api.addApplicant(this.postForm.value)
-      .subscribe((res: any) => {
-          const id = res._id;
-          this.isLoadingResults = false;
-          this.router.navigate(['/applicant/', id]);
-        }, (err: any) => {
-          console.log(err);
-          this.isLoadingResults = false;
-        });
   }
 
   getPosts() {
@@ -86,4 +62,16 @@ export class ApplicantAddComponent implements OnInit {
       });
   }
 
+  onFormSubmit() {
+    this.isLoadingResults = true;
+    this.api.addApplicant(this.applicantForm.value)
+      .subscribe((res: any) => {
+          const id = res._id;
+          this.isLoadingResults = false;
+          this.router.navigate(['/home/']);
+        }, (err: any) => {
+          console.log(err);
+          this.isLoadingResults = false;
+        });
+  }
 }

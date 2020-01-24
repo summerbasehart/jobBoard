@@ -1,8 +1,8 @@
 var mongoose = require('mongoose'), Schema = mongoose.Schema;
 
 var ApplicantSchema = new mongoose.Schema ({
-    post : { type: Schema.Types.ObjectId, ref: 'Post' },
     id: string,
+    post : { type: Schema.Types.ObjectId, ref: 'Post' },
     appName: string,
     appPhone: string,
     appEmail: string,

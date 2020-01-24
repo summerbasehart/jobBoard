@@ -1,6 +1,6 @@
 export class Applicant {
+    id: number;
     post: string;
-    id: string;
     appName: string;
     appPhone: string;
     appEmail: string;

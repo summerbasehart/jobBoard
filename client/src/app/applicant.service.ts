@@ -3,8 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { Applicant } from './applicant/applicant';
+import { Category } from './category/category';
+import { Post } from './post/post';
 
-const apiUrl = 'http://localhost:3000/api/applicant/';
+const apiUrl = 'http://localhost:3000/api/applicants/';
 
 @Injectable({
     providedIn: 'root'
@@ -51,6 +53,22 @@ const apiUrl = 'http://localhost:3000/api/applicant/';
           catchError(this.handleError<Applicant>('deleteApplicant'))
         );
       }
+
+      getPosts(): Observable<Post[]> {
+        return this.http.get<Post[]>(apiUrl + 'post')
+          .pipe(
+            tap(_ => this.log('fetched Posts')),
+            catchError(this.handleError('getPosts', []))
+          );
+      }
+    
+      getPost(id: any): Observable<Post> {
+        return this.http.get<Post>(apiUrl + 'post/' + id).pipe(
+          tap(_ => console.log(`fetched post by id=${id}`)),
+          catchError(this.handleError<Post>(`getPost id=${id}`))
+        );
+      }
+    
     
       private handleError<T>(operation = 'operation', result?: T) {
         return (error: any): Observable<T> => {
