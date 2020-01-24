@@ -62,7 +62,7 @@ import { AdminComponent } from './admin/admin.component';
     AdminComponent,
     ApplicantComponent,
     ApplicantAddComponent,
-    ApplicantDetailsComponent
+    ApplicantDetailsComponent,
   ],
   imports: [
     BrowserModule,

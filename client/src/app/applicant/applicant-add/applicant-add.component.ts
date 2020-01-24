@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 import { ApplicantService } from '../../applicant.service';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { Post } from '../../post/post';
 import { PostService } from '../../post.service';
-import { Post } from './../../post/post';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -20,9 +20,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./applicant-add.component.scss']
 })
 export class ApplicantAddComponent implements OnInit {
-
   postForm: FormGroup;
-  post = '';
   appName = '';
   appEmail = '';
   appPhone: '';
@@ -30,7 +28,18 @@ export class ApplicantAddComponent implements OnInit {
   appAddress2 = '';
   appResume = '';
   isLoadingResults = false;
+  
   matcher = new MyErrorStateMatcher();
+  post: Post = {
+    category: '',
+    id: '',
+    postTitle: '',
+    postAuthor: '',
+    postDescription: '',
+    postQualifications: '',
+    postReference: '',
+    updated: null
+  };
   posts: Post[] = [];
 
   constructor(

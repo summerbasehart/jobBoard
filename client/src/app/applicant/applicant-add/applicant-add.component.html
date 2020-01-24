@@ -1,30 +1,45 @@
-<form id="employment-form" novalidate="novalidate" name="employForm">
+<div class="container">
+    <form [formGroup]="employment-form" novalidate="novalidate" name="employForm">
+        <h3 class="text-center">Application for Employment</h3>
+        <h4 class="text-center">Join OST Today!</h4>
+        <select class="form-item" formControlName="post">
+            <option value="no position selected">--select a position--</option>
 
-    <div class="ajax-hidden">
-        <input placeholder="Full Name" formControlName="appName" required="required" />
-    </div>
-
-    <label for="post">Department : </label>
-        <select formControlName="post">
-          <option *ngFor="let post of posts" [value]="post._id">
-            {{post.postName}}
-          <option>
+            <option *ngFor="let post of posts" [value]="post._id">
+                {{post.postName}}
+            <option>
         </select>
+        <br>
+        <br>
+        <div class="ajax-hidden">
+            <input class="form-item" placeholder="Full Name" formControlName="appName" required="required" />
+        </div>
+        <br>
+        <br>
+        <input class="form-item" formControlName="appEmail" type="email" placeholder="E-mail" required="required" />
+        <br>
+        <br>
+        <input class="form-item" formControlName="appPhone" type="phone" name="" placeholder="Phone"
+            required="required" />
+        <br>
+        <br>
+        <textarea class="form-item" formControlName="appAddress1" rows="1"
+            placeholder="Address Line 1 (include Unit/Apt #)"></textarea>
 
-    <input class="form-control" formControlName="appEmail" type="email" placeholder="E-mail" required="required" />
+        <textarea class="form-item" formControlName="appAddress2" rows="1" placeholder="Address Line 2"
+            ng-model=""></textarea>
+        <br>
+        <br>
+        <textarea class="form-item" formControlName="appResume" name="" rows="6"
+            placeholder="Paste your resume here - Plain text Only" ng-model=""></textarea>
+        <br>
+        <br>
+        <div class="submit-button text-center">
+            <a class="btn btn-custom-1-inverse" ng-click="" ng-disabled="">
+                Send it
+            </a>
+        </div>
+        <br>
 
-    <input class="form-control" formControlName="appPhone" type="phone" name="" placeholder="Phone" required="required" />
-
-    <textarea class="form-control" formControlName="appAddress1" rows="1" placeholder="Address Line 1 (include Unit/Apt #)"></textarea>
-
-    <textarea class="form-control" formControlName="appAddress2" rows="1" placeholder="Address Line 2" ng-model=""></textarea>
-
-    <textarea class="form-control" formControlName="appResume" name="" rows="6" placeholder="Paste your resume here - Plain text Only" ng-model=""></textarea>
-
-    <div class="submit-button text-center">
-        <a class="btn btn-custom-1-inverse" ng-click="" ng-disabled="">
-            Send it 
-        </a>
-    </div>
-
-</form>
+    </form>
+</div>
