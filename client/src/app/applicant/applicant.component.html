@@ -1,0 +1,15 @@
+<div>
+    <div class="example-loading-shade" *ngIf="isLoadingResults">
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+    <div>
+      <div *ngFor="let post of posts">
+        <div [routerLink]="['/details/', post._id]">
+          <div>
+            <h4>{{post.postTitle}}</h4>
+            <h5>{{post.updated | date: 'dd MMM yyyy'}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
