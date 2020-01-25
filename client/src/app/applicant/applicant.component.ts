@@ -9,7 +9,6 @@ import { Applicant } from './applicant';
 })
 export class ApplicantComponent implements OnInit {
 
-  displayedColumns: string[] = ['appName', 'post'];
   data: Applicant[] = [];
   isLoadingResults = true;
 

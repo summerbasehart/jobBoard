@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var auth = require('./routes/auth');
 var category = require('./routes/category');
+var applicant = require('./routes/applicant');
 var post = require('./routes/post');
 var cors = require('cors')
 // var mailer = require('./nodemailer');
@@ -34,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/auth', auth);
 app.use('/api/category', category);
 app.use('/api/post', post);
+app.use('/api/applicant', applicant);
 app.use('/api/public', indexRouter);
 app.use('/users', usersRouter);
 

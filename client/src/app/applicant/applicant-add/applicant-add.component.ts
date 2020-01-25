@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApplicantService } from '../../applicant.service';
+import { HttpClientModule } from '@angular/common/http';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { Post } from '../../post/post';
@@ -34,7 +35,7 @@ export class ApplicantAddComponent implements OnInit {
   constructor(
     private router: Router,
     private api: ApplicantService,
-    private postApi: PostService,
+    private postService: PostService,
     private formBuilder: FormBuilder) { }
 
   ngOnInit() {
@@ -51,7 +52,7 @@ export class ApplicantAddComponent implements OnInit {
   }
 
   getPosts() {
-    this.postApi.getPosts()
+    this.postService.getPosts()
       .subscribe((res: any) => {
         this.posts = res;
         console.log(this.posts);
@@ -66,9 +67,9 @@ export class ApplicantAddComponent implements OnInit {
     this.isLoadingResults = true;
     this.api.addApplicant(this.applicantForm.value)
       .subscribe((res: any) => {
-          const id = res._id;
+          const id = res.id;
           this.isLoadingResults = false;
-          this.router.navigate(['/home/']);
+          this.router.navigate(['/applicant/', id]);
         }, (err: any) => {
           console.log(err);
           this.isLoadingResults = false;

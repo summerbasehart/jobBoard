@@ -66,14 +66,15 @@
     cursor: pointer;
 }
 
-.w3-bar-item:checked {
+.selectedPost {
     background-color: red;
 }
 
 #jobContainer {
-    height: 400px;
+    height: 600px;
     overflow: scroll;
-    background-color: #181818;
+    background-image: url(https://cdn.pixabay.com/photo/2014/06/16/23/40/grey-370125_960_720.png);
+    background-color: red;
     padding: 15px;
 }
 

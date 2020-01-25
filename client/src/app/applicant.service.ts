@@ -3,10 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { Applicant } from './applicant/applicant';
-import { Category } from './category/category';
 import { Post } from './post/post';
 
-const apiUrl = 'http://localhost:3000/api/applicants/';
+const apiUrl = 'http://localhost:3000/api/applicant/';
 
 @Injectable({
     providedIn: 'root'

@@ -34,21 +34,25 @@
         </div>
         <div class="col-md-10" id="jobContainer">
           <div class="job w3-container w3-animate-opacity" id="{{selectedPost.postTitle}}">
-            <h3 class="jobSections">{{selectedPost.postTitle}} --  Date Posted: {{selectedPost.updated | date: 'dd MMM yyyy'}}</h3>
+            <h3 class="jobSections" >{{selectedPost.postTitle}} --  Date Posted: {{selectedPost.updated | date: 'dd MMM yyyy'}}</h3>
             <h4 class="jobSections">Job Description</h4>
             <p innerHTML={{selectedPost.postDescription}}></p><br>
             <h4 class="jobSections">Qualifications</h4>
             <p innerHTML={{selectedPost.postQualifications}}></p><br>
             <h4 class="jobSections">For More Information Contact:</h4>
             <p innerHTML={{selectedPost.postReference}}></p>
+            <br>
+            <br>
+            <br>
+            <a class="btn btn-custom-1-inverse" [routerLink]="['/applicant/add']">Go to Application</a>
           </div>
         </div>
       </div>
-      <div class="row">
+     <!--  <div class="row">
         <div class="col-md-12">
           <h4>Employment Application</h4>
           <a class="btn btn-custom-1-inverse" [routerLink]="['/applicant/add']">Go to Application</a>
-          <!-- <form id="employment-form" novalidate="novalidate" name="employForm">
+          <form id="employment-form" novalidate="novalidate" name="employForm">
             <div class="ajax-hidden">
               <div class="form-group">
                 <input class="form-control" name="" placeholder="Name" ng-model="" required="required" />
@@ -90,9 +94,9 @@
                 when it came
                 to submitting this form</div>
             </div>
-          </form> -->
+          </form> 
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
   <div class="tab">

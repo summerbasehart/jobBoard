@@ -1,14 +1,14 @@
 var mongoose = require('mongoose'), Schema = mongoose.Schema;
 
 var ApplicantSchema = new mongoose.Schema ({
-    id: string,
     post : { type: Schema.Types.ObjectId, ref: 'Post' },
-    appName: string,
-    appPhone: string,
-    appEmail: string,
-    appAddress1: string,
-    appAddress2: string,
-    appResume: string,
+    id: String,
+    appName: String,
+    appPhone: String,
+    appEmail: String,
+    appAddress1: String,
+    appAddress2: String,
+    appResume: String,
     updated: { type: Date, default: Date.now }
 });
 

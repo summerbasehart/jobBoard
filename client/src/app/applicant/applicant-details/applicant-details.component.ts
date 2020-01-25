@@ -34,6 +34,7 @@ export class ApplicantDetailsComponent implements OnInit {
     this.api.getApplicant(id)
       .subscribe((data: any) => {
         this.applicant = data;
+        this.applicant.id = data._id;
         console.log(this.applicant);
         this.isLoadingResults = false;
       });

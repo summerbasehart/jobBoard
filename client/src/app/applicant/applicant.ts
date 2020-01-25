@@ -1,5 +1,5 @@
 export class Applicant {
-    id: number;
+    id: string;
     post: string;
     appName: string;
     appPhone: string;

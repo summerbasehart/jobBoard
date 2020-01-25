@@ -84,7 +84,7 @@ export class PostEditComponent implements OnInit {
     this.isLoadingResults = true;
     this.api.updatePost(this.id, this.postForm.value)
       .subscribe((res: any) => {
-          const id = res.id;
+          const id = res._id;
           this.isLoadingResults = false;
           this.router.navigate(['/post', id]);
         }, (err: any) => {

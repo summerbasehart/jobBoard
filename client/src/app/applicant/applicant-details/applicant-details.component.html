@@ -2,9 +2,9 @@
     <div class="example-loading-shade" *ngIf="isLoadingResults">
         <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
-    <div class="row" [routerLink]="['/details/', applicant.id]">
+    <div class="row text-center" [routerLink]="['/details/', applicant.id]">
         <div class="col-md-2">
-            <h3>{{applicant.appName}}</h3>
+            <h3>{{applicant.appName}} for {{applicant.post}}</h3>
             <h4>{{applicant.appSubmit | date: 'dd MMM yyyy'}}</h4>
         </div>
         <div class="col-md-3">

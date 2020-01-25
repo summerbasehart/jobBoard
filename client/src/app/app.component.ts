@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Category } from './category/category';
 import { HomeService } from './home.service';
 import { AuthService } from './auth.service';
-
+import { ApplicantService } from './applicant.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ import { AuthService } from './auth.service';
 export class AppComponent implements OnInit  {
   title = 'client';
 
-  constructor(private api: HomeService, private authService: AuthService, private router: Router) { }
+  constructor(private api: HomeService, private authService: AuthService, private router: Router, private applicantService: ApplicantService) { }
 
   categories: Category[] = [];
   loginStatus = false;
@@ -26,6 +26,7 @@ export class AppComponent implements OnInit  {
         this.loginStatus = false;
       }
     });
+    
     this.api.getCategories()
       .subscribe((res: any) => {
         this.categories = res;
@@ -33,7 +34,9 @@ export class AppComponent implements OnInit  {
       }, err => {
         console.log(err);
       });
+    // this.applicantService.addApplicant()
   }
+  
   
   logout() {
     this.authService.logout()

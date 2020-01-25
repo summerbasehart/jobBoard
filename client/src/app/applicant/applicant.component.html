@@ -1,16 +1,18 @@
-<div>
-    <div class="example-loading-shade" *ngIf="isLoadingResults">
-      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
-    </div>
-    <div>
-      <div *ngFor="let post of applicants">
-        <div [routerLink]="['/details/', applicant._id]">
-          <div>
-            <h4>{{applicant.appName}}</h4>
-            <h5>{{applicant.appSumbit | date: 'dd MMM yyyy'}}</h5>
-            <h5>{{applicant.post}}</h5>
-          </div>
-        </div>
+<div class="dashboard">
+  <div class="example-loading-shade" *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <div class="row">
+    <a mat-flat-button [routerLink]="['add']">Add App</a>
+  </div>
+  <hr>
+  <h3>Applications on File:</h3>
+  <div class="row">
+    <div class="col-md-3 posting" *ngFor="let post of data">
+      <div [routerLink]="['details/', applicant._id]">
+        <p><b>{{data.appName}}: Applying for {{data.post}} position</b></p>
+        <p> Submitted: {{data.appSubmit | date: 'dd MMM yyyy'}}</p>
       </div>
     </div>
+  </div>
 </div>

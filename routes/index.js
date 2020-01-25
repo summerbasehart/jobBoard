@@ -1,5 +1,6 @@
 var Category = require("../models/category");
 var Post = require("../models/post");
+var Applicant = require ("../models/applicant")
 var express = require('express');
 var router = express.Router();
 
