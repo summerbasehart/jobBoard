@@ -19,7 +19,7 @@ export class ApplicantDetailsComponent implements OnInit {
       appAddress2: '',
       post: '', 
       appResume: '',
-      appSubmit: null 
+      updated: null 
     };
 
   isLoadingResults = true;

@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "stop": "taskkill -f -im node.exe"
   },
   "dependencies": {
     "@angular/cdk": "^8.2.3",
@@ -29,4 +30,5 @@
     "passport-jwt": "^4.0.0",
     "web-animations-js": "^2.3.2"
   }
+  
 }

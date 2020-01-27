@@ -9,13 +9,13 @@ import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
 import { CategoryComponent } from './category/category.component';
 import { PostComponent } from './post/post.component';
+import { ApplicantComponent } from './applicant/applicant.component'
 import { CategoryDetailsComponent } from './category/category-details/category-details.component';
 import { CategoryAddComponent } from './category/category-add/category-add.component';
 import { CategoryEditComponent } from './category/category-edit/category-edit.component';
 import { PostDetailsComponent } from './post/post-details/post-details.component';
 import { PostAddComponent } from './post/post-add/post-add.component';
 import { PostEditComponent } from './post/post-edit/post-edit.component';
-import { ApplicantComponent } from './applicant/applicant.component'
 import { ApplicantAddComponent } from './applicant/applicant-add/applicant-add.component';
 import { ApplicantDetailsComponent } from './applicant/applicant-details/applicant-details.component'
 
@@ -52,6 +52,7 @@ import { AdminComponent } from './admin/admin.component';
     DetailsComponent,
     CategoryComponent,
     PostComponent,
+    ApplicantComponent,
     CategoryDetailsComponent,
     CategoryAddComponent,
     CategoryEditComponent,
@@ -60,7 +61,6 @@ import { AdminComponent } from './admin/admin.component';
     PostEditComponent,
     BycategoryComponent,
     AdminComponent,
-    ApplicantComponent,
     ApplicantAddComponent,
     ApplicantDetailsComponent,
   ],

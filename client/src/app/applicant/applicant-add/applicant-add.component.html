@@ -5,7 +5,7 @@
         <div class="form-group">
             <select class="form-control" placeholder="position" formControlName="post">
                 <option value="no position selected" selected="true">--select a position--</option>
-                <option value="{{post._id}}" *ngFor="let post of posts">{{post.postTitle}}</option>
+                <option value="{{post.postTitle}}" *ngFor="let post of posts">{{post.postTitle}}</option>
             </select>
         </div>
         <div class="ajax-hidden">

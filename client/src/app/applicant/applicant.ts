@@ -7,5 +7,5 @@ export class Applicant {
     appAddress1: string;
     appAddress2: string;
     appResume: string;
-    appSubmit: Date
+    updated: Date
   }
