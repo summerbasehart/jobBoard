@@ -9,7 +9,7 @@ import { Applicant } from './applicant';
 })
 export class ApplicantComponent implements OnInit {
 
-  displayedColumns: string[] = ['appName', 'updated'];
+  // displayedColumns: string[] = ['appName', 'updated'];
   data: Applicant[] = [];
   isLoadingResults = true;
 
