@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApplicantService } from './../../applicant.service';
 import { Applicant } from '../applicant';
+import { PostService } from '../../post.service'
 
 @Component({
   selector: 'app-applicant-details',

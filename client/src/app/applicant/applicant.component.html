@@ -26,10 +26,10 @@
   </div> -->
 
   <div class="row">
-    <div class="col-md-3 application" *ngFor="let post of data">
-      <div [routerLink]="['details/', post._id]">
-        <p><b>{{post.appName}}</b></p>
-        <p> Submitted: {{post.updated | date: 'dd MMM yyyy'}}</p>
+    <div class="col-md-3 application" *ngFor="let app of data">
+      <div [routerLink]="['details/', app._id]">
+        <p><b>{{app.appName}}</b></p>
+        <p> Submitted: {{app.updated | date: 'dd MMM yyyy'}}</p>
       </div>
     </div>
   </div>

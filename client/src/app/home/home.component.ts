@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
   selectPost(post) {
     this.selectedPost = post;
     console.log(this.selectedPost);
-    
   }
 
   ngOnInit() {

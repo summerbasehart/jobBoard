@@ -26,5 +26,5 @@ export class ApplicantComponent implements OnInit {
         this.isLoadingResults = false;
       });
   }
-
+  
 }

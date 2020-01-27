@@ -1,26 +1,28 @@
-<div class="" >
-    <div class="example-loading-shade"
-          *ngIf="isLoadingResults">
-      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+<div class="dashboard">
+  <div class="example-loading-shade" *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <div class="row">
+    <div class="col-md-1">
+      <a mat-flat-button [routerLink]="['/post']">Return</a>
     </div>
-    <div class="button-row">
-      <a mat-flat-button color="primary" [routerLink]="['/category']">Back</a>
+  </div>
+  <div class="row posting">
+    <div class="col-md-3">
+      <p><b>{{category.catName}}</b></p>
+      <p>Updated: {{category.updated | date}}</p>
     </div>
-    <mat-card class="example-card dashboard">
-      <mat-card-header>
-        <mat-card-title><h2>{{category.catName}}</h2></mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <dl>
-          <dt>Category Content:</dt>
-          <dd [innerHTML]="category.catContent"></dd>
-          <dt>Updated At:</dt>
-          <dd>{{category.updated | date}}</dd>
-        </dl>
-      </mat-card-content>
-      <mat-card-actions>
-        <a mat-flat-button color="primary" [routerLink]="['/category/edit', category._id]"><mat-icon>edit</mat-icon></a>
-        <a mat-flat-button color="warn" (click)="deleteCategory(category._id)"><mat-icon>delete</mat-icon></a>
-      </mat-card-actions>
-    </mat-card>
+    <div class="col-md-7">
+      <p>Department Description:</p>
+      <small>{{category.catCOntent}}</small>
+    </div>
+    <div class="col-md-2">
+      <a class="btn btn-block" [routerLink]="['/category/edit', category.id]">
+        <mat-icon>edit</mat-icon>
+      </a>
+      <a class="btn btn-block" button (click)="deleteCategory(category.id)">
+        <mat-icon>delete</mat-icon>
+      </a>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,11 @@
+delete functions
+    post √
+    category √
+    applicant √
+
+post functions
+    posts √
+    category √
+    applicant √
+
+ge

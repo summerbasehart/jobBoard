@@ -9,8 +9,8 @@
     <div class="row application">
         <div class="col-md-6">
             <h3>{{applicant.appName}}</h3> 
-            <h4>for {{applicant.post}}</h4>
-            <h4>{{applicant.updated | date: 'dd MMM yyyy'}}</h4>
+            <h4>Applying for: </h4>
+            <h4>Submitted: {{applicant.updated | date: 'dd MMM yyyy'}}</h4>
         </div>
         <div class="col-md-5">
             <h4>{{applicant.appPhone}}</h4>
@@ -25,7 +25,7 @@
             <!-- <a class="btn btn-block" [routerLink]="['/post/edit', post.id]">
                 <mat-icon>edit</mat-icon>
             </a> -->
-            <a class="btn btn-block" button (click)="deletePost(applicant.id)">
+            <a class="btn btn-block" button (click)="deleteApplicant(applicant.id)">
                 <mat-icon>delete</mat-icon>
             </a>
         </div>
