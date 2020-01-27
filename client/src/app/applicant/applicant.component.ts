@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApplicantService } from '../applicant.service';
 import { Applicant } from './applicant';
 
+
 @Component({
   selector: 'app-applicant',
   templateUrl: './applicant.component.html',
@@ -26,5 +27,7 @@ export class ApplicantComponent implements OnInit {
         this.isLoadingResults = false;
       });
   }
+
+
   
 }

@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApplicantService } from './../../applicant.service';
 import { Applicant } from '../applicant';
-import { PostService } from '../../post.service'
+import { PostService } from '../../post.service';
+import { Post } from '../../post/post';
 
 @Component({
   selector: 'app-applicant-details',
@@ -24,10 +25,12 @@ export class ApplicantDetailsComponent implements OnInit {
     };
 
   isLoadingResults = true;
+  post: Post[] = [];
 
-  constructor(private route: ActivatedRoute, private api: ApplicantService, private router: Router) { }
+  constructor(private route: ActivatedRoute, private api: ApplicantService, private router: Router, private postApi: PostService) { }
 
   ngOnInit() {
+    this.getPost()
     this.getApplicantDetails(this.route.snapshot.params.id);
   }
 
@@ -53,4 +56,18 @@ export class ApplicantDetailsComponent implements OnInit {
       }
       );
   }
+
+  getPost() {
+    this.postApi.getPost()
+      .subscribe((res: any) => {
+        this.post = res;
+        console.log(this.post);
+        this.isLoadingResults = false;
+      }, err => {
+        console.log(err);
+        this.isLoadingResults = false;
+      });
+  }
+
+  
 }

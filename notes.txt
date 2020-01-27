@@ -8,4 +8,12 @@ post functions
     category √
     applicant √
 
-ge
+retrive
+    posts √
+    category √
+    applicant √
+
+edit functions
+    posts 
+    category 
+    applicant 
