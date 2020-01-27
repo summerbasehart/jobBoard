@@ -32,8 +32,8 @@ export class CategoryEditComponent implements OnInit {
   ngOnInit() {
     this.getCategory(this.route.snapshot.params.id);
     this.categoryForm = this.formBuilder.group({
-      catName : [null, Validators.required],
-      catContent : [null, Validators.required]
+      catName: [null, Validators.required],
+      catContent: [null, Validators.required]
     });
   }
 
@@ -51,9 +51,9 @@ export class CategoryEditComponent implements OnInit {
     this.isLoadingResults = true;
     this.api.updateCategory(this.id, this.categoryForm.value)
       .subscribe((res: any) => {
-          const id = res.id;
+          // const id = res._id;
           this.isLoadingResults = false;
-          this.router.navigate(['/category-details', id]);
+          this.router.navigate(['/category/']);
         }, (err: any) => {
           console.log(err);
           this.isLoadingResults = false;
@@ -61,8 +61,8 @@ export class CategoryEditComponent implements OnInit {
       );
   }
 
-  categoryDetails() {
-    this.router.navigate(['/category-details', this.id]);
-  }
+  // categoryDetails() {
+  //   this.router.navigate(['/category-details', this.id]);
+  // }
 
 }

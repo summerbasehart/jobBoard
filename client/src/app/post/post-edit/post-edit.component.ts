@@ -61,7 +61,7 @@ export class PostEditComponent implements OnInit {
         postTitle: data.postTitle,
         category: data.category,
         postAuthor: data.postAuthor,
-        postDescription : data.postDescription,
+        postDescription: data.postDescription,
         postQualifications: data.postQualifications,
         postReference: data.postReference,
       });
@@ -84,9 +84,9 @@ export class PostEditComponent implements OnInit {
     this.isLoadingResults = true;
     this.api.updatePost(this.id, this.postForm.value)
       .subscribe((res: any) => {
-          const id = res._id;
+          // const id = res.id;
           this.isLoadingResults = false;
-          this.router.navigate(['/post', id]);
+          this.router.navigate(['/post/']);
         }, (err: any) => {
           console.log(err);
           this.isLoadingResults = false;
