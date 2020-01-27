@@ -1,13 +1,13 @@
 <div>
   <div class="example-loading-shade" *ngIf="isLoadingResults">
-    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>ß
   </div>
   <div class="button-row">
     <a mat-flat-button color="primary" [routerLink]="['/category']">
       Back
     </a>
   </div>
-  <div class="row dashboard">
+  <mat-card class="card dashboard">
     <form [formGroup]="categoryForm" (ngSubmit)="onFormSubmit()">
       <div class="form-group">
         <label for="catName">Category Name</label>
@@ -29,5 +29,5 @@
         Save
       </button>
     </form>
-  </div>
+  </mat-card>
 </div>
