@@ -68,7 +68,7 @@ export class ApplicantAddComponent implements OnInit {
       .subscribe((res: any) => {
           const id = res.id;
           this.isLoadingResults = false;
-          this.router.navigate(['/applicant/', id]);
+          this.router.navigate(['/home/']);
         }, (err: any) => {
           console.log(err);
           this.isLoadingResults = false;

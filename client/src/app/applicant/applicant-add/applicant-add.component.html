@@ -26,7 +26,8 @@
             <textarea class="form-control"  rows="1" placeholder="Address Line 2" formControlName="appAddress2"></textarea>
         </div>
         <div class="form-group">
-            <textarea class="form-control"  rows="6" placeholder="Paste your resume here - Do Not Repeat Above Info" formControlName="appResume"></textarea>
+            <label for="appResume">Paste Resume Here - Do Not Repeat Above Info </label>
+            <ckeditor matInput class="form-control"  rows="6" placeholder="Paste your resume here - Do Not Repeat Above Info" formControlName="appResume"></ckeditor>
         </div>
         <p class="text-center">**Must Complete ALL Fields</p>
         <button class="btn btn-block" type="submit" [disabled]="!applicantForm.valid" mat-flat-button >
