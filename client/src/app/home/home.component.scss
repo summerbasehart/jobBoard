@@ -24,6 +24,10 @@
     #jobContainer {
         height: 500px
     }
+    ul {
+        color: white;
+        padding-inline-start: 4% !important;
+    }
   }
   
   /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
@@ -39,6 +43,10 @@
     }
     #jobContainer {
         height: 400px
+    }
+    ul {
+        color: white;
+        padding-inline-start: 2% !important;
     }
   }
 
