@@ -25,9 +25,6 @@ export class AppComponent implements OnInit  {
         this.loginStatus = true;
         document.getElementById("mainContainer").style.maxWidth = "100%";
         document.getElementById("dashboard").style.minHeight = "575px";
-        document.getElementById("join").contentEditable = "true";
-        document.getElementById("top").contentEditable = "true";
-        document.getElementById("open").contentEditable = "true";
       } else {
         this.loginStatus = false;
       }
