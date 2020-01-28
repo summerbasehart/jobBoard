@@ -13,8 +13,8 @@
             <h4>Submitted: {{contractor.updated | date: 'dd MMM yyyy'}}</h4>
         </div>
         <div class="col-md-5">
-            <h4>{{contractor.conPhone}}</h4>
-            <h4>{{contractor.conEmail}}</h4>
+            <h4><a href="tel:{{contractor.conPhone}}">{{contractor.conPhone}}</a></h4>
+            <h4><a href="mailto:{{contractor.conEmail}}">{{contractor.conEmail}}</a></h4>
             <h4>{{contractor.conAddress1}}, </h4>
             <h4>{{contractor.conAddress2}}</h4>
         </div>

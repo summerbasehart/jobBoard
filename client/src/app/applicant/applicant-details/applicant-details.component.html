@@ -13,9 +13,9 @@
             <h4>Submitted: {{applicant.updated | date: 'dd MMM yyyy'}}</h4>
         </div>
         <div class="col-md-5">
-            <h4>{{applicant.appPhone}}</h4>
-            <h4>{{applicant.appEmail}}</h4>
-            <h4>{{applicant.appAddress1}}, </h4>
+            <h4><a href="tel:{{applicant.appPhone}}">{{applicant.appPhone}}</a></h4>
+            <h4><a href="mailto:{{applicant.appEmail}}">{{applicant.appEmail}}</a></h4>
+            <h4>{{applicant.appAddress1}},</h4>
             <h4>{{applicant.appAddress2}}</h4>
         </div>
         <div class="col-md-1">
