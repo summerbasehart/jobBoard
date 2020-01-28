@@ -8,7 +8,7 @@ var ContractorSchema = new mongoose.Schema ({
     conEmail: String,
     conAddress1: String,
     conAddress2: String,
-    conMessage: String,
+    message: String,
     updated: { type: Date, default: Date.now }
 });
 

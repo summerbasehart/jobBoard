@@ -4,6 +4,7 @@ import { Category } from './category/category';
 import { HomeService } from './home.service';
 import { AuthService } from './auth.service';
 import { ApplicantService } from './applicant.service';
+import { ContractorService } from './contractor.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ import { ApplicantService } from './applicant.service';
 export class AppComponent implements OnInit  {
   title = 'client';
 
-  constructor(private api: HomeService, private authService: AuthService, private router: Router, private applicantService: ApplicantService) { }
+  constructor(private api: HomeService, private authService: AuthService, private router: Router, private applicantService: ApplicantService, private contractorService: ContractorService) { }
 
   categories: Category[] = [];
   loginStatus = false;

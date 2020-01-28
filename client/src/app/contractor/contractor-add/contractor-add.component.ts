@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ApplicantService } from '../../applicant.service';
+import { ContractorService } from '../../contractor.service';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
-import { Post } from '../../post/post';
-import { PostService } from '../../post.service';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -15,56 +13,42 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 }
 
 @Component({
-  selector: 'app-applicant-add',
-  templateUrl: './applicant-add.component.html',
-  styleUrls: ['./applicant-add.component.scss']
+  selector: 'app-contractor-add',
+  templateUrl: './contractor-add.component.html',
+  styleUrls: ['./contractor-add.component.scss']
 })
-export class ApplicantAddComponent implements OnInit {
-  applicantForm: FormGroup;
-  appName = '';
-  appEmail = '';
-  appPhone: '';
-  appAddress1 = '';
-  appAddress2 = '';
-  appResume = '';
+export class ContractorAddComponent implements OnInit {
+  contractorForm: FormGroup;
+  company = '';
+  conName = '';
+  conEmail = '';
+  conPhone: '';
+  conAddress1 = '';
+  conAddress2 = '';
+  message = '';
   isLoadingResults = false;
   matcher = new MyErrorStateMatcher();
-  posts: Post[] = [];
 
   constructor(
     private router: Router,
-    private api: ApplicantService,
-    private postService: PostService,
+    private api: ContractorService,
     private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.getPosts();
-    this.applicantForm = this.formBuilder.group({
-      post : [null, Validators.required],
-      appName : [null, Validators.required],
-      appEmail : [null, Validators.required],
-      appPhone : [null, Validators.required],
-      appAddress1 : [null, Validators.required],
-      appAddress2 : [null, Validators.required],
-      appResume : [null, Validators.required],
+    this.contractorForm = this.formBuilder.group({
+      company : [null, Validators.required],
+      conName : [null, Validators.required],
+      conEmail : [null, Validators.required],
+      conPhone : [null, Validators.required],
+      conAddress1 : [null, Validators.required],
+      conAddress2 : [null, Validators.required],
+      message : [null, Validators.required],
     });
-  }
-
-  getPosts() {
-    this.postService.getPosts()
-      .subscribe((res: any) => {
-        this.posts = res;
-        console.log(this.posts);
-        this.isLoadingResults = false;
-      }, err => {
-        console.log(err);
-        this.isLoadingResults = false;
-      });
   }
 
   onFormSubmit() {
     this.isLoadingResults = true;
-    this.api.addApplicant(this.applicantForm.value)
+    this.api.addContractor(this.contractorForm.value)
       .subscribe((res: any) => {
           const id = res.id;
           this.isLoadingResults = false;

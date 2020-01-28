@@ -10,7 +10,6 @@ import { Contractor } from './contractor';
 })
 export class ContractorComponent implements OnInit {
 
-  // displayedColumns: string[] = ['appName', 'updated'];
   data: Contractor[] = [];
   isLoadingResults = true;
 

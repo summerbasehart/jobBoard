@@ -1,6 +1,8 @@
 var Category = require("../models/category");
 var Post = require("../models/post");
 var Applicant = require("../models/applicant")
+var Contractor = require("../models/contractor")
+
 var express = require('express');
 var router = express.Router();
 
@@ -43,6 +45,13 @@ router.get('/applicant', function(req, res, next) {
   Applicant.find(function (err, applicants) {
     if (err) return next(err);
     res.json(applicants);
+  });
+});
+
+router.get('/contractor', function(req, res, next) {
+  Contractor.find(function (err, contractors) {
+    if (err) return next(err);
+    res.json(contractors);
   });
 });
 

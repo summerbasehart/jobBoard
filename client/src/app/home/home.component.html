@@ -158,7 +158,12 @@
       <div class="row" ng-controller="ostJoinCtrl">
         <div class="col-md-12">
           <h4>Join OST Today!</h4>
-          <form id="contact-form" novalidate="novalidate" name="joinForm">
+          <div>    
+            <br>
+            <br>        
+            <a class="btn btn-custom-1-inverse" [routerLink]="['/contractor/add']">Apply to OST Now!</a>
+          </div>
+          <!-- <form id="contact-form" novalidate="novalidate" name="joinForm">
             <div class="ajax-hidden">
               <div class="form-group">
                 <input class="form-control" id="c_name" name="c_name" placeholder="Name" ng-model="newContact.name"
@@ -204,10 +209,8 @@
                 happened
                 when it came to
                 emailing us</div>
-              <!-- Displays status when submitting form-->
-              <!-- .col-->
             </div>
-          </form>
+          </form> -->
         </div>
       </div>
     </div>

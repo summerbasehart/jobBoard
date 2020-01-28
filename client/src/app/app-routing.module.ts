@@ -7,18 +7,20 @@ import { DetailsComponent } from './details/details.component';
 import { CategoryComponent } from './category/category.component';
 import { PostComponent } from './post/post.component';
 import { ApplicantComponent } from './applicant/applicant.component';
+import { ContractorComponent } from './contractor/contractor.component';
 import { CategoryDetailsComponent } from './category/category-details/category-details.component';
 import { CategoryAddComponent } from './category/category-add/category-add.component';
 import { CategoryEditComponent } from './category/category-edit/category-edit.component';
 import { PostDetailsComponent } from './post/post-details/post-details.component';
 import { PostAddComponent } from './post/post-add/post-add.component';
 import { PostEditComponent } from './post/post-edit/post-edit.component';
-import { ApplicantAddComponent } from'./applicant/applicant-add/applicant-add.component';
-import { ApplicantDetailsComponent } from'./applicant/applicant-details/applicant-details.component';
+import { ContractorAddComponent } from'./contractor/contractor-add/contractor-add.component';
+import { ContractorDetailsComponent } from'./contractor/contractor-details/contractor-details.component';
 import { BycategoryComponent } from './bycategory/bycategory.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AdminComponent } from './admin/admin.component';
-
+import { ApplicantAddComponent } from'./applicant/applicant-add/applicant-add.component';
+import { ApplicantDetailsComponent } from'./applicant/applicant-details/applicant-details.component';
 
 
 const routes: Routes = [
@@ -122,6 +124,23 @@ const routes: Routes = [
     path: 'applicant/add',
     component: ApplicantAddComponent,
     data: { title: 'Applicant Add' }
+  },
+  {
+    path: 'contractor',
+    canActivate: [AuthGuard],
+    component: ContractorComponent,
+    data: { title: 'Contractor' }
+  },
+  {
+    path: 'contractor/details/:id',
+    canActivate: [AuthGuard],
+    component: ContractorDetailsComponent,
+    data: { title: 'Contractor Details' }
+  },
+  {
+    path: 'contractor/add',
+    component: ContractorAddComponent,
+    data: { title: 'Contractor Add' }
   },
 ];
 

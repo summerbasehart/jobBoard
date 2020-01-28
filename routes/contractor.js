@@ -9,9 +9,9 @@ var Contractor = require("../models/contractor");
 router.get('/', passport.authenticate('jwt', { session: false}), function(req, res) {
   var token = getToken(req.headers);
   if (token) {
-    Contractor.find(function (err, applicants) {
+    Contractor.find(function (err, contractors) {
       if (err) return next(err);
-      res.json(applicants);
+      res.json(contractors);
     });
   } else {
     return res.status(403).send({success: false, msg: 'Unauthorized.'});

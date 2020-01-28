@@ -10,6 +10,7 @@ import { DetailsComponent } from './details/details.component';
 import { CategoryComponent } from './category/category.component';
 import { PostComponent } from './post/post.component';
 import { ApplicantComponent } from './applicant/applicant.component'
+import { ContractorComponent } from './contractor/contractor.component'
 import { CategoryDetailsComponent } from './category/category-details/category-details.component';
 import { CategoryAddComponent } from './category/category-add/category-add.component';
 import { CategoryEditComponent } from './category/category-edit/category-edit.component';
@@ -17,7 +18,9 @@ import { PostDetailsComponent } from './post/post-details/post-details.component
 import { PostAddComponent } from './post/post-add/post-add.component';
 import { PostEditComponent } from './post/post-edit/post-edit.component';
 import { ApplicantAddComponent } from './applicant/applicant-add/applicant-add.component';
-import { ApplicantDetailsComponent } from './applicant/applicant-details/applicant-details.component'
+import { ApplicantDetailsComponent } from './applicant/applicant-details/applicant-details.component';
+import { ContractorAddComponent } from './contractor/contractor-add/contractor-add.component';
+import { ContractorDetailsComponent } from './contractor/contractor-details/contractor-details.component'
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './interceptors/token.interceptor';
@@ -53,6 +56,7 @@ import { AdminComponent } from './admin/admin.component';
     CategoryComponent,
     PostComponent,
     ApplicantComponent,
+    ContractorComponent,
     CategoryDetailsComponent,
     CategoryAddComponent,
     CategoryEditComponent,
@@ -63,6 +67,8 @@ import { AdminComponent } from './admin/admin.component';
     AdminComponent,
     ApplicantAddComponent,
     ApplicantDetailsComponent,
+    ContractorAddComponent,
+    ContractorDetailsComponent
   ],
   imports: [
     BrowserModule,

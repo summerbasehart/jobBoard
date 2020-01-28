@@ -20,7 +20,7 @@ export class ContractorDetailsComponent implements OnInit {
       conEmail: "",
       conAddress1: "",
       conAddress2: "",
-      conMessage: "",
+      message: "",
       updated: null
     };
 

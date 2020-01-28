@@ -6,6 +6,6 @@ export class Contractor {
     conEmail: string;
     conAddress1: string;
     conAddress2: string;
-    conMessage: string;
+    message: string;
     updated: Date
   }
