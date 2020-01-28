@@ -1,6 +1,6 @@
 <div class="row rowOne">
   <div class="container">
-    <div class="col-md-12 ">
+    <div class="col-md-12" id="top" contenteditable="false">
       <h3 class="text-center ">JOIN OST AND BECOME A PART OF A WINNING TEAM!</h3>
       <p class="text-center">We are seeking Independent Owner/Operators with HIGH CUBE box trucks to join our
         team.
@@ -19,12 +19,14 @@
     <input id="tab-1" type="radio" name="tab-group-1" checked="" />
     <label for="tab-1">Employee </label>
     <div class="content">
-      <div class="col-md-12 open">
+      <div class="col-md-12 open" id="open" contenteditable="false">
         <h3>Why Join OST:</h3>
         <p>As an employee of Of Service Transportation, you would be an important member of a
-          team effort. We hope that you will find your position with the Company rewarding, challenging, and productive.</p>
+          team effort. We hope that you will find your position with the Company rewarding, challenging, and productive.
+        </p>
         <p>Because our success depends upon the dedication of our employees, we are highly selective in choosing new
-          members of our team. We would look to you and the other employees to contribute to the success of the Company.</p>
+          members of our team. We would look to you and the other employees to contribute to the success of the Company.
+        </p>
         <h3>Open Positions:</h3>
       </div>
       <div class="example-loading-shade" *ngIf="isLoadingResults">
@@ -39,7 +41,8 @@
         </div>
         <div class="col-md-10" id="jobContainer">
           <div class="job w3-container w3-animate-opacity" id="{{selectedPost.postTitle}}">
-            <h3 class="jobSections" >{{selectedPost.postTitle}} --  Date Posted: {{selectedPost.updated | date: 'dd MMM yyyy'}}</h3>
+            <h3 class="jobSections">{{selectedPost.postTitle}} -- Date Posted:
+              {{selectedPost.updated | date: 'dd MMM yyyy'}}</h3>
             <h4 class="jobSections">Job Description</h4>
             <p innerHTML={{selectedPost.postDescription}}></p><br>
             <h4 class="jobSections">Qualifications</h4>
@@ -50,7 +53,7 @@
           </div>
         </div>
       </div>
-      <div class="this"> 
+      <div class="this">
         <br>
         <a class="btn btn-block btn-custom-1-inverse" [routerLink]="['/applicant/add']">Apply to OST Now!</a>
       </div>
@@ -60,7 +63,7 @@
     <input id="tab-2" type="radio" name="tab-group-1" />
     <label for="tab-2">Contractor </label>
     <div class="content">
-      <div class="row">
+      <div class="row" id="join" contenteditable="false">
         <div class="col-md-12">
           <h3>Why join OST:</h3>
           <ul>
@@ -82,8 +85,6 @@
             <li>BUSINESS EXPANSION OPPORTUNITIES!</li>
           </ul>
         </div>
-      </div>
-      <div class="row">
         <div class="col-md-12">
           <h3>Independent Contract Carrier Requirements:</h3>
           <ul>
@@ -98,8 +99,6 @@
             <li>Must be able to communicate well with customers (must speak and understand English)</li>
           </ul>
         </div>
-      </div>
-      <div class="row">
         <div class="col-md-12">
           <p>For information regarding this opportunity, please submit your contact information below or call
             Ernesto Gomez direct at (951) 366-0276.</p>
@@ -111,8 +110,8 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-            <br>       
-            <a class="btn btn-block btn-custom-1-inverse" [routerLink]="['/contractor/add']">Apply to OST Now!</a>
+          <br>
+          <a class="btn btn-block btn-custom-1-inverse" [routerLink]="['/contractor/add']">Apply to OST Now!</a>
         </div>
       </div>
     </div>
@@ -151,4 +150,5 @@
 </script>
 <!-- zone.js required by Angular -->
 <script src="node_modules/zone.js/dist/zone.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
