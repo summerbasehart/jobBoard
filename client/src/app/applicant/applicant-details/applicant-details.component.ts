@@ -60,7 +60,7 @@ export class ApplicantDetailsComponent implements OnInit {
   getPost() {
     this.postApi.getPost(this.post)
       .subscribe((res: any) => {
-        this.post = res.id;
+        this.post = res;
         console.log(this.post);
         this.isLoadingResults = false;
       }, err => {
