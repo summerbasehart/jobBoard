@@ -45,60 +45,9 @@
           </div>
         </div>
       </div>
-      <div>    
-        <br>
-        <br>        
-        <a class="btn btn-custom-1-inverse" [routerLink]="['/applicant/add']">Apply to OST Now!</a>
+      <div class="this"> 
+        <a class="btn btn-block btn-custom-1-inverse" [routerLink]="['/applicant/add']">Apply to OST Now!</a>
       </div>
-     <!--  <div class="row">
-        <div class="col-md-12">
-          <h4>Employment Application</h4>
-          <a class="btn btn-custom-1-inverse" [routerLink]="['/applicant/add']">Go to Application</a>
-          <form id="employment-form" novalidate="novalidate" name="employForm">
-            <div class="ajax-hidden">
-              <div class="form-group">
-                <input class="form-control" name="" placeholder="Name" ng-model="" required="required" />
-              </div>
-            </div>
-            <div class="form-group">
-              <select class="form-control" placeholder="position" >
-                <option value="{{post.postTitle}}" *ngFor="let post of posts">{{post.postTitle}}</option>
-                <option value="no position selected">--select a position--</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <input class="form-control" type="email" name="c_email" placeholder="E-mail" ng-model=""
-                required="required" />
-            </div>
-            <div class="form-group">
-              <input class="form-control" type="phone" name="" placeholder="Phone" ng-model="" required="required" />
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="" rows="1" placeholder="Address Line 1 (include Unit/Apt)"
-                ng-model=""></textarea>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="" rows="1" placeholder="Address Line 2" ng-model=""></textarea>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="" rows="6" placeholder="Paste your resume here"
-                ng-model=""></textarea>
-            </div>
-            <div class="form-group submit-button text-center"><a class="btn btn-custom-1-inverse" ng-click=""
-                ng-disabled="">Send it &nbsp;<i class="fa fa-refresh fa-spin" [hidden]="!emailing"></i></a></div>
-            <div class="form-group">
-              <div class="alert alert-success" [hidden]="!emailed">Thank you for your interest!
-                We
-                will be
-                reaching out to you as soon as we can.</div>
-              <div class="alert alert-danger" [hidden]="!emailError">We are sorry, something
-                happened
-                when it came
-                to submitting this form</div>
-            </div>
-          </form> 
-        </div>
-      </div>-->
     </div>
   </div>
   <div class="tab">
@@ -127,7 +76,6 @@
             <li>BUSINESS EXPANSION OPPORTUNITIES!</li>
           </ul>
         </div>
-
       </div>
       <div class="row">
         <div class="col-md-12">
@@ -163,54 +111,6 @@
             <br>        
             <a class="btn btn-custom-1-inverse" [routerLink]="['/contractor/add']">Apply to OST Now!</a>
           </div>
-          <!-- <form id="contact-form" novalidate="novalidate" name="joinForm">
-            <div class="ajax-hidden">
-              <div class="form-group">
-                <input class="form-control" id="c_name" name="c_name" placeholder="Name" ng-model="newContact.name"
-                  required="required" />
-                <div class="alert alert-danger" ng-show="joinForm.c_name.$error.required && joinForm.c_name.$dirty">
-                  Name is a required field.
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <input class="form-control" id="c_company" ng-model="newContact.company" name="c_company"
-                placeholder="Company" />
-            </div>
-            <div class="form-group">
-              <input class="form-control" id="c_email" type="email" name="c_email" placeholder="E-mail"
-                ng-model="newContact.email" required="required" />
-              <div class="alert alert-danger" ng-show="joinForm.c_email.$error.required && joinForm.c_email.$dirty">
-                Email is a
-                required
-                field.</div>
-            </div>
-            <div class="form-group">
-              <input class="form-control" id="c_phone" type="phone" name="c_phone" placeholder="Phone"
-                ng-model="newContact.phone" required="required" />
-              <div class="alert alert-danger" ng-show="joinForm.c_phone.$error.required && joinForm.c_phone.$dirty">
-                Phone is a
-                required
-                field.</div>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" id="c_message" name="c_message" rows="6" placeholder="Your message"
-                ng-model="newContact.message"></textarea>
-            </div>
-            <div class="form-group submit-button"><a class="btn btn-custom-1-inverse" ng-click="joinOST()"
-                ng-disabled="joinForm.$invalid">Send it &nbsp;<i class="fa fa-refresh fa-spin"
-                  ng-show="emailing"></i></a></div>
-            <div class="form-group">
-              <div class="alert alert-success" [hidden]="!emailed">Thank you for your interest!
-                We
-                will be reaching
-                out to you as soon as we can.</div>
-              <div class="alert alert-danger" [hidden]="!emailError">We are sorry, something
-                happened
-                when it came to
-                emailing us</div>
-            </div>
-          </form> -->
         </div>
       </div>
     </div>

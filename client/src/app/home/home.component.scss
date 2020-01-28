@@ -1,7 +1,6 @@
 .tabs {
     position: relative;   
-    min-height: 1200px; /* This part sucks */
-    max-height: 2000px;
+    min-height: 900px; /* This part sucks */
     clear: both;
     margin: 35px 0 25px;
 }
@@ -46,6 +45,7 @@
     padding: 20px;
     -webkit-transition: opacity .6s linear;
     opacity: 0;
+    min-height: 100%
 }
 
 [type=radio]:checked ~ label {
@@ -71,7 +71,7 @@
 }
 
 #jobContainer {
-    height: 600px;
+    height: 500px;
     overflow: scroll;
     background-color: #454545;
     padding: 15px;

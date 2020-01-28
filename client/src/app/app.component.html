@@ -21,10 +21,10 @@
             <a class="nav-link" [routerLink]="['/admin']">Home </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/category']">Category</a>
+            <a class="nav-link" [routerLink]="['/category']">Categories</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/post']">Post</a>
+            <a class="nav-link" [routerLink]="['/post']">Job Posts</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/applicant']">Applications</a>
@@ -41,11 +41,12 @@
       <div class="container">
         <div class="col-md-12 copyright"><small class="text-center">© 2020 OST Advantage</small></div>
       </div>
+      <nav class="toolbarOne" text-center>
+        <div>
+          <button mat-button class="toolbarButtonOne" [routerLink]="['/login']">Admin</button>
+        </div>
+      </nav>
     </div>
   </div>
-  <nav class="toolbarOne" text-center *ngIf="loginStatus === false">
-    <div>
-      <button mat-button class="toolbarButtonOne" [routerLink]="['/login']">Admin</button>
-    </div>
-  </nav>
+  
 </div>
