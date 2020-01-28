@@ -1,21 +1,27 @@
+create categories component √
+create posts component √
+create admin component √
+create applicant component √
+create contractors component √
+
 delete functions
     post √
     category √
     applicant √
-    contractor
+    contractor √
 
 post functions
     posts √
     category √
     applicant √
-    contractor
+    contractor √
 
 
 retrieve
     posts √
     category √
     applicant √
-    contractor
+    contractor √
 
 edit functions
     posts 
@@ -25,6 +31,7 @@ edit functions
 
 set 1st post as defualt for home page
 
-move application
+test application print view √
 
-create contractors component
+test contractor print view 
+
