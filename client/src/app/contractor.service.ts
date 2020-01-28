@@ -13,7 +13,7 @@ export class ContractorService {
 
   constructor(private http: HttpClient) { }
 
-  getApplicants(): Observable<Contractor[]> {
+  getContractors(): Observable<Contractor[]> {
     return this.http.get<Contractor[]>(apiUrl)
       .pipe(
         tap(_ => this.log('fetched contractors')),
@@ -21,7 +21,7 @@ export class ContractorService {
       );
   }
 
-  getApplicant(id: any): Observable<Contractor> {
+  getContractor(id: any): Observable<Contractor> {
     const url = `${apiUrl}/${id}`;
     return this.http.get<Contractor>(url).pipe(
       tap(_ => console.log(`fetched contractor by id=${id}`)),
@@ -29,14 +29,14 @@ export class ContractorService {
     );
   }
 
-  addApplicant(applicant: Contractor): Observable<Contractor> {
-    return this.http.post<Contractor>(apiUrl, applicant).pipe(
+  addContractor(contractor: Contractor): Observable<Contractor> {
+    return this.http.post<Contractor>(apiUrl, contractor).pipe(
       tap((prod: Contractor) => console.log(`added contractor w/ id=${contractor.id}`)),
       catchError(this.handleError<Contractor>('addContractor'))
     );
   }
 
-  deleteApplicant(id: any): Observable<Contractor> {
+  deleteContractor(id: any): Observable<Contractor> {
     const url = `${apiUrl}/${id}`;
     return this.http.delete<Contractor>(url).pipe(
       tap(_ => console.log(`deleted contractor id=${id}`)),

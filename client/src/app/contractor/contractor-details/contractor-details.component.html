@@ -3,35 +3,29 @@
         <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
     <div class="button-row">
-        <a mat-flat-button color="primary" [routerLink]="['/applicant']">Back</a>
+        <a mat-flat-button color="primary" [routerLink]="['/contractor']">Back</a>
       </div>
       <hr>
-    <div class="row application">
+    <div class="row contractor">
         <div class="col-md-6">
-            <h3>{{applicant.appName}}</h3> 
-            <h4>Applying for: {{applicant.post}}</h4>
-            <h4>Submitted: {{applicant.updated | date: 'dd MMM yyyy'}}</h4>
+            <h3>{{contractor.conName}}</h3> 
+            <h4>{{contractor.company}}</h4>
+            <h4>Submitted: {{contractor.updated | date: 'dd MMM yyyy'}}</h4>
         </div>
         <div class="col-md-5">
-            <h4>{{applicant.appPhone}}</h4>
-            <h4>{{applicant.appEmail}}</h4>
-            <h4>{{applicant.appAddress1}}, </h4>
-            <h4>{{applicant.appAddress2}}</h4>
+            <h4>{{contractor.conPhone}}</h4>
+            <h4>{{contractor.conEmail}}</h4>
+            <h4>{{contractor.conAddress1}}, </h4>
+            <h4>{{contractor.conAddress2}}</h4>
         </div>
         <div class="col-md-1">
-            <!-- <a class="btn btn-block" [routerLink]="['/applicant/details', applicant.id]">
-                <mat-icon>view</mat-icon>
-            </a> -->
-            <!-- <a class="btn btn-block" [routerLink]="['/post/edit', post.id]">
-                <mat-icon>edit</mat-icon>
-            </a> -->
-            <a class="btn btn-block" button (click)="deleteApplicant(applicant.id)">
+            <a class="btn btn-block" button (click)="deleteContractor(contractor.id)">
                 <mat-icon>delete</mat-icon>
             </a>
         </div>
         <br>
         <div class="col-md-12">
-            <p innerHTML={{applicant.appResume}}></p>
+            <p innerHTML={{contractor.conMessage}}></p>
         </div>
     </div>
 </div>
