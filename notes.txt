@@ -23,7 +23,7 @@ retrieve
     contractor √
 
 edit functions
-    posts 
+    posts √
     category 
     applicant
     contractor
