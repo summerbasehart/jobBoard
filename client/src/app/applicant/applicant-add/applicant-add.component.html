@@ -4,7 +4,8 @@
         <h4 class="text-center">Join OST Today!</h4>
         <div class="form-group">
             <select class="form-control" placeholder="position" formControlName="post">
-                <option value="no position selected" selected="true">--select a position--</option>
+                <option value="undefined" selected disabled hidden> -- Select an Option --
+                </option> 
                 <option value="{{post._id}}" *ngFor="let post of posts">{{post.postTitle}}</option>
             </select>
         </div>
