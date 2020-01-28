@@ -39,7 +39,7 @@ export class CategoryEditComponent implements OnInit {
 
   getCategory(id: any) {
     this.api.getCategory(id).subscribe((data: any) => {
-      this.id = data.id;
+      this.id = data._id;
       this.categoryForm.setValue({
         catName: data.catName,
         catContent: data.catContent

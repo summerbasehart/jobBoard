@@ -24,11 +24,11 @@ retrieve
 
 edit functions
     posts √
-    category 
+    category √
     applicant
     contractor
 
-set 1st post as defualt for home page
+set 1st post as default for home page
 
 test application print view √
 
