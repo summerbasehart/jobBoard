@@ -11,6 +11,13 @@ router.get('/category', function(req, res, next) {
   });
 });
 
+router.get('/category/:id', function(req, res, next) {
+  Post.find({category: req.params.id}, function (err, category) {
+    if (err) return next(err);
+    res.json(category);
+  });
+});
+
 router.get('/bycategory/:id', function(req, res, next) {
   Post.find({category: req.params.id}, function (err, posts) {
     if (err) return next(err);

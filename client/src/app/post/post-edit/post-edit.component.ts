@@ -56,7 +56,7 @@ export class PostEditComponent implements OnInit {
 
   getPost(id: any) {
     this.api.getPost(id).subscribe((data: any) => {
-      this.id = data.id;
+      this.id = data._id;
       this.postForm.setValue({
         postTitle: data.postTitle,
         category: data.category,

@@ -27,7 +27,7 @@
   </div> -->
 
   <div class="row">
-    <div class="col-md-3 categories" *ngFor="let post of data" [routerLink]="['details/', post._id]">
+    <div class="col-md-3 categories" *ngFor="let post of data"[routerLink]="['details/', post._id]">
         <p><b>{{post.catName}}</b></p>
         <p> Updated: {{post.updated | date: 'dd MMM yyyy'}}</p>
     </div>

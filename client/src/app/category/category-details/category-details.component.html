@@ -4,7 +4,7 @@
   </div>
   <div class="row">
     <div class="col-md-1">
-      <a mat-flat-button [routerLink]="['/post']">Return</a>
+      <a mat-flat-button [routerLink]="['/category']">Return</a>
     </div>
   </div>
   <div class="row posting">
@@ -17,7 +17,7 @@
       <small>{{category.catContent}}</small>
     </div>
     <div class="col-md-2">
-      <a class="btn btn-block" [routerLink]="['/category/edit', category.id]">
+      <a class="btn btn-block" [routerLink]="['/category/edit/', category._id]">
         <mat-icon>edit</mat-icon>
       </a>
       <a class="btn btn-block" button (click)="deleteCategory(category.id)">
