@@ -7,18 +7,21 @@ create contractors component √
 post functions
     posts √
     category √
+    admin √
     applicant √
     contractor √
 
 delete functions
     post √
     category √
+    admin √
     applicant √
     contractor √
 
 retrieve
     posts √
     category √
+    admin √
     applicant √
     contractor √
 

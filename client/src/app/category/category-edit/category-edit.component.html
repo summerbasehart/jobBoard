@@ -1,4 +1,4 @@
-<div class="dashboard" >
+<div class="dashboard" id="dashboard" >
     <div class="example-loading-shade"
           *ngIf="isLoadingResults">
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
@@ -6,7 +6,7 @@
     <div class="button-row">
       <a mat-flat-button color="primary" (click)="categoryDetails()">Back</a>
     </div>
-    <div class="dashboard">
+    <div class="dashboard" id="dashboard">
       <form [formGroup]="categoryForm" (ngSubmit)="onFormSubmit()">
         <div>
           <label for="catName">Category Name</label>
