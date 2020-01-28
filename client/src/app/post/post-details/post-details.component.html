@@ -16,11 +16,11 @@
     </div>
     <div class="col-md-4">
       <p>Qualifications:</p>
-      <small>{{post.postQualifications}}</small>
+      <small innerHTML={{post.postQualifications}}></small>
     </div>
     <div class="col-md-4">
       <p>Duties and Benefits:</p>
-      <small>{{post.postDescription}}</small>
+      <small innerHTML={{post.postDescription}}></small>
     </div>
     <div class="col-md-1">
       <a class="btn btn-block" [routerLink]="['/post/edit', post.id]">
