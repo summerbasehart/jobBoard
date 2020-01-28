@@ -8,10 +8,18 @@ body {
     body {
       font-size: 11px;
     }
+    ul {
+        color: white;
+        padding-inline-start: 2% !important;
+    }
   }
   @media screen and (min-width: 601px) {
     body{
       font-size: 13px;
+    }
+    ul {
+        color: white;
+        padding-inline-start: 4% !important;
     }
   }
 
@@ -79,10 +87,7 @@ body {
     color: red;
 }
 
-ul {
-    color: white;
-    padding-inline-start: 2% !important;
-}
+
 li {
     padding-bottom: 5px;
 }

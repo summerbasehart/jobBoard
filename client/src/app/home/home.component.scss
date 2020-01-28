@@ -8,12 +8,21 @@
     .tabs {
         min-height: 800px; /* This part sucks */
     }
+    #jobContainer {
+        height: 500px
+    }
   }
   
   /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
   @media screen and (max-width: 600px) {
     .tabs{
         min-height: 900px; /* This part sucks */
+    }
+    #jobNames {
+        max-height: 200px
+    }
+    #jobContainer {
+        height: 400px
     }
   }
 
@@ -71,7 +80,6 @@
 }
 
 #jobContainer {
-    height: 40em;
     overflow: scroll;
     background-color: #454545;
     padding: 15px;
