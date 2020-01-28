@@ -1,9 +1,21 @@
 .tabs {
     position: relative;   
-    min-height: 900px; /* This part sucks */
     clear: both;
     margin: 35px 0 25px;
 }
+
+@media screen and (min-width: 601px) {
+    .tabs {
+        min-height: 800px; /* This part sucks */
+    }
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    .tabs{
+        min-height: 900px; /* This part sucks */
+    }
+  }
 
 .tab {
     float: left;
@@ -18,18 +30,6 @@
     -webkit-transition: background-color .17s linear;
     cursor: pointer;
     font-weight: bold;
-    @media screen and (min-width: 601px) {
-        div.example {
-          font-size: 22px;
-        }
-      }
-      
-      /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-      @media screen and (max-width: 600px) {
-        div.example {
-          font-size: 10px;
-        }
-      }
 }
 
 .tab [type=radio] {
@@ -45,7 +45,7 @@
     padding: 20px;
     -webkit-transition: opacity .6s linear;
     opacity: 0;
-    min-height: 100%
+    max-height: 100%
 }
 
 [type=radio]:checked ~ label {
