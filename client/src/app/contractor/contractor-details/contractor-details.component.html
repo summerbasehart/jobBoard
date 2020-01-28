@@ -1,0 +1,37 @@
+<div class="dashboard">
+    <div class="example-loading-shade" *ngIf="isLoadingResults">
+        <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+    <div class="button-row">
+        <a mat-flat-button color="primary" [routerLink]="['/applicant']">Back</a>
+      </div>
+      <hr>
+    <div class="row application">
+        <div class="col-md-6">
+            <h3>{{applicant.appName}}</h3> 
+            <h4>Applying for: {{applicant.post}}</h4>
+            <h4>Submitted: {{applicant.updated | date: 'dd MMM yyyy'}}</h4>
+        </div>
+        <div class="col-md-5">
+            <h4>{{applicant.appPhone}}</h4>
+            <h4>{{applicant.appEmail}}</h4>
+            <h4>{{applicant.appAddress1}}, </h4>
+            <h4>{{applicant.appAddress2}}</h4>
+        </div>
+        <div class="col-md-1">
+            <!-- <a class="btn btn-block" [routerLink]="['/applicant/details', applicant.id]">
+                <mat-icon>view</mat-icon>
+            </a> -->
+            <!-- <a class="btn btn-block" [routerLink]="['/post/edit', post.id]">
+                <mat-icon>edit</mat-icon>
+            </a> -->
+            <a class="btn btn-block" button (click)="deleteApplicant(applicant.id)">
+                <mat-icon>delete</mat-icon>
+            </a>
+        </div>
+        <br>
+        <div class="col-md-12">
+            <p innerHTML={{applicant.appResume}}></p>
+        </div>
+    </div>
+</div>

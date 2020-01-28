@@ -2,18 +2,29 @@ delete functions
     post √
     category √
     applicant √
+    contractor
 
 post functions
     posts √
     category √
     applicant √
+    contractor
 
-retrive
+
+retrieve
     posts √
     category √
     applicant √
+    contractor
 
 edit functions
     posts 
     category 
-    applicant 
+    applicant
+    contractor
+
+set 1st post as defualt for home page
+
+move application
+
+create contractors component

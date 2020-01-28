@@ -51,7 +51,6 @@ export class CategoryEditComponent implements OnInit {
     this.isLoadingResults = true;
     this.api.updateCategory(this.id, this.categoryForm.value)
       .subscribe((res: any) => {
-          const id = res.id;
           this.isLoadingResults = false;
           this.router.navigate(['/category/']);
         }, (err: any) => {
@@ -62,7 +61,7 @@ export class CategoryEditComponent implements OnInit {
   }
 
   categoryDetails() {
-    this.router.navigate(['/category-details', this.id]);
+    this.router.navigate(['/category-details/', this.id]);
   }
 
 }
