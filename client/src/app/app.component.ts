@@ -23,8 +23,8 @@ export class AppComponent implements OnInit  {
     this.authService.isLoggedIn.subscribe((status: any) => {
       if (status === true) {
         this.loginStatus = true;
-        document.getElementById("mainContainer").style.maxWidth = "100%";
-        document.getElementById("dashboard").style.minHeight = "575px";
+        document.getElementById("mainContainer").style.maxWidth = "99%";
+        document.getElementById("dashboard").style.minHeight = "700px";
       } else {
         this.loginStatus = false;
       }

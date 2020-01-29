@@ -44,7 +44,13 @@ body {
 .logo {
     margin: auto;
     padding-top: 0;
-    width: 30%;
+    width: 22%;
+}
+
+.adminLogo {
+    margin: auto;
+    padding-top: 0;
+    width: 15%;
 }
 
 .subhead {

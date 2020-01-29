@@ -1,14 +1,20 @@
 <div>
   <div class="row text-center" id="header">
-    <div class="col-md-12">
-       <a [routerLink]="['/home']" id="logo"> 
+    <div class="col-md-12" *ngIf="loginStatus === true">
+       <a [routerLink]="['/home']"> 
+        <img class="img-responsive adminLogo" src="../../images/OSTLogoLarge.png" />
+        </a>
+      <h2 class="text-center subhead">Delivering
+        Service<span>&nbsp;<b>FIRST!</b></span></h2>
+    </div>
+    <div class="col-md-12" *ngIf="loginStatus === false">
+       <a [routerLink]="['/home']"> 
         <img class="img-responsive logo" src="../../images/OSTLogoLarge.png" />
         </a>
       <h2 class="text-center subhead">Delivering
         Service<span>&nbsp;<b>FIRST!</b></span></h2>
     </div>
   </div>
-
   <div class="container mainContainer" id="mainContainer">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" *ngIf="loginStatus === true">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
@@ -18,7 +24,7 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/home']">HomeView</a>
+            <a class="nav-link" [routerLink]="['/admin']">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/category']">Departments</a>
