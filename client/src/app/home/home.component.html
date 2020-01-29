@@ -39,7 +39,12 @@
           </div>
         </div>
         <div class="col-md-10" id="jobContainer">
-          <div class="job w3-container w3-animate-opacity" id="{{selectedPost.postTitle}}">
+          <div class="job w3-container w3-animate-opacity" *ngIf="selectedPost === null, show">
+            <h3 class="text-center">
+              Please select a position to view job details
+            </h3>
+          </div>
+          <div class="job w3-container w3-animate-opacity" id="{{selectedPost.postTitle}}" *ngIf="selectedPost !== null, show">
             <h3 class="jobSections">{{selectedPost.postTitle}} -- Date Posted:
               {{selectedPost.updated | date: 'dd MMM yyyy'}}</h3>
             <h4 class="jobSections">Job Description</h4>

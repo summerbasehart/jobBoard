@@ -24,13 +24,14 @@ export class ApplicantDetailsComponent implements OnInit {
     updated: null
   };
   isLoadingResults = true;
-  post: Post[] = [];
+  post: Post[] = []
 
   constructor(private route: ActivatedRoute, private api: ApplicantService, private router: Router, private postApi: PostService) { }
 
   ngOnInit() {
-    this.getPost()
+    this.getPosts()
     this.getApplicantDetails(this.route.snapshot.params.id);
+    // this.getPostDetails(this.route.snapshot.params.id);
   }
 
   getApplicantDetails(id: any) {
@@ -56,10 +57,20 @@ export class ApplicantDetailsComponent implements OnInit {
       );
   }
 
-  getPost() {
-    this.postApi.getPost(this.post)
+  // getPostDetails(id: any) {
+  //   this.postApi.getPost(Post)
+  //     .subscribe((data: any) => {
+  //       this.post = data;
+  //       this.post.id = data._id;
+  //       console.log(this.post);
+  //       this.isLoadingResults = false;
+  //     });
+  // }
+
+  getPosts() {
+    this.postApi.getPosts()
       .subscribe((res: any) => {
-        this.post = res._id;
+        this.post = res;
         console.log(this.post);
         this.isLoadingResults = false;
       }, err => {
