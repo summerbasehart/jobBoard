@@ -12,18 +12,17 @@ import { Post } from '../../post/post';
 })
 export class ApplicantDetailsComponent implements OnInit {
 
-    applicant: Applicant = { 
-      id: null, 
-      appPhone: '',
-      appEmail: '',
-      appName: '', 
-      appAddress1: '',
-      appAddress2: '',
-      post: '', 
-      appResume: '',
-      updated: null 
-    };
-
+  applicant: Applicant = {
+    id: null,
+    appPhone: '',
+    appEmail: '',
+    appName: '',
+    appAddress1: '',
+    appAddress2: '',
+    post: '',
+    appResume: '',
+    updated: null
+  };
   isLoadingResults = true;
   post: Post[] = [];
 
@@ -69,5 +68,5 @@ export class ApplicantDetailsComponent implements OnInit {
       });
   }
 
-  
+
 }
