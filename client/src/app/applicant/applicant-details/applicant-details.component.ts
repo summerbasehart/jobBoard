@@ -29,17 +29,32 @@ export class ApplicantDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private api: ApplicantService, private router: Router, private postApi: PostService) { }
 
   ngOnInit() {
-    this.getPosts()
     this.getApplicantDetails(this.route.snapshot.params.id);
-    // this.getPostDetails(this.route.snapshot.params.id);
+    this.route.params.subscribe(params => {
+      this.getApplicantsByPost(this.route.snapshot.params.post);
+    });
   }
 
   getApplicantDetails(id: any) {
     this.api.getApplicant(id)
-      .subscribe((data: any) => {
-        this.applicant = data;
-        this.applicant.id = data._id;
+      .subscribe((app: any) => {
+        this.applicant = app;
+        this.applicant.id = app._id;
         console.log(this.applicant);
+        this.isLoadingResults = false;
+      });
+  }
+
+  getApplicantsByPost(id: any) {
+    this.post = [];
+    var x = this.applicant.post;
+    this.api.getApplicantsByPost(x)
+      .subscribe((res: any) => {
+        this.post = res;
+        console.log(this.post);
+        this.isLoadingResults = false;
+      }, err => {
+        console.log(err);
         this.isLoadingResults = false;
       });
   }
@@ -67,17 +82,17 @@ export class ApplicantDetailsComponent implements OnInit {
   //     });
   // }
 
-  getPosts() {
-    this.postApi.getPosts()
-      .subscribe((res: any) => {
-        this.post = res;
-        console.log(this.post);
-        this.isLoadingResults = false;
-      }, err => {
-        console.log(err);
-        this.isLoadingResults = false;
-      });
-  }
-
+  // getPost() {
+  //   var x = this.applicant.post
+  //   this.postApi.getPost(x)
+  //     .subscribe((res: any) => {
+  //       this.post = res;
+  //       console.log(this.post);
+  //       this.isLoadingResults = false;
+  //     }, err => {
+  //       console.log(err);
+  //       this.isLoadingResults = false;
+  //     });
+  // }
 
 }

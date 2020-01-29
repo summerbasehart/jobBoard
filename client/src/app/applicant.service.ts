@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { Applicant } from './applicant/applicant';
+import { Post } from './post/post'
 
 const apiUrl = 'http://localhost:3000/api/applicant/';
 
@@ -34,6 +35,14 @@ export class ApplicantService {
       tap((prod: Applicant) => console.log(`added applicant w/ id=${applicant.id}`)),
       catchError(this.handleError<Applicant>('addApplicant'))
     );
+  }
+
+  getApplicantsByPost(id: any): Observable<Applicant[]> {
+    return this.http.get<Applicant[]>(apiUrl + id)
+      .pipe(
+        tap(_ => this.log('fetched Applicants')),
+        catchError(this.handleError('getApplicants', []))
+      );
   }
 
   // updateApplicant(id: any, applicant: Applicant): Observable<any> {

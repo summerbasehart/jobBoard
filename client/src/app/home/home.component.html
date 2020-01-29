@@ -23,9 +23,7 @@
         <h3>Joining OST:</h3>
         <p>As an employee of Of Service Transportation, you would be an important member of a <b>TEAM</b> effort. We hope that you find your position with us rewarding, challenging, and productive. We would look to you and the other employees to contribute to the success of the Company.
         </p>
-        <p>Since our success depends upon the dedication of our employees, we are highly selective in choosing new
-          members of our team. 
-        </p>
+        
         <h3>Open Positions:</h3>
       </div>
       <div class="example-loading-shade" *ngIf="isLoadingResults">
@@ -39,9 +37,17 @@
           </div>
         </div>
         <div class="col-md-10" id="jobContainer">
-          <div class="job w3-container w3-animate-opacity" *ngIf="selectedPost === null, show">
-            <h3 class="text-center">
-              Please select a position to view job details
+          <div class="job w3-container w3-animate-opacity text-center" *ngIf="selectedPost === null, show">
+            <br>
+            <br>
+            <h4>Since our success depends upon the dedication of our employees,<br><br>
+              we are highly selective in choosing new members of our team. 
+            </h4>
+            <br>
+            <br>
+            <h3>
+              Please select a position to view job details<br>
+              ____________________________________________
             </h3>
           </div>
           <div class="job w3-container w3-animate-opacity" id="{{selectedPost.postTitle}}" *ngIf="selectedPost !== null, show">
@@ -58,6 +64,7 @@
         </div>
       </div>
       <div class="this">
+        <br>
         <br>
         <a class="btn btn-block btn-custom-1-inverse" [routerLink]="['/applicant/add']">Apply to OST Now!</a>
       </div>
