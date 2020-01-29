@@ -38,7 +38,7 @@ export class ApplicantService {
   }
 
   getApplicantsByPost(id: any): Observable<Applicant[]> {
-    return this.http.get<Applicant[]>(apiUrl + id)
+    return this.http.get<Applicant[]>(apiUrl + 'applicant/applicant-details/' + id)
       .pipe(
         tap(_ => this.log('fetched Applicants')),
         catchError(this.handleError('getApplicants', []))

@@ -18,16 +18,20 @@ router.get('/', passport.authenticate('jwt', { session: false}), function(req, r
   }
 });
 
-router.get('/:id', passport.authenticate('jwt', { session: false}), function(req, res, next) {
-var token = getToken(req.headers);
-if (token) {
-  Applicant.findById(req.params.id, function (err, applicant) {
-    if (err) return next(err);
-    res.json(applicant);
-  });
-} else {
-  return res.status(403).send({success: false, msg: 'Unauthorized.'});
-}
+router.get('/:id', passport.authenticate('jwt', { session: false }), function (req, res, next) {
+  var token = getToken(req.headers);
+  if (token) {
+    Applicant.findById(req.params.id, function (err, applicant) {
+      if (err) return next(err);
+      res.json(applicant);
+    });
+    // Applicant.findByPost(req.params.post, function (err, post) {
+    //   if (err) return next(err);
+    //   res.json(post);
+    //   });
+  } else {
+    return res.status(403).send({ success: false, msg: 'Unauthorized.' });
+  }
 });
 
 router.post('/', passport.authenticate('jwt', { session: false}), function(req, res, next) {

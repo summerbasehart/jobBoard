@@ -30,9 +30,9 @@ export class ApplicantDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.getApplicantDetails(this.route.snapshot.params.id);
-    this.route.params.subscribe(params => {
-      this.getApplicantsByPost(this.route.snapshot.params.post);
-    });
+    // this.route.params.subscribe(params => {
+    //   // this.getApplicantsByPost(this.route.snapshot.params.post);
+    // });
   }
 
   getApplicantDetails(id: any) {
@@ -45,19 +45,19 @@ export class ApplicantDetailsComponent implements OnInit {
       });
   }
 
-  getApplicantsByPost(id: any) {
-    this.post = [];
-    var x = this.applicant.post;
-    this.api.getApplicantsByPost(x)
-      .subscribe((res: any) => {
-        this.post = res;
-        console.log(this.post);
-        this.isLoadingResults = false;
-      }, err => {
-        console.log(err);
-        this.isLoadingResults = false;
-      });
-  }
+  // getApplicantsByPost(id: any) {
+  //   this.post = [];
+  //   var x = this.applicant.post;
+  //   this.api.getApplicantsByPost(x)
+  //     .subscribe((res: any) => {
+  //       this.post = res;
+  //       console.log(this.post);
+  //       this.isLoadingResults = false;
+  //     }, err => {
+  //       console.log(err);
+  //       this.isLoadingResults = false;
+  //     });
+  // }
 
   deleteApplicant(id: any) {
     this.isLoadingResults = true;
