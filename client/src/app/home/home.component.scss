@@ -106,8 +106,10 @@
     overflow: scroll;
     background-color: #454545;
     padding: 15px;
-    background: url(../../images/truckPhoto.png), no-repeat right bottom fixed;
+    background: linear-gradient(0deg, rgba(72, 72, 72, 0.4), rgba(255, 0, 0, 0.2)), url(../../images/truckPhoto.png), no-repeat center center fixed;
     background-size: cover;
+    color:white;
+    text-shadow: 0 2px black !important
 }
 
 .jobName {
