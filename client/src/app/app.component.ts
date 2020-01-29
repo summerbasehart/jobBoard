@@ -39,6 +39,15 @@ export class AppComponent implements OnInit  {
     // this.applicantService.addApplicant()
   }
 
+  myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
   
   logout() {
     this.authService.logout()

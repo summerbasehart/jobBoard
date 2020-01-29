@@ -30,11 +30,14 @@
             ],
             "styles": [
               "src/assets/css/style.css",
-              "src/assets/css/ost.css"
+              "src/assets/css/ost.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "src/js/ost.js",
-              "src/js/jobs.js"
+              "src/js/jobs.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
