@@ -29,6 +29,8 @@ edit functions
     posts √
     category √
 
+restrict registration to ost emails √
+
 set 1st post as default for home page
 
 pull postTitle into applicant page using applicant.post for post.id
