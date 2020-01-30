@@ -4,9 +4,9 @@
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
     <div class="button-row">
-      <a mat-flat-button color="primary" (click)="categoryDetails()">Back</a>
+      <a mat-flat-button color="primary" [routerLink]="['/category']">Back</a>
     </div>
-    <div class="dashboard" id="dashboard">
+    <mat-card class="card" id="dashboard">
       <form [formGroup]="categoryForm" (ngSubmit)="onFormSubmit()">
         <div>
           <label for="catName">Category Name</label>
@@ -29,5 +29,5 @@
           Save
         </button>
       </form>
-    </div>
+    </mat-card>
   </div>

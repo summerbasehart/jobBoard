@@ -253,7 +253,7 @@ p {
 }
 
 .btn-custom-1-inverse, .btn-custom-2-inverse {
-	background: red;
+	background: red !important;
 	border: 2px darkred;
 	padding: 1% 2%;
 	color: black;

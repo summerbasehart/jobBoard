@@ -1,6 +1,6 @@
 body {
     font: Helvetica, Arial, sans-serif;
-    color: #fff;
+    color: #fff !important;
     background-color: #000;
     margin-bottom:20px
   }
