@@ -2,17 +2,17 @@
   <div class="row text-center" id="header">
     <div class="col-md-12" *ngIf="loginStatus === true">
       <a [routerLink]="['/home']">
-        <img class="img-responsive adminLogo" src="../../images/OST" />
+        <img class="img-responsive adminLogo" src="../images/OSTLogoLarge.png" />
       </a>
       <h2 class="text-center subhead">Delivering
-        Service<span>&nbsp;<b>FIRST!</b></span></h2>
+        Service<span>&nbsp;<b>FIRST!</b></span>&nbsp;&nbsp;&nbsp;</h2>
     </div>
     <div class="col-md-12" *ngIf="loginStatus === false">
-      <a [routerLink]="['/home']">
+      <a [routerLink]="['/admin']">
         <img class="img-responsive logo" src="../images/OSTLogoLarge.png" />
       </a>
       <h2 class="text-center subhead">Delivering
-        Service<span>&nbsp;<b>FIRST!</b></span></h2>
+        Service<span>&nbsp;<b>FIRST!</b></span>&nbsp;&nbsp;&nbsp;</h2>
     </div>
   </div>
   <div class="container mainContainer" id="mainContainer">
