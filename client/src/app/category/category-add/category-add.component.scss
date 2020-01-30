@@ -16,8 +16,14 @@
 
 .mat-flat-button {
     margin: 15px 15px 0 15px;
-    background-color: grey;
+    background-color: red;
     color: white;
+}
+
+.mat-flat-button:disabled {
+    margin: 15px 15px 0 15px;
+    background-color: rgb(124, 0, 0);
+    color: grey !important;
 }
 
 .mat-input-element {

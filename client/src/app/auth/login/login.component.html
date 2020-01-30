@@ -24,10 +24,12 @@
           </mat-error>
         </mat-form-field>
         <span class="button-row">
-          <button type="submit" value="Submit" [disabled]="!loginForm.valid" class="btn btn-block" >Login</button></span><span class="button-row">
+          <button type="submit" value="Submit" [disabled]="!loginForm.valid" class="btn btn-block" >Login</button>
+        </span>
+        <span class="button-row">
             <br>
-            <p>New here? <a class="link" (click)="register()">Register</a> </p>
-            <p>Here by mistake? Go back <a class="link" [routerLink]="['/']">Home</a></p>
+            <p><b>New here? &nbsp;&nbsp;<a class="link" (click)="register()">Register</a> </b></p>
+            <p><b>Here by mistake? Go back &nbsp;&nbsp;<a class="link" [routerLink]="['/home']">Home</a></b></p>
             </span>
       </form>
     </div>
