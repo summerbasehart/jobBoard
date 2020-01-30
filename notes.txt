@@ -31,9 +31,9 @@ edit functions
 
 restrict registration to ost emails √
 
-set default for home page √
+set default for job board √
 
-test application print view √
+test applicant print view √
 
 test contractor print view √
 
