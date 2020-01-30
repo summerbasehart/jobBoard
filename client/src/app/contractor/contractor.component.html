@@ -10,6 +10,7 @@
   <div class="row">
     <div class="col-md-2 contract" *ngFor="let con of data" [routerLink]="['details/', con._id]">
         <p><b>{{con.conName}}</b></p>
+        <p>{{con.company}}</p>
         <p> Submitted: {{con.updated | date: 'dd MMM yyyy'}}</p>
     </div>
   </div>
