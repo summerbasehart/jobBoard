@@ -5,6 +5,7 @@ var express = require('express');
 var jwt = require('jsonwebtoken');
 var router = express.Router();
 var Applicant = require("../models/applicant");
+const Post = require('../models/post');
 
 router.get('/', passport.authenticate('jwt', { session: false}), function(req, res) {
   var token = getToken(req.headers);
@@ -23,12 +24,14 @@ router.get('/:id', passport.authenticate('jwt', { session: false }), function (r
   if (token) {
     Applicant.findById(req.params.id, function (err, applicant) {
       if (err) return next(err);
-      res.json(applicant);
+      console.log(applicant.post);
+      Post.findOne({_id: applicant.post}).exec(function (err, post) {
+        if (err) return next(err);
+        console.log(post);
+        res.json([applicant, post]);
+      });
+      
     });
-    // Applicant.findByPost(req.params.post, function (err, post) {
-    //   if (err) return next(err);
-    //   res.json(post);
-    //   });
   } else {
     return res.status(403).send({ success: false, msg: 'Unauthorized.' });
   }

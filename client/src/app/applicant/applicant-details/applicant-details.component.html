@@ -4,28 +4,33 @@
     </div>
     <div class="button-row">
         <a mat-flat-button color="primary" [routerLink]="['/applicant']">Back</a>
-      </div>
-      <hr>
-    <div class="row application">
-        <div class="col-md-6">
-            <h3>{{applicant.appName}}</h3> 
-            <h4>Applying for: {{post.postTitle}} </h4>
-            <h4>Submitted: {{applicant.updated | date: 'dd MMM yyyy'}}</h4>
-        </div>
-        <div class="col-md-5">
-            <h4><a href="tel:{{applicant.appPhone}}">{{applicant.appPhone}}</a></h4>
-            <h4><a href="mailto:{{applicant.appEmail}}">{{applicant.appEmail}}</a></h4>
-            <h4>{{applicant.appAddress1}},</h4>
-            <h4>{{applicant.appAddress2}}</h4>
-        </div>
-        <div class="col-md-1">
-            <a class="btn btn-block" button (click)="deleteApplicant(applicant.id)">
-                <mat-icon>delete</mat-icon>
-            </a>
+    </div>
+    <hr>
+    <div class="application" *ngIf="post.postTitle">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>{{applicant.appName}}</h3>
+                <h4>Applying for: {{post.postTitle}} </h4>
+                <h4>Submitted: {{applicant.updated | date: 'dd MMM yyyy'}}</h4>
+            </div>
+            <div class="col-md-5">
+                <h4><a href="tel:{{applicant.appPhone}}">{{applicant.appPhone}}</a></h4>
+                <h4><a href="mailto:{{applicant.appEmail}}">{{applicant.appEmail}}</a></h4>
+                <h4>{{applicant.appAddress1}},</h4>
+                <h4>{{applicant.appAddress2}}</h4>
+            </div>
+            <div class="col-md-1">
+                <a class="btn btn-block" button (click)="deleteApplicant(applicant.id)">
+                    <mat-icon>delete</mat-icon>
+                </a>
+            </div>
         </div>
         <hr>
-        <div class="col-md-12">
-            <p innerHTML={{applicant.appResume}}></p>
+        <div class="row">
+            <div class="col-md-12">
+                <p innerHTML={{applicant.appResume}}></p>
+            </div>
         </div>
     </div>
+    <br>
 </div>

@@ -143,9 +143,9 @@ p {
 .form-control {
 	background: #FFF;
 	border: 2px solid #D8E1E4;
-	height: 1%;
+	height: 1% !important;
 	font-size: 14px;
-	padding: 2%;
+	padding: 2% !important;
 }
 
 .input-lg, .form-horizontal .form-group-lg .form-control {

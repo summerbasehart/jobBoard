@@ -22,11 +22,11 @@ export class ApplicantService {
       );
   }
 
-  getApplicant(id: any): Observable<Applicant> {
+  getApplicant(id: any): Observable<any[]> {
     const url = `${apiUrl}/${id}`;
-    return this.http.get<Applicant>(url).pipe(
-      tap(_ => console.log(`fetched applicant by id=${id}`)),
-      catchError(this.handleError<Applicant>(`getApplicant id=${id}`))
+    return this.http.get<any[]>(url).pipe(
+      tap(result => console.log(result)),
+      catchError(this.handleError<any[]>(`getApplicant id=${id}`))
     );
   }
 
