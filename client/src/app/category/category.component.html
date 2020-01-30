@@ -6,8 +6,8 @@
     <a mat-flat-button [routerLink]="['add']">Add Category</a>
   </div>
   <hr>
-  <h3>Departments:</h3>
-  <div class="row">
+  <h3 class="text-center">Departments:</h3>
+  <div class="row justify-content-center">
     <div class="col-md-2 categories" *ngFor="let post of data" [routerLink]="['details/', post._id]">
         <p><b>{{post.catName}}</b></p>
         <p> Updated: {{post.updated | date: 'dd MMM yyyy'}}</p>

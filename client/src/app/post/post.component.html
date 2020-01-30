@@ -6,8 +6,8 @@
     <a mat-flat-button [routerLink]="['add']">Add Job Posting</a>
   </div>
   <hr>
-  <h3>Current Job Postings:</h3>
-  <div class="row">
+  <h3 class="text-center">Current Job Postings:</h3>
+  <div class="row justify-content-center">
     <div class="col-md-2 posting" *ngFor="let post of data" [routerLink]="['details/', post._id]">
         <p><b>{{post.postTitle}}</b></p>
         <p> Last updated: {{post.updated | date: 'dd MMM yyyy'}}</p>

@@ -5,14 +5,19 @@
 }
 
 .card {
-    padding: 15px
+    background-color: rgba(255,255,255,0.7);
+    color:black !important;
+    padding: 20px;
+    border: 1px solid black;
+    max-width:50%;
+    margin: auto
 }
 
 .card-text {
     margin:15px
 }
 
-#dashboard {
+#main {
     animation: fadein 1.5s;
     -moz-animation: fadein 1.5s; /* Firefox */
     -webkit-animation: fadein 1.5s; /* Safari and Chrome */

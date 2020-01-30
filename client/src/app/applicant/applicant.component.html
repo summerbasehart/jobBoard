@@ -6,8 +6,8 @@
     <a mat-flat-button [routerLink]="['add']">Add Applicant</a>
   </div>
   <hr>
-  <h3>Candidates:</h3>
-  <div class="row">
+  <h3 class="text-center">Candidates:</h3>
+  <div class="row justify-content-center">
     <div class="col-md-2 application" *ngFor="let app of data" [routerLink]="['details/', app._id]">
         <p><b>{{app.appName}}</b></p>
         <p> Submitted: {{app.updated | date: 'dd MMM yyyy'}}</p>
