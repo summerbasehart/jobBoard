@@ -37,6 +37,10 @@ test applicant print view √
 
 test contractor print view √
 
-pull postTitle into applicant page using applicant.post for post.id
+pull postTitle into applicant page using applicant.post for post.id √
+
+Save tokens in storage for refreshing pages
+
+Set up Password reset
 
 
