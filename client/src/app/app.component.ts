@@ -24,9 +24,11 @@ export class AppComponent implements OnInit  {
       if (status === true) {
         this.loginStatus = true;
         document.getElementById("mainContainer").style.maxWidth = "99%";
+        document.getElementById("mainContainer").style.backgroundColor = "rgba(0,0,0,0.6";
       } else {
         this.loginStatus = false;
         document.getElementById("mainContainer").style.maxWidth = "1140px";
+        document.getElementById("mainContainer").style.backgroundColor = "#313131";
       }
     });
     

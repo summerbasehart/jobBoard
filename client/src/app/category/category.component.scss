@@ -1,7 +1,18 @@
 .dashboard {
-    background: url(https://image.freepik.com/free-vector/abstract-red-line-black-background-business-card_41981-1024.jpg), no-repeat center center fixed;
-    min-height: 700px;
-    background-size: cover;
+    // background: url(https://image.freepik.com/free-vector/abstract-red-line-black-background-business-card_41981-1024.jpg), no-repeat center center fixed;
+    // min-height: 700px;
+    // background-size: cover;
+    min-height: 600px;
+    background-color:(0,0,0,0.3)
+}
+
+hr {
+    display: block; 
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid white;
+    margin: 1em 0; 
+    padding: 0;
 }
 
 .row {
@@ -24,7 +35,7 @@ td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, th.mat-header-cell:
 }
 
 .categories{
-    background-color: rgba(255,255,255,0.7);
+        background-color: rgba(255,255,255);
     color:black !important;
     padding: 20px;
     border: 1px solid black;
