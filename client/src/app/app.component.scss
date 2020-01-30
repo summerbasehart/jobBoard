@@ -63,7 +63,6 @@
     font-size: small;
     color: white;
     text-decoration: underline;
-    height: 50px;
     margin: 0 auto
 }
 
@@ -116,5 +115,29 @@
     height: 100% !important;
     width: 25% !important;
     margin: 0 auto !important;
+}
+
+.bottom {
+  background-color:rgba(0,0,0,0.5) !important;
+  width: 300px;
+  padding:0
+}
+
+.social {
+  margin: 5px;
+  color:red
+}
+
+#social-fb:hover {
+  color: #3B5998;
+}
+#social-tw:hover {
+  color: #4099FF;
+}
+#social-gp:hover {
+  color: #d34836;
+}
+#social-em:hover {
+  color: #f39c12;
 }
 
