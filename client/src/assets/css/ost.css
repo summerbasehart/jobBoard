@@ -116,7 +116,6 @@ li {
 .sr-only {
     display:none;
 }
-
 .tabs {
     position: relative;   
     min-height: 1200px; /* This part sucks */
@@ -157,7 +156,6 @@ li {
 
 [type=radio]:checked ~ label {
     z-index: 2;
-    border-bottom: 2px solid white;
     color:red
 }
 

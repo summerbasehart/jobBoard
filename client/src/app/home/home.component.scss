@@ -81,9 +81,18 @@
     max-height: 100%
 }
 
+hr {
+    display: block; 
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid white;
+    margin: 1em 0; 
+    padding: 0;
+}
+
 [type=radio]:checked ~ label {
     z-index: 2;
-    border-bottom: 2px solid white;
+    border-top: 2px solid red;
     color:red
 }
 
