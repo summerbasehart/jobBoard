@@ -29,7 +29,7 @@
       <div class="example-loading-shade" *ngIf="isLoadingResults">
         <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
       </div>
-      <div class="row">
+      <div class="row" id="jobBoard">
         <div class="col-md-2" id="jobNames">
           <div class="w3-bar w3-black">
             <button class="w3-bar-item w3-button tablink" *ngFor="let post of posts"
