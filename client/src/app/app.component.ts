@@ -26,6 +26,7 @@ export class AppComponent implements OnInit  {
         document.getElementById("mainContainer").style.maxWidth = "99%";
       } else {
         this.loginStatus = false;
+        document.getElementById("mainContainer").style.maxWidth = "1140px";
       }
     });
     
