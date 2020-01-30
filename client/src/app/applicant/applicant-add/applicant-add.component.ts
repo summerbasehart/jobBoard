@@ -33,7 +33,7 @@ export class ApplicantAddComponent implements OnInit {
   isLoadingResults = false;
   matcher = new MyErrorStateMatcher();
   posts: Post[] = [];
-  public message = "Thank you! You can now return to the job board";
+  public message = "Thank you for applying to OST! You will now be redirected back to the job board..";
 
   @ViewChild(ToastContainerDirective, {static: true}) toastContainer: ToastContainerDirective;
 

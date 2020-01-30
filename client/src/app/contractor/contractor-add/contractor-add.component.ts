@@ -30,7 +30,7 @@ export class ContractorAddComponent implements OnInit {
   message = '';
   isLoadingResults = false;
   matcher = new MyErrorStateMatcher();
-  public alert = "Thank you for your submission! You will now be returned to the main page";
+  public alert = "Thank you for your submission! You will now be returned to the main page..";
 
   constructor(
     private router: Router,
