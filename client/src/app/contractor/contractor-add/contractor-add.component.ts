@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { ContractorService } from '../../contractor.service';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { ToastContainerDirective, ToastrService } from 'ngx-toastr';
+import { AlertService } from '../../_alert';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -28,10 +30,12 @@ export class ContractorAddComponent implements OnInit {
   message = '';
   isLoadingResults = false;
   matcher = new MyErrorStateMatcher();
+  public alert = "Thank you for your submission! You will now be returned to the main page";
 
   constructor(
     private router: Router,
     private api: ContractorService,
+    private alertService: AlertService,
     private formBuilder: FormBuilder) { }
 
   ngOnInit() {
@@ -52,7 +56,10 @@ export class ContractorAddComponent implements OnInit {
       .subscribe((res: any) => {
           const id = res.id;
           this.isLoadingResults = false;
-          this.router.navigate(['/home/']);
+          this.alertService.success(this.alert);
+          setTimeout(() => {
+            this.router.navigate(['/home']);
+        }, 5000);  //5s
         }, (err: any) => {
           console.log(err);
           this.isLoadingResults = false;

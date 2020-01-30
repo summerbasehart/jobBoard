@@ -33,7 +33,7 @@ export class ApplicantAddComponent implements OnInit {
   isLoadingResults = false;
   matcher = new MyErrorStateMatcher();
   posts: Post[] = [];
-  public message = "Thank you!";
+  public message = "Thank you! You can now return to the job board";
 
   @ViewChild(ToastContainerDirective, {static: true}) toastContainer: ToastContainerDirective;
 
@@ -81,7 +81,9 @@ export class ApplicantAddComponent implements OnInit {
           const id = res.id;
           this.isLoadingResults = false;
           this.alertService.success(this.message);
-          this.router.navigate(['/home/']);
+          setTimeout(() => {
+            this.router.navigate(['/home']);
+        }, 5000);  //5s
         }, (err: any) => {
           console.log(err);
           this.isLoadingResults = false;
