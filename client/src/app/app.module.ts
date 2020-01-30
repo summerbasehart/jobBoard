@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+ 
+import { ToastrModule } from 'ngx-toastr';
+import { AlertModule } from './_alert';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -68,13 +71,12 @@ import { AdminComponent } from './admin/admin.component';
     ApplicantAddComponent,
     ApplicantDetailsComponent,
     ContractorAddComponent,
-    ContractorDetailsComponent
+    ContractorDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
@@ -92,7 +94,10 @@ import { AdminComponent } from './admin/admin.component';
     MatSelectModule,
     MatOptionModule,
     CKEditorModule,
-    MatContenteditableModule
+    MatContenteditableModule,
+    AlertModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot() // ToastrModule added
   ],
   providers: [
     {

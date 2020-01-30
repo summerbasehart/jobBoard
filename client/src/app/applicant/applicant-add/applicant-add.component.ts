@@ -1,10 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApplicantService } from '../../applicant.service';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { Post } from '../../post/post';
 import { PostService } from '../../post.service';
+import { ToastContainerDirective, ToastrService } from 'ngx-toastr';
+import { AlertService } from '../../_alert';
+
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -30,11 +33,16 @@ export class ApplicantAddComponent implements OnInit {
   isLoadingResults = false;
   matcher = new MyErrorStateMatcher();
   posts: Post[] = [];
+  public message = "Thank you!";
+
+  @ViewChild(ToastContainerDirective, {static: true}) toastContainer: ToastContainerDirective;
 
   constructor(
     private router: Router,
     private api: ApplicantService,
     private postService: PostService,
+    private toastr: ToastrService,
+    private alertService: AlertService,
     private formBuilder: FormBuilder) { }
 
   ngOnInit() {
@@ -48,6 +56,10 @@ export class ApplicantAddComponent implements OnInit {
       appAddress2 : [null, Validators.required],
       appResume : [null, Validators.required],
     });
+  }
+
+  public myFunc() {
+    alert(this.message);
   }
 
   getPosts() {
@@ -68,6 +80,7 @@ export class ApplicantAddComponent implements OnInit {
       .subscribe((res: any) => {
           const id = res.id;
           this.isLoadingResults = false;
+          this.alertService.success(this.message);
           this.router.navigate(['/home/']);
         }, (err: any) => {
           console.log(err);

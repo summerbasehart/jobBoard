@@ -31,10 +31,10 @@
             <ckeditor matInput class="form-control"  rows="6" placeholder="Paste your resume here - Do Not Repeat Above Info" formControlName="appResume"></ckeditor>
         </div>
         <p class="text-center">**Must Complete ALL Fields</p>
-        <button class="btn btn-block" type="submit" [disabled]="!applicantForm.valid" mat-flat-button >
+        <button class="btn btn-block" type="submit" [disabled]="!applicantForm.valid" mat-flat-button (click)="success('Success!!')">
             Submit
         </button>
-        
+        <alert></alert>
         <br>
     </form>
 </div>

@@ -13,6 +13,7 @@
     "@angular/flex-layout": "^8.0.0-beta.27",
     "@angular/forms": "^8.2.14",
     "@angular/material": "^8.2.3",
+    "@bcodes/ngx-routerlink-delay": "^2.0.0",
     "bcrypt-nodejs": "0.0.3",
     "bluebird": "^3.7.2",
     "ckeditor4-angular": "^1.0.1",
@@ -30,5 +31,4 @@
     "passport-jwt": "^4.0.0",
     "web-animations-js": "^2.3.2"
   }
-  
 }
