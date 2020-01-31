@@ -22,7 +22,7 @@ router.get('/category/:id', function(req, res, next) {
 });
 
 router.get('/page', function(req, res, next) {
-  Category.find(function (err, pages) {
+  Page.find(function (err, pages) {
     if (err) return next(err);
     res.json(pages);
   });

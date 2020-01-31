@@ -21,7 +21,9 @@ export class PageAddComponent implements OnInit {
 
   pageForm: FormGroup;
   pageName = '';
-  pageContent = '';
+  pageHeader = '';
+  pageEmpl = '';
+  pageCont = '';
   isLoadingResults = false;
   matcher = new MyErrorStateMatcher();
 
@@ -29,8 +31,10 @@ export class PageAddComponent implements OnInit {
 
   ngOnInit() {
     this.pageForm = this.formBuilder.group({
-        pageName : [null, Validators.required],
-        pageContent : [null, Validators.required]
+      pageName : [null, Validators.required],
+      pageHeader: [null, Validators.required],
+      pageEmpl: [null, Validators.required],
+      pageCont: [null, Validators.required]
     });
   }
 

@@ -23,7 +23,15 @@ export class HomeComponent implements OnInit {
   posts: Post[] = [];
   isLoadingResults = true;
   selectedPost: Post = null;
-  page: Page[] = [];
+  page: Page = {
+    id: '',
+    pageName: '',
+    pageHeader: '',
+    pageEmpl: '',
+    pageCont: '',
+    updated: null
+  }
+  pages: Page[] = [];
 
   constructor(private api: HomeService) { }
 
@@ -32,38 +40,11 @@ export class HomeComponent implements OnInit {
     console.log(this.selectedPost);
   }
 
-  header(id:"5e3454e49b5bb90378723d41") {
-      this.api.getPage(id)
-        .subscribe((data: any) => {
-          this.page = data;
-          console.log(this.post);
-          this.isLoadingResults = false;
-        });
-    }
-
-  emp(id: "5e34554f9b5bb90378723d43") {
-    this.api.getPage(id)
-      .subscribe((emp: any) => {
-        this.page = emp;
-        console.log(this.page);
-        this.isLoadingResults = false;
-      });
-  }
-
-  con(id: "5e3455999b5bb90378723d44") {
-    this.api.getPage(id)
-      .subscribe((con: any) => {
-        this.page = con;
-        console.log(this.page);
-        this.isLoadingResults = false;
-      });
-  }
-
     ngOnInit() {
       this.api.getPages()
         .subscribe((res: any) => {
-          this.page = res;
-          console.log(this.page);
+          this.pages = res;
+          console.log(this.pages);
           this.isLoadingResults = false;
         }, err => {
           console.log(err);

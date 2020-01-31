@@ -17,12 +17,28 @@
           </mat-error>
         </div>
         <hr>
-        <div>
-          <label for="pageContent">Site Page</label>
-          <ckeditor matInput placeholder="About this Department" formControlName="pageContent" required></ckeditor>
+        <div class="form-group">
+          <label for="pageHeader">Page Header</label>
+          <ckeditor matInput placeholder="Page Header" formControlName="pageHeader" required></ckeditor>
           <mat-error>
-            <span *ngIf="!pageForm.get('pageContent').valid && pageForm.get('pageContent').touched">Please enter
-              Page Content</span>
+            <span *ngIf="!pageForm.get('pageHeader').valid && pageForm.get('pageHeader').touched">Please enter
+              Page Header</span>
+          </mat-error>
+        </div> 
+        <div class="form-group">
+          <label for="pageEmpl">Employee Tab</label>
+          <ckeditor matInput placeholder="Page Header" formControlName="pageEmpl" required></ckeditor>
+          <mat-error>
+            <span *ngIf="!pageForm.get('pageEmpl').valid && pageForm.get('pageEmpl').touched">Please enter
+              Page Header</span>
+          </mat-error>
+        </div> 
+        <div class="form-group">
+          <label for="pageCont">Contrcator Tab</label>
+          <ckeditor matInput placeholder="Page Header" formControlName="pageCont" required></ckeditor>
+          <mat-error>
+            <span *ngIf="!pageForm.get('pageCont').valid && pageForm.get('pageCont').touched">Please enter
+              Page Header</span>
           </mat-error>
         </div> 
         <button type="submit" [disabled]="!pageForm.valid" mat-flat-button color="primary">

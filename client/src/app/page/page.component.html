@@ -3,14 +3,15 @@
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
   </div>
   <div class="row">
-    <a mat-flat-button [routerLink]="['add']">Add Page</a>
+    <a mat-flat-button [routerLink]="['/home']">View</a>
   </div>
   <hr>
-  <h3 class="text-center">Pages:</h3>
+  <h3 class="text-center">Home Page:</h3>
   <div class="row justify-content-center">
-    <div class="col-md-2 categories" *ngFor="let post of data" [routerLink]="['details/', post._id]">
+    <div class="col-md-9 categories" *ngFor="let post of data" [routerLink]="['details/', post._id]">
         <p><b>{{post.pageName}}</b></p>
         <p> Updated: {{post.updated | date: 'dd MMM yyyy'}}</p>
+        <p innerHTML={{post.pageHeader}}>
     </div>
   </div>
 </div>

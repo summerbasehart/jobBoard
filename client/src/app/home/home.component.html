@@ -1,8 +1,8 @@
-<div class="row rowOne">
+<div class="row rowOne" *ngFor="let page of pages">
   <div class="container">
     <div class="col-md-12 text-center">
-      <!-- <p innerHTML={{page.pageContent}}></p> -->
-      <h3>JOIN OST AND BECOME A PART OF A WINNING TEAM!</h3>
+      <p innerHTML={{page.pageHeader}}></p>
+      <!-- <h3>JOIN OST AND BECOME A PART OF A WINNING TEAM!</h3>
       <p>We are seeking Independent Owner/Operators with HIGH CUBE box trucks to join our
         team.
         This
@@ -11,22 +11,23 @@
         As an Independent Owner/Operator you will run a two man crew providing high quality home deliveries. We
         proudly represent
         our customers by showing extraordinary care, respect, and courtesy to their customers!
-      </p>
+      </p> -->
     </div>
   </div>
 </div>
-<div class="tabs">
+<div class="tabs" *ngFor="let page of pages">
   <div class="tab">
     <input id="tab-1" type="radio" name="tab-group-1" checked="" />
     <label for="tab-1">Employee </label>
     <div class="content">
       <hr>
       <div class="col-md-12 open">
-        <h3>Joining OST:</h3>
+        <p innerHTML={{page.pageEmpl}}></p>
+        <!-- <h3>Joining OST:</h3>
         <p>As an employee of Of Service Transportation, you would be an important member of a <b>TEAM</b> effort. We hope that you find your position with us rewarding, challenging, and productive. We would look to you and the other employees to contribute to the success of the Company.
         </p>
         
-        <h3>Open Positions:</h3>
+        <h3>Open Positions:</h3> -->
       </div>
       <div class="example-loading-shade" *ngIf="isLoadingResults">
         <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
@@ -77,7 +78,8 @@
     <label for="tab-2">Contractor </label>
     <div class="content">
       <div class="row">
-        <div class="col-md-12">
+        <p innerHTML={{page.pageCont}}></p>
+        <!-- <div class="col-md-12">
           <hr>
           <h3>Why join OST:</h3>
           <ul>
@@ -120,7 +122,7 @@
         <div class="col-md-12">
           <p>For information regarding NORTHERN CALIFORNIA opportunity, please submit your contact information
             below or call John Roberts direct at (562) 479-1971.</p>
-        </div>
+        </div> -->
       </div>
       <div class="row">
         <div class="col-md-12">

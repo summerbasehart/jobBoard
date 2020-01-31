@@ -8,15 +8,23 @@
       </div>
     </div>
     <div class="row posting">
-      <div class="col-md-3">
+      <div class="col-md-2">
         <p><b>{{page.pageName}}</b></p>
         <p>Updated: {{page.updated | date}}</p>
       </div>
-      <div class="col-md-7">
-        <p>Content:</p>
-        <small innerHTML={{page.pageContent}}></small>
+      <div class="col-md-3">
+        <p>Header:</p>
+        <small innerHTML={{page.pageHeader}}></small>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-3">
+        <p>Employee Tab:</p>
+        <small innerHTML={{page.pageEmpl}}></small>
+      </div>
+      <div class="col-md-3">
+        <p>Contractor Tab:</p>
+        <small innerHTML={{page.pageCont}}></small>
+      </div>
+      <div class="col-md-1">
         <a class="btn btn-block" [routerLink]="['/page/edit/', page._id]">
           <mat-icon>edit</mat-icon>
         </a>

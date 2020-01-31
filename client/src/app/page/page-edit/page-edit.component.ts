@@ -22,7 +22,9 @@ export class PageEditComponent implements OnInit {
   pageForm: FormGroup;
   id = '';
   pageName = '';
-  pageContent = '';
+  pageHeader = '';
+  pageEmpl = '';
+  pageCont = '';
   updated: Date = null;
   isLoadingResults = false;
   matcher = new MyErrorStateMatcher();
@@ -33,7 +35,9 @@ export class PageEditComponent implements OnInit {
     this.getPage(this.route.snapshot.params.id);
     this.pageForm = this.formBuilder.group({
       pageName: [null, Validators.required],
-      pageContent: [null, Validators.required]
+      pageHeader: [null, Validators.required],
+      pageEmpl: [null, Validators.required],
+      pageCont: [null, Validators.required]
     });
   }
 

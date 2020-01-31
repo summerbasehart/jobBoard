@@ -10,7 +10,7 @@ import { Page } from '../page';
 })
 export class PageDetailsComponent implements OnInit {
 
-  page: Page = { id: null, pageName: '', pageContent: '', updated: null };
+  page: Page = { id: null, pageName: '', pageHeader: '', pageEmpl: '', pageCont: '', updated: null };
   isLoadingResults = true;
 
   constructor(private route: ActivatedRoute, private api: PageService, private router: Router) { }
