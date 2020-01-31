@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { Category } from './category/category';
 import { Post } from './post/post';
+import { Page } from './page/page';
 
 const apiUrl = 'http://localhost:3000/api/public/';
 
@@ -42,6 +43,22 @@ export class HomeService {
     return this.http.get<Post>(apiUrl + 'post/' + id).pipe(
       tap(_ => console.log(`fetched post by id=${id}`)),
       catchError(this.handleError<Post>(`getPost id=${id}`))
+    );
+  }
+
+  getPages(): Observable<Page[]> {
+    return this.http.get<Page[]>(apiUrl)
+      .pipe(
+        tap(_ => this.log('fetched Pages')),
+        catchError(this.handleError('getPages', []))
+      );
+  }
+
+  getPage(id: any): Observable<Page> {
+    const url = `${apiUrl}/${id}`;
+    return this.http.get<Page>(url).pipe(
+      tap(_ => console.log(`fetched page by id=${id}`)),
+      catchError(this.handleError<Page>(`getPage id=${id}`))
     );
   }
 

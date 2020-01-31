@@ -22,7 +22,7 @@
           <ckeditor matInput placeholder="About this Department" formControlName="pageContent" required></ckeditor>
           <mat-error>
             <span *ngIf="!categoryForm.get('pageContent').valid && categoryForm.get('pageContent').touched">Please enter
-              Page Description</span>
+              Page Content</span>
           </mat-error>
         </div> 
         <button type="submit" [disabled]="!categoryForm.valid" mat-flat-button color="primary">

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../post/post';
-import { PostService } from '../post.service';
+import { Page } from '../page/page';
 import { HomeService } from '../home.service';
 
 @Component({
@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
   posts: Post[] = [];
   isLoadingResults = true;
   selectedPost: Post = null;
+  sections: Page[] = []
 
   constructor(private api: HomeService) { }
 

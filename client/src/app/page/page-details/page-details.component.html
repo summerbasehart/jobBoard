@@ -1,5 +1,28 @@
-<div>
+<div class="dashboard" id="dashboard">
+    <div class="example-loading-shade" *ngIf="isLoadingResults">
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+    <div class="row">
+      <div class="col-md-1">
+        <a mat-flat-button [routerLink]="['/page']">Return</a>
+      </div>
+    </div>
     <div class="row posting">
-        <p innerHTML={{page.pageContent}}></p>      
+      <div class="col-md-3">
+        <p><b>{{page.pageName}}</b></p>
+        <p>Updated: {{page.updated | date}}</p>
+      </div>
+      <div class="col-md-7">
+        <p>Content:</p>
+        <small innerHTML={{page.pageContent}}></small>
+      </div>
+      <div class="col-md-2">
+        <a class="btn btn-block" [routerLink]="['/page/edit/', page._id]">
+          <mat-icon>edit</mat-icon>
+        </a>
+        <!-- <a class="btn btn-block" button (click)="deleteCategory(page.id)">
+          <mat-icon>delete</mat-icon>
+        </a> -->
+      </div>
     </div>
   </div>

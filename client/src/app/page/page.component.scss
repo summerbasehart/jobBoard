@@ -1,0 +1,82 @@
+.dashboard {
+    // background: url(https://image.freepik.com/free-vector/abstract-red-line-black-background-business-card_41981-1024.jpg), no-repeat center center fixed;
+    // min-height: 700px;
+    // background-size: cover;
+    min-height: 600px;
+    background-color:(0,0,0,0.3)
+}
+
+hr {
+    display: block; 
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid white;
+    margin: 1em 0; 
+    padding: 0;
+}
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+table.mat-table {
+    margin: 15px 0 0 15px;
+}
+
+td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, th.mat-header-cell:first-of-type {
+    padding: 24px;
+}
+
+.mat-flat-button {
+    margin: 15px 15px 0 15px;
+    background-color: grey;
+    color: white;
+}
+
+.categories{
+        background-color: rgba(255,255,255);
+    color:black !important;
+    padding: 20px;
+    border: 1px solid black;
+    cursor: pointer
+}
+
+#dashboard .categories {
+    animation: fadein 1.5s;
+    -moz-animation: fadein 1.5s; /* Firefox */
+    -webkit-animation: fadein 1.5s; /* Safari and Chrome */
+    -o-animation: fadein 1.5s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
