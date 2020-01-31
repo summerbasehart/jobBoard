@@ -10,6 +10,10 @@
     width: 100%;
 }
 
+.cke_inner {
+    display: none !important;
+}
+
 .mat-flat-button[disabled][disabled] {
         background-color: red;
         display: block;
