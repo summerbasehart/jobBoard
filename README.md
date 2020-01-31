@@ -18,3 +18,14 @@ Admin Panel
     The Admin Panel contains the functions to create, view, edit, and delete Job Posts and Job Categories.
     It also has the ability to view and print employee and contractor applications.
     Lastly, You can edit the Home page text from the "Home" link on the navbar.
+
+
+To Install:
+
+    Start in source folder, and then run the following commands:
+
+    1. "npm i"
+    2. "cd client"
+    3. "npm i"
+    4. cd ../MongoDB
+    5. mongorestore [options] [<testApp]
