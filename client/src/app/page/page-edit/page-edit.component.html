@@ -4,15 +4,15 @@
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
     <div class="button-row">
-      <a mat-flat-button color="primary" [routerLink]="['/category']">Back</a>
+      <a mat-flat-button color="primary" [routerLink]="['/page']">Back</a>
     </div>
     <mat-card class="card" id="dashboard">
-      <form [formGroup]="categoryForm" (ngSubmit)="onFormSubmit()">
+      <form [formGroup]="pageForm" (ngSubmit)="onFormSubmit()">
         <div>
           <label for="pageName">Page Name</label>
           <input matInput formControlName="pageName" [errorStateMatcher]="matcher">
           <mat-error>
-            <span *ngIf="!categoryForm.get('pageName').valid && categoryForm.get('pageName').touched">Please enter Page
+            <span *ngIf="!pageForm.get('pageName').valid && pageForm.get('pageName').touched">Please enter Page
               Name</span>
           </mat-error>
         </div>
@@ -21,11 +21,11 @@
           <label for="pageContent">Site Page</label>
           <ckeditor matInput placeholder="About this Department" formControlName="pageContent" required></ckeditor>
           <mat-error>
-            <span *ngIf="!categoryForm.get('pageContent').valid && categoryForm.get('pageContent').touched">Please enter
+            <span *ngIf="!pageForm.get('pageContent').valid && pageForm.get('pageContent').touched">Please enter
               Page Content</span>
           </mat-error>
         </div> 
-        <button type="submit" [disabled]="!categoryForm.valid" mat-flat-button color="primary">
+        <button type="submit" [disabled]="!pageForm.valid" mat-flat-button color="primary">
           Save
         </button>
       </form>

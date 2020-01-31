@@ -27,8 +27,9 @@ body {
   }
 
 .mainContainer {
+    border-radius: 25px;
     background-color: #313131;
-    box-shadow: 0 2px 5px 2px white;
+    box-shadow: 0 3px 5px 1px white;
     padding-right: 40px;
     min-height: 100%;
     /* width:100% */

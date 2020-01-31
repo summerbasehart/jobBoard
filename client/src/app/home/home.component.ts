@@ -31,14 +31,14 @@ export class HomeComponent implements OnInit {
     console.log(this.selectedPost);
   }
 
-  header(id: "5e3454e49b5bb90378723d41") {
-    this.api.getPage(id)
-      .subscribe((header: any) => {
-        this.page = header;
-        console.log(this.page);
-        this.isLoadingResults = false;
-      });
-  }
+  header(id:"5e3454e49b5bb90378723d41") {
+      this.api.getPage(id)
+        .subscribe((data: any) => {
+          this.page = data;
+          console.log(this.post);
+          this.isLoadingResults = false;
+        });
+    }
 
   emp(id: "5e34554f9b5bb90378723d43") {
     this.api.getPage(id)
@@ -59,6 +59,7 @@ export class HomeComponent implements OnInit {
   }
 
     ngOnInit() {
+      this.header(this.snapshot.params);
       this.api.getPages()
         .subscribe((res: any) => {
           this.page = res;

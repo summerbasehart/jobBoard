@@ -39,7 +39,12 @@ td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, th.mat-header-cell:
     color:black !important;
     padding: 20px;
     border: 1px solid black;
-    cursor: pointer
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.categories:hover{
+    background-color: rgb(165, 165, 165);
 }
 
 #dashboard .categories {

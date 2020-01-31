@@ -31,7 +31,12 @@ hr {
     color:black !important;
     padding: 20px;
     border: 1px solid black;
-    cursor: pointer
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.contract:hover{
+    background-color: rgb(165, 165, 165);
 }
 
 #dashboard .contract {
