@@ -3,7 +3,7 @@
 
 Registration:
 
-    Admins can only register using and email from domain @ostadvantage.com
+    Admins can only register using an email from domain @ostadvantage.com
 
 
 Front Page:
