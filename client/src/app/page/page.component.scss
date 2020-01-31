@@ -43,10 +43,6 @@ td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, th.mat-header-cell:
     border-radius: 10px;
 }
 
-.categories:hover{
-    background-color: rgb(165, 165, 165);
-}
-
 #dashboard .categories {
     animation: fadein 1.5s;
     -moz-animation: fadein 1.5s; /* Firefox */

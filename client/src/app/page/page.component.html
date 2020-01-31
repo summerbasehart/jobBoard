@@ -8,10 +8,11 @@
   <hr>
   <h3 class="text-center">Home Page:</h3>
   <div class="row justify-content-center">
-    <div class="col-md-9 categories" *ngFor="let post of data" [routerLink]="['details/', post._id]">
-        <p><b>{{post.pageName}}</b></p>
-        <p> Updated: {{post.updated | date: 'dd MMM yyyy'}}</p>
-        <p innerHTML={{post.pageHeader}}>
+    <div class="col-md-11 categories" *ngFor="let post of data" [routerLink]="['edit/', post._id]">
+      <p> Updated: {{post.updated | date: 'dd MMM yyyy'}}</p>
+      <p innerHTML={{post.pageHeader}}></p>
+      <p innerHTML={{post.pageEmpl}}></p>
+      <p innerHTML={{post.pageCont}}></p>
     </div>
   </div>
 </div>

@@ -46,7 +46,9 @@ export class PageEditComponent implements OnInit {
       this.id = data._id;
       this.pageForm.setValue({
         pageName: data.pageName,
-        pageContent: data.pageContent
+        pageHeader: data.pageHeader,
+        pageEmpl: data.pageEmpl,
+        pageCont: data.pageCont
       });
     });
   }
