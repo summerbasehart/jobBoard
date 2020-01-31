@@ -27,5 +27,5 @@ To Install:
     1. "npm i"
     2. "cd client"
     3. "npm i"
-    4. cd ../MongoDB
-    5. mongorestore [options] [<testApp]
+    4. "cd ../MongoDB"
+    5. {{Here you must run mongorestore to restore the dummy database in MongoDB/testApp, it can be edited afterwards}}
