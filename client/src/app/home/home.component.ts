@@ -59,7 +59,6 @@ export class HomeComponent implements OnInit {
   }
 
     ngOnInit() {
-      this.header(this.snapshot.params);
       this.api.getPages()
         .subscribe((res: any) => {
           this.page = res;
