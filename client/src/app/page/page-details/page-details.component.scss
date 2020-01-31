@@ -2,7 +2,8 @@
     background-color: rgba(255,255,255);
 color:black !important;
 padding: 20px;
-border: 1px solid white
+border: 1px solid white;
+border-radius: 25px
 }
 
 .btn-block {
@@ -10,6 +11,10 @@ margin: 15px 15px 0 15px;
 background-color: red;
 color:white;
 padding: 10px 10px 5px;
+}
+
+.btn-block:hover{
+    background-color: rgb(165, 165, 165);
 }
 
 .mat-flat-button {
