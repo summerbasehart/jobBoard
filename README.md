@@ -10,7 +10,8 @@ Front Page:
 
     Front Page contains tabs for either employee or contractor applications.
     All applications are stored and kept in database, and can be brought up from the admin panel.
-    Contains external link to ostadvantage.com at the top of the page, under "Learn More About Us", as well as icon links to social media platforms at the bottom.
+    Contains external link to ostadvantage.com at the top of the page, under "Learn More About Us", 
+    as well as icon links to social media platforms at the bottom.
 
 
 Admin Panel
@@ -28,4 +29,5 @@ To Install:
     2. "cd client"
     3. "npm i"
     4. "cd ../MongoDB"
-    5. {{Here you must run mongorestore to restore the dummy database in MongoDB/testApp, it can be edited afterwards}}
+    5. {{Here you must run mongorestore to restore the dummy database in MongoDB/testApp, 
+       it can be edited afterwards}}
