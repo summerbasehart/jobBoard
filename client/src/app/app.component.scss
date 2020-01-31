@@ -3,6 +3,22 @@
     padding: 0.5%;
 }
 
+.learn {
+  background-color: rgba(0,0,0,0.2) !important;
+}
+
+#corpLink {
+  color:white !important;
+  text-decoration: none;
+}
+
+#corpLink:hover{
+  background-color:rgba(255,255,255,0.5);
+  color:white;
+  text-decoration: bold;
+}
+
+
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -132,4 +148,15 @@
   color: white;
 }
 
+.mainContainer, .logo, .adminLogo, .subhead { 
+  animation: fadeInAnimation ease 3s 
+} 
 
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0; 
+  } 
+  100% { 
+      opacity: 1; 
+   } 
+}

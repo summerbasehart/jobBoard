@@ -1,4 +1,7 @@
 <div>
+  <div class="nav" id="learn" *ngIf="loginStatus === false">
+    <div class="container text-right"><a href="http://www.ostadvantage.com/" id="corpLink">Learn About Us</a></div>
+  </div>
   <div class="row text-center" id="header">
     <div class="col-md-12" *ngIf="loginStatus === true">
       <img class="img-responsive adminLogo" src="../images/OSTLogoLarge.png" />
