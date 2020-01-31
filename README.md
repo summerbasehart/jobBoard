@@ -29,5 +29,7 @@ To Install:
     2. "cd client"
     3. "npm i"
     4. "cd ../MongoDB"
-    5. {{Here you must run mongorestore to restore the dummy database in MongoDB/testApp, 
+    5a. {{Here you must run mongorestore to restore the dummy database in MongoDB/testApp, 
        it can be edited afterwards}}
+    5b. {{If mongorestore does not work, "home.json" in source folder must be added to "pages" 
+       collection, and all other data can be created in app.}}
