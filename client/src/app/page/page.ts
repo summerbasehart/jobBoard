@@ -1,5 +1,5 @@
 export class Page {
-    id: number;
+    id: string;
     pageName: string;
     pageContent: string;
     updated: Date;
