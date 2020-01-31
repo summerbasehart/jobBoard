@@ -35,12 +35,12 @@ router.get('/page/:id', function(req, res, next) {
   });
 });
 
-router.get('/bycategory/:id', function(req, res, next) {
-  Post.find({category: req.params.id}, function (err, posts) {
-    if (err) return next(err);
-    res.json(posts);
-  });
-});
+// router.get('/bycategory/:id', function(req, res, next) {
+//   Post.find({category: req.params.id}, function (err, posts) {
+//     if (err) return next(err);
+//     res.json(posts);
+//   });
+// });
 
 router.get('/post', function(req, res, next) {
   Post.find(function (err, posts) {

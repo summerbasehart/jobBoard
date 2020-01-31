@@ -3,20 +3,22 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { HomeComponent } from './home/home.component';
-import { DetailsComponent } from './details/details.component';
 import { CategoryComponent } from './category/category.component';
+import { PageComponent } from './page/page.component';
 import { PostComponent } from './post/post.component';
 import { ApplicantComponent } from './applicant/applicant.component';
 import { ContractorComponent } from './contractor/contractor.component';
 import { CategoryDetailsComponent } from './category/category-details/category-details.component';
 import { CategoryAddComponent } from './category/category-add/category-add.component';
 import { CategoryEditComponent } from './category/category-edit/category-edit.component';
+import { PageDetailsComponent } from './page/page-details/page-details.component';
+import { PageAddComponent } from './page/page-add/page-add.component';
+import { PageEditComponent } from './page/page-edit/page-edit.component';
 import { PostDetailsComponent } from './post/post-details/post-details.component';
 import { PostAddComponent } from './post/post-add/post-add.component';
 import { PostEditComponent } from './post/post-edit/post-edit.component';
 import { ContractorAddComponent } from'./contractor/contractor-add/contractor-add.component';
 import { ContractorDetailsComponent } from'./contractor/contractor-details/contractor-details.component';
-import { BycategoryComponent } from './bycategory/bycategory.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AdminComponent } from './admin/admin.component';
 import { ApplicantAddComponent } from'./applicant/applicant-add/applicant-add.component';
@@ -39,16 +41,6 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     component: AdminComponent,
     data: { title: ' Admin' }
-  },
-  {
-    path: 'bycategory/:id',
-    component: BycategoryComponent,
-    data: { title: 'Post by Category' }
-  },
-  {
-    path: 'details/:id',
-    component: DetailsComponent,
-    data: { title: 'Show Post Details' }
   },
   {
     path: 'login',
@@ -141,6 +133,29 @@ const routes: Routes = [
     path: 'contractor/add',
     component: ContractorAddComponent,
     data: { title: 'Contractor Add' }
+  },
+  {
+    path: 'page',
+    canActivate: [AuthGuard],
+    component: PageComponent,
+    data: { title: 'Page' }
+  },
+  {
+    path: 'page/details/:id',
+    component: PageDetailsComponent,
+    data: { title: 'Page Details' }
+  },
+  {
+    path: 'page/add',
+    canActivate: [AuthGuard],
+    component: PageAddComponent,
+    data: { title: 'Page Add' }
+  },
+  {
+    path: 'page/edit/:id',
+    canActivate: [AuthGuard],
+    component: PageEditComponent,
+    data: { title: 'Page Edit' }
   },
 ];
 

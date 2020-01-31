@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { HomeComponent } from './home/home.component';
-import { DetailsComponent } from './details/details.component';
 import { CategoryComponent } from './category/category.component';
 import { PostComponent } from './post/post.component';
 import { ApplicantComponent } from './applicant/applicant.component'
@@ -24,6 +23,10 @@ import { ApplicantAddComponent } from './applicant/applicant-add/applicant-add.c
 import { ApplicantDetailsComponent } from './applicant/applicant-details/applicant-details.component';
 import { ContractorAddComponent } from './contractor/contractor-add/contractor-add.component';
 import { ContractorDetailsComponent } from './contractor/contractor-details/contractor-details.component'
+import { PageComponent } from './page/page.component';
+import { PageAddComponent } from './page/page-add/page-add.component';
+import { PageDetailsComponent } from './page/page-details/page-details.component';
+import { PageEditComponent } from './page/page-edit/page-edit.component';
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './interceptors/token.interceptor';
@@ -44,7 +47,6 @@ import {
   MatOptionModule,
   MatGridListModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BycategoryComponent } from './bycategory/bycategory.component';
 import { CKEditorModule } from 'ckeditor4-angular';
 import { MatContenteditableModule } from 'mat-contenteditable';
 import { AdminComponent } from './admin/admin.component';
@@ -55,7 +57,6 @@ import { AdminComponent } from './admin/admin.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    DetailsComponent,
     CategoryComponent,
     PostComponent,
     ApplicantComponent,
@@ -66,12 +67,15 @@ import { AdminComponent } from './admin/admin.component';
     PostDetailsComponent,
     PostAddComponent,
     PostEditComponent,
-    BycategoryComponent,
     AdminComponent,
     ApplicantAddComponent,
     ApplicantDetailsComponent,
     ContractorAddComponent,
     ContractorDetailsComponent,
+    PageComponent,
+    PageEditComponent,
+    PageAddComponent,
+    PageDetailsComponent
   ],
   imports: [
     BrowserModule,

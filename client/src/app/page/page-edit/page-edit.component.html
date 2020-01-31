@@ -1,0 +1,33 @@
+<div class="dashboard" id="dashboard" >
+    <div class="example-loading-shade"
+          *ngIf="isLoadingResults">
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+    <div class="button-row">
+      <a mat-flat-button color="primary" [routerLink]="['/category']">Back</a>
+    </div>
+    <mat-card class="card" id="dashboard">
+      <form [formGroup]="categoryForm" (ngSubmit)="onFormSubmit()">
+        <div>
+          <label for="pageName">Page Name</label>
+          <input matInput formControlName="pageName" [errorStateMatcher]="matcher">
+          <mat-error>
+            <span *ngIf="!categoryForm.get('pageName').valid && categoryForm.get('pageName').touched">Please enter Page
+              Name</span>
+          </mat-error>
+        </div>
+        <hr>
+        <div>
+          <label for="pageContent">Site Page</label>
+          <ckeditor matInput placeholder="About this Department" formControlName="pageContent" required></ckeditor>
+          <mat-error>
+            <span *ngIf="!categoryForm.get('pageContent').valid && categoryForm.get('pageContent').touched">Please enter
+              Page Description</span>
+          </mat-error>
+        </div> 
+        <button type="submit" [disabled]="!categoryForm.valid" mat-flat-button color="primary">
+          Save
+        </button>
+      </form>
+    </mat-card>
+  </div>
