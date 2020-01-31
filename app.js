@@ -38,6 +38,7 @@ app.use('/api/category', category);
 app.use('/api/post', post);
 app.use('/api/applicant', applicant);
 app.use('/api/contractor', contractor);
+app.use('/api/page', page);
 
 app.use('/api/public', indexRouter);
 app.use('/users', usersRouter);

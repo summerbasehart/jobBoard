@@ -1,4 +1,5 @@
 var Category = require("../models/category");
+var Page = require("../models/page");
 var Post = require("../models/post");
 var Applicant = require("../models/applicant")
 var Contractor = require("../models/contractor")
@@ -17,6 +18,20 @@ router.get('/category/:id', function(req, res, next) {
   Post.find({category: req.params.id}, function (err, category) {
     if (err) return next(err);
     res.json(category);
+  });
+});
+
+router.get('/page', function(req, res, next) {
+  Category.find(function (err, pages) {
+    if (err) return next(err);
+    res.json(pages);
+  });
+});
+
+router.get('/page/:id', function(req, res, next) {
+  Post.find({page: req.params.id}, function (err, page) {
+    if (err) return next(err);
+    res.json(page);
   });
 });
 
