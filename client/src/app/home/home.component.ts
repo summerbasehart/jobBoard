@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Post } from '../post/post';
 import { Page } from '../page/page';
 import { HomeService } from '../home.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-home',

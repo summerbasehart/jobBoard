@@ -149,7 +149,7 @@
   color: white;
 }
 
-.mainContainer, .logo, .adminLogo, .subhead { 
+.mainContainer, .adminLogo, .subhead { 
   animation: fadeInAnimation ease 3s 
 } 
 
@@ -159,5 +159,17 @@
   } 
   100% { 
       opacity: 1; 
+   } 
+}
+
+.logo  { 
+  animation: slide ease 3s 
+} 
+@keyframes slide { 
+  0% { 
+      width: 45%; 
+  } 
+  100% { 
+      width: 22%; 
    } 
 }

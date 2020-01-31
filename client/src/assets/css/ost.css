@@ -56,7 +56,19 @@ body {
     margin: auto;
     padding-top: 0;
     width: 22%;
+    animation:slidein 5s forwards;
+    -webkit-animation:slidein 5s forwards;
 }
+    
+/* @-moz-keyframes slidein {
+    from {margin-left:0%;}
+    to {margin:auto}
+  }
+  
+@-webkit-keyframes slidein {
+    from {margin-left:0%;}
+    to {margin:auto}
+} */
 
 .adminLogo {
     margin: auto;
