@@ -43,15 +43,15 @@
           <div class="job w3-container w3-animate-opacity text-center" *ngIf="selectedPost === null, show">
             <br>
             <br>
-            <h4>Since our success depends upon the dedication of our employees,<br><br>
-              we are highly selective in choosing new members of our team. 
-            </h4>
-            <br>
-            <br>
             <h3>
               Please select a position to view job details<br>
               ____________________________________________
             </h3>
+            <br>
+            <br>
+            <p>Since our success depends upon the dedication of our employees,<br><br>
+              we are highly selective in choosing new members of our team. 
+            </p>
           </div>
           <div class="job w3-container w3-animate-opacity" id="{{selectedPost.postTitle}}" *ngIf="selectedPost !== null, show">
             <h3 class="jobSections">{{selectedPost.postTitle}} -- Date Posted:
