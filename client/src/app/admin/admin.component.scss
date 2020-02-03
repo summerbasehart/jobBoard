@@ -27,7 +27,12 @@ hr {
     margin:15px
 }
 
-#main {
+li {
+    padding-bottom: 5px;
+}
+  
+
+#main, #secondary {
     animation: fadein 1.5s;
     -moz-animation: fadein 1.5s; /* Firefox */
     -webkit-animation: fadein 1.5s; /* Safari and Chrome */
