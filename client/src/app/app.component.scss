@@ -164,7 +164,7 @@
 }
 
 .mainContainer, .adminLogo, .subhead { 
-  animation: fadeInAnimation ease 3s 
+  animation: fadeInAnimation ease 6s 
 } 
 
 @keyframes fadeInAnimation { 
@@ -180,10 +180,13 @@
   margin: auto;
   padding-top: 0;
   width: 22%;
-  animation: slide ease 3s 
+  animation: slide ease 3s, fadeInAnimation ease 4s 
 } 
 @keyframes slide { 
-  0% { 
+  0%{
+    width:45%;
+  }
+  50% { 
       width: 45%; 
   } 
   100% { 
