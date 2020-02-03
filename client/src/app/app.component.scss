@@ -1,4 +1,5 @@
 
+
 .container {
     padding: 0.5%;
 }
@@ -148,6 +149,19 @@
   color: white;
 }
 
+.adminLogo {
+  margin: auto;
+  padding-top: 0;
+  width: 15%;
+}
+
+.subhead {
+  color: white;
+  font-family: 'Times New Roman';
+  font-size: 160%;
+  text-shadow: 0 2px red;
+}
+
 .mainContainer, .adminLogo, .subhead { 
   animation: fadeInAnimation ease 3s 
 } 
@@ -162,6 +176,9 @@
 }
 
 .logo  { 
+  margin: auto;
+  padding-top: 0;
+  width: 22%;
   animation: slide ease 3s 
 } 
 @keyframes slide { 
@@ -171,4 +188,24 @@
   100% { 
       width: 22%; 
    } 
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+li {
+  padding-bottom: 5px;
+}
+
+.submit-button{
+  display: block;
+  background-color: red;
+  border: red;
+  color: white;
+}
+
+.sr-only {
+  display:none;
 }

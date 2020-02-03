@@ -51,15 +51,16 @@
     }
   }
 
-// .tab {
-//     float: left;
-// }
+.tab {
+    float: left;
+}
 
 .tab label {
     padding: 10px; 
     position: relative;
     left: 1px; 
     top: -29px;
+    font-size: 20px;
     -webkit-transition: background-color .17s linear;
     cursor: pointer;
     font-weight: bold;
@@ -120,6 +121,11 @@ hr {
     background-size: cover;
     color:white;
     text-shadow: 0 2px black !important
+}
+
+#jobNames {
+    background-color: #252525;
+    padding: 5px;
 }
 
 .jobName {
@@ -193,4 +199,19 @@ textarea.form-control {
 
 .btn{
     color: white !important
+}
+
+.jobSections {
+    font-weight: bolder !important;
+    text-transform: uppercase !important;
+    font-size: 16px !important;
+    margin-left: 15px;
+    color: lightgrey !important;
+    padding-top: 5px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.open {
+    margin-top: 30px;
+    margin-bottom: 5px;
 }

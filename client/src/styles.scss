@@ -1,20 +1,6 @@
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-@import 'scss/ost.scss';
 
-@import 'scss/owl.theme.scss';
-
-@import 'scss/owl.carousel.scss';
-
-@import 'scss/style.scss';
-
-@import 'scss/simpletextrotator.scss';
-
-@import 'scss/magnific-popup.scss';
-
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 // regular style toast 
 @import '~ngx-toastr/toastr';
