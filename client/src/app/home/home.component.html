@@ -33,13 +33,13 @@
         <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
       </div>
       <div class="row" id="jobBoard">
-        <div class="col-md-2" id="jobNames">
+        <div class="col-md-3" id="jobNames">
           <div class="w3-bar">
             <button class="w3-bar-item w3-button w3-black tablink" *ngFor="let post of posts"
               (click)="selectPost(post)" [ngClass]="[selectedPost ? 'w3-black': 'w3-red']">{{post.postTitle}}</button>
           </div>
         </div>
-        <div class="col-md-10" id="jobContainer">
+        <div class="col-md-9" id="jobContainer">
           <div class="job w3-container w3-animate-opacity text-center" *ngIf="selectedPost === null, show">
             <br>
             <br>
@@ -78,7 +78,7 @@
     <label for="tab-2">Contractor </label>
     <div class="content">
       <hr>
-      <div class="row">
+      <div class="row" id="contractTab">
         <p innerHTML={{page.pageCont}}></p>
         <!-- <div class="col-md-12">
           <hr>
