@@ -1,0 +1,33 @@
+<div class="dashboard" id="dashboard">
+    <div class="example-loading-shade" *ngIf="isLoadingResults">
+        <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+    <div class="button-row">
+        <a mat-flat-button color="primary" [routerLink]="['/blog']">
+            Back
+        </a>
+    </div>
+    <mat-card class="card">
+        <form [formGroup]="blogForm" (ngSubmit)="onFormSubmit()">
+            <div>
+                <label for="blogTitle">Job Title : </label>
+                <input matInput placeholder="Blog Title" formControlName="blogTitle" [errorStateMatcher]="matcher">
+            </div>
+            <div>
+                <label for="blogAuthor">Created By : </label>
+                <input matInput placeholder="Blog Author" formControlName="blogAuthor" [errorStateMatcher]="matcher">
+            </div>
+            <div>
+                <label for="blogContent">Content : </label>
+                <ckeditor matCkeditor placeholder="Blog Content" formControlName="blogContent"></ckeditor>
+            </div>
+            <div>
+                <label for="blogPs">Notes or Source(s) : </label>
+                <input matInput placeholder="Blog Reference" formControlName="blogPs" [errorStateMatcher]="matcher">
+            </div>
+            <button type="submit" [disabled]="!blogForm.valid" mat-flat-button color="primary">
+                Save
+            </button>
+        </form>
+    </mat-card>
+</div>

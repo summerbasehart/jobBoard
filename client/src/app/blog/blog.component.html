@@ -1,0 +1,16 @@
+<div class="dashboard" id="dashboard">
+    <div class="example-loading-shade" *ngIf="isLoadingResults">
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+    <div class="row">
+      <a mat-flat-button [routerLink]="['add']">Add Blog Entry</a>
+    </div>
+    <hr>
+    <h3 class="text-center">Blog Posts:</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-2 blog" *ngFor="let blog of data" [routerLink]="['details/', blog._id]">
+          <p><b>{{blog.blogTitle}}</b></p>
+          <p> Last updated: {{blog.updated | date: 'dd MMM yyyy'}}</p>
+      </div>
+    </div>
+  </div>

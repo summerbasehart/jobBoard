@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './category/category.component';
 import { PageComponent } from './page/page.component';
 import { PostComponent } from './post/post.component';
+import { BlogComponent } from './blog/blog.component'
 import { ApplicantComponent } from './applicant/applicant.component';
 import { ContractorComponent } from './contractor/contractor.component';
 import { CategoryDetailsComponent } from './category/category-details/category-details.component';
@@ -17,6 +18,9 @@ import { PageEditComponent } from './page/page-edit/page-edit.component';
 import { PostDetailsComponent } from './post/post-details/post-details.component';
 import { PostAddComponent } from './post/post-add/post-add.component';
 import { PostEditComponent } from './post/post-edit/post-edit.component';
+import { BlogAddComponent } from './blog/blog-add/blog-add.component';
+import { BlogEditComponent } from './blog/blog-edit/blog-edit.component';
+import { BlogDetailsComponent } from './blog/blog-details/blog-details.component';
 import { ContractorAddComponent } from'./contractor/contractor-add/contractor-add.component';
 import { ContractorDetailsComponent } from'./contractor/contractor-details/contractor-details.component';
 import { AuthGuard } from './auth/auth.guard';
@@ -156,6 +160,30 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     component: PageEditComponent,
     data: { title: 'Page Edit' }
+  },
+  {
+    path: 'blog',
+    canActivate: [AuthGuard],
+    component: BlogComponent,
+    data: { title: 'Blog' }
+  },
+  {
+    path: 'blog/details/:id',
+    canActivate: [AuthGuard],
+    component: BlogDetailsComponent,
+    data: { title: 'Blog Details' }
+  },
+  {
+    path: 'blog/add',
+    canActivate: [AuthGuard],
+    component: BlogAddComponent,
+    data: { title: 'Blog Add' }
+  },
+  {
+    path: 'blog/edit/:id',
+    canActivate: [AuthGuard],
+    component: BlogEditComponent,
+    data: { title: 'Blog Edit' }
   },
 ];
 

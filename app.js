@@ -9,6 +9,7 @@ var category = require('./routes/category');
 var applicant = require('./routes/applicant');
 var contractor = require('./routes/contractor');
 var post = require('./routes/post');
+var blog = require('./routes/blog');
 var page = require('./routes/page');
 var cors = require('cors')
 // var mailer = require('./nodemailer');
@@ -38,6 +39,7 @@ app.use('/api/auth', auth);
 app.use('/api/page', page);
 app.use('/api/category', category);
 app.use('/api/post', post);
+app.use('/api/blog', blog);
 app.use('/api/applicant', applicant);
 app.use('/api/contractor', contractor);
 

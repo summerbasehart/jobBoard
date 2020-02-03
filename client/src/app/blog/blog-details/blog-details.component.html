@@ -1,0 +1,30 @@
+<div class="dashboard" id="dashboard">
+  <div class="example-loading-shade" *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <div class="row">
+    <div class="col-md-1">
+      <a mat-flat-button [routerLink]="['/blog']">Return</a>
+    </div>
+  </div>
+  <div class="row blog">
+    <div class="col-md-3">
+      <p><b>{{blog.blogTitle}}</b></p>
+      <p>Created by: {{blog.blogAuthor}}</p>
+      <p>Updated: {{blog.updated | date}}</p>
+      <p>Contact: {{blog.blogPs}}</p>
+    </div>
+    <div class="col-md-8">
+      <p>Qualifications:</p>
+      <small innerHTML={{blog.blogContent}}></small>
+    </div>
+    <div class="col-md-1">
+      <a class="btn btn-block" [routerLink]="['/blog/edit', blog.id]">
+        <mat-icon>edit</mat-icon>
+      </a>
+      <a class="btn btn-block" button (click)="deleteBlog(blog.id)">
+        <mat-icon>delete</mat-icon>
+      </a>
+    </div>
+  </div>
+</div>

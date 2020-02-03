@@ -50,6 +50,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CKEditorModule } from 'ckeditor4-angular';
 import { MatContenteditableModule } from 'mat-contenteditable';
 import { AdminComponent } from './admin/admin.component';
+import { BlogAddComponent } from './blog/blog-add/blog-add.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogEditComponent } from './blog/blog-edit/blog-edit.component';
+import { BlogDetailsComponent } from './blog/blog-details/blog-details.component'
 
 @NgModule({
   declarations: [
@@ -75,7 +79,11 @@ import { AdminComponent } from './admin/admin.component';
     PageComponent,
     PageEditComponent,
     PageAddComponent,
-    PageDetailsComponent
+    PageDetailsComponent,
+    BlogComponent,
+    BlogAddComponent,
+    BlogEditComponent,
+    BlogDetailsComponent
   ],
   imports: [
     BrowserModule,
