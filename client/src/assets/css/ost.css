@@ -10,6 +10,7 @@ body {
       font-size: 12px !important;
     }
     h3{
+      font-size: 1.25rem !important;
         margin-top: 5px !important;
         margin-bottom: 5px !important;
         margin-left: 10% !important;
@@ -18,9 +19,10 @@ body {
   }
   @media screen and (min-width: 601px) {
     body{
-      font-size: 13px !important;
+      font-size: 14px !important;
     }
     h3{
+      font-size: 1.75rem !important;
         margin-top: 20px !important;
         margin-bottom: 20px !important;
     }

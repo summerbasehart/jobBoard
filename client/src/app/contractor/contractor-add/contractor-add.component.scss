@@ -10,6 +10,13 @@
     width: 100%;
 }
 
+select{
+    display: block;
+    padding: 10px;
+    width: 95%;
+    margin: 20px;
+}
+
 .mat-flat-button[disabled][disabled] {
         background-color: red;
         display: block;

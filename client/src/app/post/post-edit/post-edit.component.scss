@@ -6,6 +6,17 @@
     background-color:(0,0,0,0.3)
 }
 
+label, input {
+    color:black
+}
+
+select{
+    display: block;
+    padding: 10px;
+    width: 95%;
+    margin: 20px;
+}
+
 .mat-flat-button {
     margin: 15px;
     background-color: grey;

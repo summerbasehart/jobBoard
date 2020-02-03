@@ -13,6 +13,7 @@
 
 @media screen and (max-width: 1200px) {
     .tab label {
+        font-size:20px;
         margin-left: 200%; 
     }
 }
@@ -23,6 +24,11 @@
     }
     #jobContainer {
         height: 500px
+    }
+
+    .tab label {
+        font-size: 20px;
+        margin-left: 350%;
     }
     ul {
         color: white;
@@ -36,7 +42,8 @@
         min-height: 900px; /* This part sucks */
     }
     .tab label {
-        margin-left: 35%; 
+        font-size:16px;
+        margin-left: 80%; 
     }
     #jobNames {
         max-height: 200px;
@@ -60,7 +67,6 @@
     position: relative;
     left: 1px; 
     top: -29px;
-    font-size: 20px;
     -webkit-transition: background-color .17s linear;
     cursor: pointer;
     font-weight: bold;
