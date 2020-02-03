@@ -20,6 +20,7 @@ export class AppComponent implements OnInit  {
   loginStatus = false;
 
   ngOnInit() {
+    localStorage.getItem("token");
     this.authService.isLoggedIn.subscribe((status: any) => {
       if (status === true) {
         this.loginStatus = true;
