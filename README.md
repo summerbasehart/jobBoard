@@ -28,7 +28,7 @@ To Install:
     1. "npm i"
     2. "cd client"
     3. "npm i"
-    4. "cd ../DB"
+    4. "cd ../dump"
     5a. {{Here you must run mongorestore to restore the dummy database in "DB" folder, 
        it can be edited afterwards}}
     5b. {{If mongorestore does not work, "home.json" in source folder must be added to "pages" 
