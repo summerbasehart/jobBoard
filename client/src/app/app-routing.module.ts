@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { HomeComponent } from './home/home.component';
+import { BulletinComponent } from './bulletin/bulletin.component';
 import { CategoryComponent } from './category/category.component';
 import { PageComponent } from './page/page.component';
 import { PostComponent } from './post/post.component';
@@ -39,6 +40,11 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
     data: { title: ' Home' }
+  },
+  {
+    path: 'bulletin',
+    component: BulletinComponent,
+    data: { title: ' Bulletin' }
   },
   {
     path: 'admin',
@@ -163,13 +169,11 @@ const routes: Routes = [
   },
   {
     path: 'blog',
-    canActivate: [AuthGuard],
     component: BlogComponent,
     data: { title: 'Blog' }
   },
   {
     path: 'blog/details/:id',
-    canActivate: [AuthGuard],
     component: BlogDetailsComponent,
     data: { title: 'Blog Details' }
   },

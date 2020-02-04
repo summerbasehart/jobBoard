@@ -22,6 +22,7 @@ export class BlogEditComponent implements OnInit {
   blogForm: FormGroup;
   id = '';
   blogTitle = '';
+  blogImgUrl: '';
   blogAuthor = '';
   blogContent = '';
   blogPs = '';
@@ -39,6 +40,7 @@ export class BlogEditComponent implements OnInit {
     this.getBlog(this.route.snapshot.params.id);
     this.blogForm = this.formBuilder.group({
         blogTitle : [null, Validators.required],
+        blogImgUrl : [null, Validators.required],
         blogAuthor : [null, Validators.required],
         blogContent : [null, Validators.required],
         blogPs : [null, Validators.required],
@@ -50,7 +52,7 @@ export class BlogEditComponent implements OnInit {
       this.id = data._id;
       this.blogForm.setValue({
         blogTitle: data.blogTitle,
-        category: data.category,
+        blogImgUrl: data.blogImgUrl,
         blogAuthor: data.blogAuthor,
         blogDescription: data.blogDescription,
         blogQualifications: data.blogQualifications,

@@ -1,8 +1,9 @@
 var Category = require("../models/category");
 var Page = require("../models/page");
 var Post = require("../models/post");
-var Applicant = require("../models/applicant")
-var Contractor = require("../models/contractor")
+var Applicant = require("../models/applicant");
+var Contractor = require("../models/contractor");
+var Blog = require("../models/blog")
 
 var express = require('express');
 var router = express.Router();
@@ -53,6 +54,20 @@ router.get('/post/:id', function(req, res, next) {
   Post.findById(req.params.id, function (err, post) {
     if (err) return next(err);
     res.json(post);
+  });
+});
+
+router.get('/blog', function(req, res, next) {
+  Blog.find(function (err, blogs) {
+    if (err) return next(err);
+    res.json(blogs);
+  });
+});
+
+router.get('/blog/:id', function(req, res, next) {
+  Blog.findById(req.params.id, function (err, blog) {
+    if (err) return next(err);
+    res.json(blog);
   });
 });
 

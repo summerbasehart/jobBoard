@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Blog } from '../blog/blog';
 import { BulletinService } from '../bulletin.service';
+import { BlogService } from '../blog.service';
 import * as $ from 'jquery';
 
 @Component({
@@ -12,6 +13,7 @@ export class BulletinComponent implements OnInit {
   blog : Blog = {
     id: '',
     blogTitle: '',
+    blogImgUrl: '',
     blogAuthor: '',
     blogContent: '',
     blogPs: '',
@@ -20,10 +22,10 @@ export class BulletinComponent implements OnInit {
   isLoadingResults = true;
   blogs: Blog[] = [];
 
-  constructor(private api: BulletinService) { }
+  constructor(private api: BulletinService, private blogService: BlogService) { }
 
     ngOnInit() {
-      this.api.getBlogs()
+      this.blogService.getBlogs()
         .subscribe((res: any) => {
           this.blogs = res;
           console.log(this.blogs);

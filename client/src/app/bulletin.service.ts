@@ -21,14 +21,6 @@ export class BulletinService {
       );
   }
 
-  getBlog(id: any): Observable<Blog> {
-    return this.http.get<Blog>(apiUrl + 'blog/' + id).pipe(
-      tap(_ => console.log(`fetched blog by id=${id}`)),
-      catchError(this.handleError<Blog>(`getBlog id=${id}`))
-    );
-  }
-
-
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 

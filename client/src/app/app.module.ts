@@ -13,6 +13,12 @@ import { CategoryComponent } from './category/category.component';
 import { PostComponent } from './post/post.component';
 import { ApplicantComponent } from './applicant/applicant.component'
 import { ContractorComponent } from './contractor/contractor.component'
+import { AdminComponent } from './admin/admin.component';
+import { BlogAddComponent } from './blog/blog-add/blog-add.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogEditComponent } from './blog/blog-edit/blog-edit.component';
+import { BlogDetailsComponent } from './blog/blog-details/blog-details.component';
+import { BulletinComponent } from './bulletin/bulletin.component'
 import { CategoryDetailsComponent } from './category/category-details/category-details.component';
 import { CategoryAddComponent } from './category/category-add/category-add.component';
 import { CategoryEditComponent } from './category/category-edit/category-edit.component';
@@ -45,15 +51,12 @@ import {
   MatToolbarModule,
   MatSelectModule,
   MatOptionModule,
-  MatGridListModule } from '@angular/material';
+  MatGridListModule,
+  MatExpansionModule} from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CKEditorModule } from 'ckeditor4-angular';
 import { MatContenteditableModule } from 'mat-contenteditable';
-import { AdminComponent } from './admin/admin.component';
-import { BlogAddComponent } from './blog/blog-add/blog-add.component';
-import { BlogComponent } from './blog/blog.component';
-import { BlogEditComponent } from './blog/blog-edit/blog-edit.component';
-import { BlogDetailsComponent } from './blog/blog-details/blog-details.component'
+
 
 @NgModule({
   declarations: [
@@ -83,7 +86,8 @@ import { BlogDetailsComponent } from './blog/blog-details/blog-details.component
     BlogComponent,
     BlogAddComponent,
     BlogEditComponent,
-    BlogDetailsComponent
+    BlogDetailsComponent,
+    BulletinComponent
   ],
   imports: [
     BrowserModule,
@@ -108,8 +112,9 @@ import { BlogDetailsComponent } from './blog/blog-details/blog-details.component
     CKEditorModule,
     MatContenteditableModule,
     AlertModule,
-    BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot() // ToastrModule added
+    MatExpansionModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     {

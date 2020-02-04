@@ -21,6 +21,7 @@ export class BlogAddComponent implements OnInit {
 
   blogForm: FormGroup;
   blogTitle = '';
+  blogImgUrl: '';
   blogAuthor = '';
   blogContent = '';
   blogPs = '';
@@ -35,6 +36,7 @@ export class BlogAddComponent implements OnInit {
   ngOnInit() {
     this.blogForm = this.formBuilder.group({
       blogTitle : [null, Validators.required],
+      blogImgUrl : [null, Validators.required],
       blogAuthor : [null, Validators.required],
       blogContent : [null, Validators.required],
       blogPs : [null, Validators.required],

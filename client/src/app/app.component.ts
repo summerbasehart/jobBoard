@@ -4,7 +4,10 @@ import { Category } from './category/category';
 import { HomeService } from './home.service';
 import { AuthService } from './auth.service';
 import { ApplicantService } from './applicant.service';
-import { ContractorService } from './contractor.service';
+import { ContractorService } from './contractor.service'
+import { BulletinService } from './bulletin.service';
+import { BlogService } from './blog.service'
+
 
 @Component({
   selector: 'app-root',

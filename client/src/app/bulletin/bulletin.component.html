@@ -1,0 +1,45 @@
+<div class="bulletin">
+
+    <div class="header">
+        <h3 class="text-center">Bulletin Board</h3>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-4"><b>Blog Title:</b></div>
+        <div class="col-md-6"><b>Date Posted:</b></div>
+    </div>
+
+    <mat-expansion-panel *ngFor="let blog of blogs" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{blog.blogTitle}}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{blog.updated | date: 'dd MMM yyyy'}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="row text-center">
+            <div class="col-md-5">
+                <img mat-card-image src="{{blog.blogImgUrl}}" alt="{{blog.blogTitle}}">
+            </div>
+            <div class="col-md-7">
+                <p innerHTML={{blog.blogContent}}></p>
+            </div>
+        </div>
+    </mat-expansion-panel>
+
+
+
+    <!-- <mat-expansion-panel >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Self aware panel
+      </mat-panel-title>
+      <mat-panel-description>
+        Currently I am {{panelOpenState ? 'open' : 'closed'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>I'm visible because I am open</p>
+  </mat-expansion-panel> -->
+
+</div>

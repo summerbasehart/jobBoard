@@ -13,6 +13,7 @@ export class BlogDetailsComponent implements OnInit {
   blog: Blog = {
     id: '',
     blogTitle: '',
+    blogImgUrl: '',
     blogAuthor: '',
     blogContent: '',
     blogPs: '',
