@@ -56,6 +56,7 @@ import {
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CKEditorModule } from 'ckeditor4-angular';
 import { MatContenteditableModule } from 'mat-contenteditable';
+import {NgxPrintModule} from 'ngx-print';
 
 
 @NgModule({
@@ -112,6 +113,7 @@ import { MatContenteditableModule } from 'mat-contenteditable';
     CKEditorModule,
     MatContenteditableModule,
     AlertModule,
+    NgxPrintModule,
     MatExpansionModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()
