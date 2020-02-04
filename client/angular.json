@@ -35,7 +35,6 @@
               "./node_modules/ngx-toastr/toastr.css" 
             ],
             "scripts": [
-              "src/js/ost.js",
               "src/js/jobs.js",
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js"
