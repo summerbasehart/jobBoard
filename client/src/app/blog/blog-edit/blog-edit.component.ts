@@ -54,9 +54,8 @@ export class BlogEditComponent implements OnInit {
         blogTitle: data.blogTitle,
         blogImgUrl: data.blogImgUrl,
         blogAuthor: data.blogAuthor,
-        blogDescription: data.blogDescription,
-        blogQualifications: data.blogQualifications,
-        blogReference: data.blogReference,
+        blogContent: data.blogContent,
+        blogPs: data.blogPs,
       });
     });
   }

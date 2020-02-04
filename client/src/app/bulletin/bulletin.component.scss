@@ -5,8 +5,14 @@
 
 mat-expansion-panel {
     margin:10px;
-    background-color: rgba(255,255,255,0.6);
-    color:black;
+    background-color: rgba(255, 44, 44, 0.644);
+    color:white;
     border-radius: 20px;
     border: 1px solid red
+}
+
+#body {
+    padding: 30px 24px 16px !important;
+    background-color:white;
+    color:black
 }
