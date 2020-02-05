@@ -21,8 +21,10 @@ export class BulletinComponent implements OnInit {
   };
   isLoadingResults = true;
   blogs: Blog[] = [];
+  // sortedBlogs = this.blogs.slice().sort((a, b) => b.updated - a.updated)
 
   constructor(private api: BulletinService, private blogService: BlogService) { }
+
 
     ngOnInit() {
       this.blogService.getBlogs()
