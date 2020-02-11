@@ -28,6 +28,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { AdminComponent } from './admin/admin.component';
 import { ApplicantAddComponent } from'./applicant/applicant-add/applicant-add.component';
 import { ApplicantDetailsComponent } from'./applicant/applicant-details/applicant-details.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const routes: Routes = [
@@ -189,6 +190,11 @@ const routes: Routes = [
     component: BlogEditComponent,
     data: { title: 'Blog Edit' }
   },
+  {
+    path: "**",
+    component: NotFoundComponent,
+    data: { title: 'Not Found' }
+  }
 ];
 
 @NgModule({

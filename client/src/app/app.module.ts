@@ -57,6 +57,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CKEditorModule } from 'ckeditor4-angular';
 import { MatContenteditableModule } from 'mat-contenteditable';
 import {NgxPrintModule} from 'ngx-print';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -88,7 +89,8 @@ import {NgxPrintModule} from 'ngx-print';
     BlogAddComponent,
     BlogEditComponent,
     BlogDetailsComponent,
-    BulletinComponent
+    BulletinComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
