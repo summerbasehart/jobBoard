@@ -32,6 +32,7 @@
     "nodemon": "^2.0.2",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "postman": "^0.2.0",
     "web-animations-js": "^2.3.2"
   },
   "devDependencies": {
