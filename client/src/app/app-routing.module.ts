@@ -191,7 +191,7 @@ const routes: Routes = [
     data: { title: 'Blog Edit' }
   },
   {
-    path: "**",
+    path: '**',
     component: NotFoundComponent,
     data: { title: 'Not Found' }
   }
